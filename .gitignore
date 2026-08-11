@@ -1,0 +1,6 @@
+# Local working files — not part of the published site
+DEPLOY.md
+scripts/
+index-v*-backup.html
+assets/badges/README.md
+.DS_Store

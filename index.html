@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdalrahman Attya — Principal Cloud Architect | AWS &amp; Azure</title>
+<meta name="description" content="Principal Cloud Architect with 15 years in IT and 8 years across AWS and Azure. Secure, scalable, cost-efficient cloud platforms, platform engineering, DevOps automation and AI/data workload enablement. Copenhagen &amp; London.">
+<meta name="author" content="Abdalrahman Attya">
+<link rel="canonical" href="https://abdalrahmanattya.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Abdalrahman Attya — Principal Cloud Architect">
+<meta property="og:description" content="Secure, scalable cloud platforms on AWS and Azure. 15 years in IT, 8 years in cloud architecture. Copenhagen &amp; London.">
+<meta property="og:url" content="https://abdalrahmanattya.github.io/">
+<meta property="og:image" content="https://abdalrahmanattya.github.io/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abdalrahman Attya, Principal Cloud Architect — AWS and Azure, platform engineering, AI and data platforms.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://abdalrahmanattya.github.io/assets/og-card.png">
+<meta name="theme-color" content="#0a0f17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0f17'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%2338e2c8' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abdalrahman Attya",
+  "jobTitle": "Principal Cloud Architect",
+  "description": "Principal Cloud Architect with 15 years in IT and 8 years designing secure, scalable cloud platforms on AWS and Azure.",
+  "email": "mailto:abdalrahman.esmail.attya@gmail.com",
+  "url": "https://abdalrahmanattya.github.io/",
+  "image": "https://abdalrahmanattya.github.io/assets/headshot.jpg",
+  "homeLocation": { "@type": "Place", "name": "Copenhagen, Denmark" },
+  "workLocation": [
+    { "@type": "Place", "name": "Copenhagen, Denmark" },
+    { "@type": "Place", "name": "London, United Kingdom" }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/abdalrahman-attya-567488186",
+    "https://github.com/abdalrahmanattya",
+    "https://www.credly.com/users/abdalrahman-attya"
+  ],
+  "knowsAbout": [
+    "Cloud architecture","Amazon Web Services","Microsoft Azure","Platform engineering",
+    "DevOps","Kubernetes","Terraform","Infrastructure as Code","Cloud security",
+    "AWS landing zones","FinOps","Machine learning platforms","Data governance"
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Munster Technological University" },
+    { "@type": "CollegeOrUniversity", "name": "Università degli Studi di Messina" },
+    { "@type": "CollegeOrUniversity", "name": "Arab Academy for Science, Technology and Maritime Transport" }
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Solutions Architect – Professional", "credentialCategory": "certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "AWS Certified DevOps Engineer – Professional", "credentialCategory": "certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Security – Specialty", "credentialCategory": "certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Solutions Architect Expert", "credentialCategory": "certification" }
+  ]
+}
+</script>
+
+<style>
+  /* ============ Self-hosted fonts (no external requests) ============ */
+  @font-face{font-family:"Site Sans";src:url("fonts/lato-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Site Sans";src:url("fonts/lato-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:"Site Sans";src:url("fonts/lato-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Site Mono";src:url("fonts/dejavumono-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+</style>
+<style>
+  /* ============ Tokens ============ */
+  :root{
+    --bg:#0a0f17;
+    --bg-2:#0e1520;
+    --panel:#111a26;
+    --panel-2:#16212f;
+    --line:#22303f;
+    --line-soft:#1a2532;
+    --txt:#e6edf5;
+    --txt-2:#a9b8c9;
+    --txt-3:#8b9bb0;   /* lightened for WCAG AA on card backgrounds (6.2:1) */
+    --accent:#38e2c8;
+    --accent-2:#5aa9ff;
+    --accent-dim:rgba(56,226,200,.12);
+    --radius:14px;
+    --maxw:1120px;
+    /* To swap in a different typeface, change these two lines only. */
+    --mono:"Site Mono",ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:"Site Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+
+  /* ============ Base ============ */
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--txt);
+    font-family:var(--sans);font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(900px 500px at 78% -8%,rgba(56,226,200,.10),transparent 60%),
+      radial-gradient(760px 460px at 8% 12%,rgba(90,169,255,.09),transparent 62%);
+  }
+  main,header,footer{position:relative;z-index:1}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%}
+  ::selection{background:rgba(56,226,200,.28)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:16px;top:16px;z-index:100;background:var(--accent);color:#04120f;padding:10px 16px;border-radius:8px}
+
+  h1,h2,h3,h4{line-height:1.15;margin:0;letter-spacing:-.021em;text-wrap:balance}
+  h1{letter-spacing:-.032em}
+  p{margin:0 0 1rem;text-wrap:pretty}
+  /* Numerals line up in columns instead of jittering */
+  .metric .n,.tl-when,.d-s,.c-lv,.edu .yr{font-variant-numeric:tabular-nums}
+
+  /* ============ Nav ============ */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,15,23,.82);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--txt);letter-spacing:-.01em}
+  .brand:hover{text-decoration:none}
+  .brand-mark{
+    width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#04120f;font-size:13px;font-weight:800;font-family:var(--mono)
+  }
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:var(--txt-2);font-size:14px;font-weight:500}
+  .nav-links a:hover{color:var(--accent);text-decoration:none}
+  .nav-links a.active{color:var(--accent)}
+  .nav-links a:not(.nav-cta){position:relative;padding-bottom:2px}
+  .nav-links a:not(.nav-cta)::after{
+    content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;
+    background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease
+  }
+  .nav-links a.active::after{transform:scaleX(1)}
+  .nav-cta{
+    padding:8px 16px;border:1px solid var(--accent);border-radius:999px;
+    color:var(--accent) !important;font-size:14px;font-weight:600;
+    transition:background .18s ease,color .18s ease;
+  }
+  .nav-cta:hover{background:var(--accent);color:#04120f !important}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:7px 11px;font-size:16px;cursor:pointer}
+
+  /* ============ Layout helpers ============ */
+  section{padding:96px 0;scroll-margin-top:64px}
+  section:nth-of-type(even){background:var(--bg-2);border-block:1px solid var(--line-soft)}
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);opacity:.7}
+  .sec-title{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px}
+  .sec-lead{color:var(--txt-2);max-width:64ch;margin-bottom:44px;font-size:1.03rem}
+
+  /* ============ Hero ============ */
+  .hero{padding:52px 0 48px;border-bottom:1px solid var(--line-soft)}
+
+  .byline{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:34px}
+  .avatar{
+    width:74px;height:74px;border-radius:50%;overflow:hidden;flex:none;
+    border:1px solid var(--line);box-shadow:0 0 0 4px rgba(56,226,200,.09)
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .by-name{font-size:1.14rem;font-weight:700;letter-spacing:-.018em;color:var(--txt)}
+  .by-role{font-family:var(--mono);font-size:.76rem;letter-spacing:.07em;color:var(--txt-3);margin-top:4px}
+  .status{
+    display:inline-flex;align-items:center;gap:9px;padding:6px 14px;border-radius:999px;
+    border:1px solid rgba(56,226,200,.35);background:var(--accent-dim);
+    font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.04em;
+    margin-left:auto
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(56,226,200,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(56,226,200,.55)}70%{box-shadow:0 0 0 9px rgba(56,226,200,0)}100%{box-shadow:0 0 0 0 rgba(56,226,200,0)}}
+
+  .hero h1{font-size:clamp(2.3rem,5.2vw,3.6rem);max-width:900px;margin-bottom:20px}
+  .hero h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lede{color:var(--txt-2);font-size:1.08rem;max-width:64ch;margin-bottom:18px}
+  .hero-role{
+    font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--txt-3);
+    padding-top:14px;border-top:1px solid var(--line-soft);max-width:76ch;margin-bottom:0
+  }
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;padding:12px 24px;border-radius:10px;
+    font-weight:600;font-size:.95rem;border:1px solid transparent;transition:transform .16s ease,background .18s ease,border-color .18s ease
+  }
+  .btn:hover{text-decoration:none;transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#04120f}
+  .btn-primary:hover{background:#5cf0d9}
+  .btn-ghost{border-color:var(--line);color:var(--txt)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+  .metric{
+    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);
+    padding:18px 20px;transition:border-color .2s ease,transform .2s ease
+  }
+  .metric:hover{border-color:rgba(56,226,200,.5);transform:translateY(-2px)}
+  .metric .n{font-family:var(--mono);font-size:1.85rem;font-weight:700;color:var(--accent);line-height:1.1}
+  .metric .l{font-size:.83rem;color:var(--txt-3);text-transform:uppercase;letter-spacing:.09em;margin-top:6px}
+
+  .logos{margin-top:26px;padding-top:22px;border-top:1px solid var(--line-soft)}
+  .logos-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-3);margin-bottom:16px}
+  .logos-row{display:flex;flex-wrap:wrap;gap:16px 38px;align-items:center}
+  .client{display:inline-flex;align-items:center;color:var(--txt-3);transition:color .2s ease}
+  .client:hover{color:var(--accent)}
+  .cl-mark{display:block}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+
+  /* ============ About ============ */
+  .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:56px}
+  .about-grid p{color:var(--txt-2)}
+  .about-grid p:first-of-type{font-size:1.1rem;color:var(--txt)}
+  .facts{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:26px;height:fit-content}
+  .facts h3{font-size:.78rem;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .fact{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
+  .fact:last-child{border-bottom:0;padding-bottom:0}
+  .fact dt{color:var(--txt-3)}
+  .fact dd{margin:0;color:var(--txt);text-align:right;font-weight:500}
+  dl.facts-list{margin:0}
+
+  /* ============ Services ============ */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+  .card{
+    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:28px;
+    transition:border-color .2s ease,transform .2s ease,background .2s ease
+  }
+  .card:hover{border-color:rgba(56,226,200,.45);transform:translateY(-3px);background:var(--panel-2)}
+  .card .ico{display:block;margin-bottom:18px;border-radius:9px}
+  .card h3{font-size:1.08rem;margin-bottom:10px}
+  .card p{color:var(--txt-2);font-size:.94rem;margin:0}
+
+  /* ============ Case studies ============ */
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{
+    font-family:var(--mono);font-size:.74rem;padding:4px 11px;border-radius:6px;
+    background:var(--panel-2);border:1px solid var(--line);color:var(--txt-2)
+  }
+  /* ============ Tabbed case studies ============ */
+  .tabs{
+    display:flex;gap:6px;flex-wrap:wrap;margin-bottom:-1px;position:relative;z-index:2
+  }
+  .tab{
+    display:flex;flex-direction:column;gap:3px;align-items:flex-start;
+    background:var(--bg-2);border:1px solid var(--line);border-bottom-color:transparent;
+    border-radius:10px 10px 0 0;padding:13px 20px;cursor:pointer;
+    font-family:inherit;color:var(--txt-2);text-align:left;
+    transition:color .18s ease,background .18s ease,border-color .18s ease
+  }
+  .tab .t-org{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--txt-3);transition:color .18s ease}
+  .tab .t-name{font-size:.94rem;font-weight:600;letter-spacing:-.01em}
+  .tab:hover{color:var(--txt);background:var(--panel-2)}
+  .tab:hover .t-org{color:var(--txt-2)}
+  .tab[aria-selected="true"]{
+    background:var(--panel);color:var(--txt);
+    border-color:var(--line);border-bottom-color:var(--panel);
+    box-shadow:inset 0 2px 0 0 var(--accent)
+  }
+  .tab[aria-selected="true"] .t-org{color:var(--accent)}
+  .tab:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+  .panels{border:1px solid var(--line);background:var(--panel);border-radius:0 var(--radius) var(--radius) var(--radius);padding:34px}
+  .panel[hidden]{display:none}
+  .panel{animation:fadein .3s ease}
+  @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .panel .case-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:8px}
+  .panel .case-head h3{font-size:1.28rem}
+  .panel .case-org{font-family:var(--mono);font-size:.8rem;color:var(--accent);letter-spacing:.05em}
+  .panel .case-meta{font-size:.86rem;color:var(--txt-3);margin-bottom:18px}
+  .panel p.sum{color:var(--txt-2);margin-bottom:20px;max-width:80ch}
+  .panel ul{margin:0 0 22px;padding-left:0;list-style:none;display:grid;gap:11px}
+  .panel li{position:relative;padding-left:24px;color:var(--txt-2);font-size:.95rem;max-width:82ch}
+  .panel li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.65}
+  .panel li b{color:var(--txt);font-weight:600}
+  .panel figure.diagram{background:var(--bg-2)}
+  /* Without JS the tab bar stays hidden and all four panels render in sequence */
+  .cases .tabs{display:none}
+  .cases.js .tabs{display:flex}
+  .cases:not(.js) .panels{border-radius:var(--radius)}
+  .cases:not(.js) .panel + .panel{margin-top:40px;padding-top:40px;border-top:1px solid var(--line)}
+
+  /* ============ Timeline ============ */
+  .tl{position:relative;padding-left:30px}
+  .tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--accent),var(--line) 55%,transparent)}
+  .tl-item{position:relative;padding-bottom:34px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:-28px;top:7px;width:11px;height:11px;border-radius:50%;
+    background:var(--bg-2);border:2px solid var(--line)
+  }
+  .tl-item.now::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 4px var(--accent-dim)}
+  .tl-role{font-size:1.05rem;font-weight:650;margin-bottom:3px}
+  .tl-org{display:flex;align-items:center;gap:11px;flex-wrap:wrap;color:var(--txt-3);margin-top:5px}
+  .tl-mark{display:block;color:var(--txt-2);transition:color .2s ease}
+  .tl-item:hover .tl-mark{color:var(--accent)}
+  .tl-loc{font-family:var(--mono);font-size:.76rem;letter-spacing:.03em}
+  .tl-when{font-family:var(--mono);font-size:.79rem;color:var(--txt-3);margin-top:3px;letter-spacing:.03em}
+  .tl-note{color:var(--txt-2);font-size:.93rem;margin-top:8px;max-width:70ch}
+
+  /* ============ Tech logo grid ============ */
+  .logo-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));
+    gap:12px;margin-bottom:38px
+  }
+  .logo{
+    border:1px solid var(--line);background:var(--panel);border-radius:12px;
+    padding:18px 8px 14px;text-align:center;
+    transition:border-color .2s ease,background .2s ease,transform .2s ease
+  }
+  .logo:hover{border-color:rgba(56,226,200,.45);background:var(--panel-2);transform:translateY(-2px)}
+  .logo svg{width:30px;height:30px;display:block;margin:0 auto 11px;color:var(--brand,var(--txt-2));
+    filter:saturate(.9);transition:filter .2s ease,transform .2s ease}
+  .logo:hover svg{filter:saturate(1.15);transform:scale(1.06)}
+  .logo .nm{font-family:var(--mono);font-size:.74rem;color:var(--txt-3);letter-spacing:.02em;transition:color .2s ease}
+  .logo:hover .nm{color:var(--txt-2)}
+
+  /* ============ Architecture diagrams ============ */
+  figure.diagram{
+    margin:30px 0 0;border:1px solid var(--line);background:var(--panel);
+    border-radius:var(--radius);padding:22px 22px 18px
+  }
+  .diagram-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .diagram-scroll svg{width:100%;min-width:680px;height:auto;display:block}
+  .diagram figcaption{
+    margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft);
+    font-size:.85rem;color:var(--txt-3);line-height:1.55
+  }
+  .diagram figcaption b{color:var(--txt-2);font-weight:600}
+  .d-box{fill:var(--panel-2);stroke:var(--line);stroke-width:1.2}
+  .d-box.hi{fill:rgba(56,226,200,.09);stroke:rgba(56,226,200,.45)}
+  .d-band{fill:rgba(255,255,255,.018);stroke:var(--line-soft);stroke-width:1.2;stroke-dasharray:5 5}
+  .d-t{fill:var(--txt);font-family:var(--sans);font-size:13px;font-weight:600}
+  .d-s{fill:var(--txt-3);font-family:var(--mono);font-size:10.5px}
+  .d-h{fill:var(--accent);font-family:var(--mono);font-size:10.5px;letter-spacing:.14em}
+  .d-line{stroke:var(--line);stroke-width:1.6;fill:none}
+  .d-line.dash{stroke:var(--line-soft);stroke-dasharray:5 5}
+  .d-line.acc{stroke:rgba(56,226,200,.6)}
+
+  /* ============ Skills ============ */
+  .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}
+  .skill{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:24px}
+  .skill h3{font-size:.79rem;font-family:var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:.83rem;padding:5px 12px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);color:var(--txt-2)}
+
+  /* ============ Certifications ============ */
+  .cert-feature{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cert-feat{
+    display:grid;grid-template-columns:88px 1fr;gap:20px;align-items:start;
+    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);
+    padding:26px 24px;color:inherit;
+    transition:border-color .2s ease,background .2s ease,transform .2s ease
+  }
+  .cert-feat:hover{border-color:rgba(56,226,200,.45);background:var(--panel-2);transform:translateY(-3px);text-decoration:none}
+  .cf-art{
+    display:block;width:88px;height:88px;background-image:var(--badge);
+    background-size:contain;background-repeat:no-repeat;background-position:center
+  }
+  .cf-body{min-width:0}
+  .cf-name{font-size:1.05rem;font-weight:650;line-height:1.3;color:var(--txt);text-wrap:balance}
+  .cf-issuer{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin-top:7px}
+  .cf-note{margin:12px 0 0;font-size:.88rem;line-height:1.55;color:var(--txt-3)}
+
+  .cert-rule{display:flex;align-items:center;gap:18px;margin:44px 0 26px}
+  .cert-rule::before,.cert-rule::after{content:"";flex:1;height:1px;background:var(--line)}
+  .cert-rule span{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-3)}
+
+  .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .cert{
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;
+    padding:20px 12px 16px;border-radius:12px;color:inherit;border:1px solid transparent;
+    transition:background .2s ease,border-color .2s ease,transform .2s ease
+  }
+  .cert:hover{background:var(--panel);border-color:var(--line);transform:translateY(-2px);text-decoration:none}
+  .c-art{
+    display:block;width:74px;height:74px;margin-bottom:11px;background-image:var(--badge);
+    background-size:contain;background-repeat:no-repeat;background-position:center;
+    filter:saturate(.92);transition:filter .2s ease
+  }
+  .cert:hover .c-art{filter:saturate(1.05)}
+  .c-name{font-size:.85rem;font-weight:600;line-height:1.3;color:var(--txt-2);
+    min-height:2.6em;display:flex;align-items:center;justify-content:center}
+  .cert:hover .c-name{color:var(--txt)}
+  .c-lv{font-family:var(--mono);font-size:.63rem;letter-spacing:.11em;text-transform:uppercase;color:var(--txt-3)}
+  .cert-verify{text-align:center;margin:34px 0 0}
+  .edu-block{margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+
+  /* ============ Education ============ */
+  .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .edu{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:24px}
+  .edu .deg{font-weight:650;margin-bottom:5px}
+  .edu .inst{color:var(--txt-2);font-size:.92rem}
+  .edu .yr{font-family:var(--mono);font-size:.78rem;color:var(--txt-3);margin-top:8px}
+
+
+  /* ============ Contact ============ */
+  .contact{text-align:center}
+  .contact .sec-lead{margin-left:auto;margin-right:auto}
+  .contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+  .cc{
+    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:26px 20px;
+    display:block;color:inherit;transition:border-color .2s ease,transform .2s ease
+  }
+  .cc:hover{border-color:var(--accent);transform:translateY(-3px);text-decoration:none}
+  .cc svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+  .cc .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--txt-3);margin-bottom:6px}
+  .cc .v{font-size:.94rem;font-weight:550;word-break:break-word}
+
+  /* ============ Footer ============ */
+  footer{border-top:1px solid var(--line-soft);padding:34px 0;background:var(--bg)}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;font-size:.86rem;color:var(--txt-3)}
+  .foot a{color:var(--txt-3)}
+  .foot a:hover{color:var(--accent)}
+
+  /* ============ Reveal ============ */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+
+
+
+  /* ============ Responsive ============ */
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:44px}
+    .cert-feature{grid-template-columns:1fr}
+    .cert-feat{grid-template-columns:76px 1fr;gap:18px;padding:22px 20px}
+    .metrics{grid-template-columns:repeat(2,1fr);margin-top:44px}
+  }
+  @media (max-width:720px){
+    section{padding:68px 0}
+    .hero{padding:44px 0 48px}
+    .status{margin-left:0;order:3}
+    .byline{gap:14px;margin-bottom:32px}
+    .avatar{width:62px;height:62px}
+    .nav-toggle{display:block}
+    .nav-links{
+      display:none;position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;align-items:stretch;gap:0;
+      background:var(--bg-2);border-bottom:1px solid var(--line);padding:8px 24px 18px
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 0;border-bottom:1px solid var(--line-soft)}
+    .nav-cta{text-align:center;margin-top:12px;border-bottom:0 !important}
+    .panels{padding:24px 20px}
+    .fact{flex-direction:column;gap:2px}
+    .fact dd{text-align:left}
+  }
+  @media (max-width:480px){
+    .btn{width:100%;justify-content:center}
+    .cert-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important}
+    html{scroll-behavior:auto}
+    .rv{opacity:1;transform:none}
+  }
+  @media print{
+    body{background:#fff;color:#000}
+    .nav,.btns,footer,body::before{display:none}
+    section{padding:20px 0;background:#fff !important;border:0}
+    .avatar{width:64px;height:64px}
+    .panel,.diagram,.cert,.cert-feat{break-inside:avoid}
+    .tabs{display:none !important}
+    .panel[hidden]{display:block !important}
+    .panel + .panel{margin-top:26px;padding-top:26px;border-top:1px solid #ccc}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Shared arrow markers + AWS/tooling service icons, referenced by every diagram -->
+<svg width="0" height="0" style="position:absolute;left:-9999px" aria-hidden="true" focusable="false"><defs>
+<marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#8b9bb0"/></marker>
+<marker id="arwa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#38e2c8" opacity=".85"/></marker>
+<symbol id="ic-s3" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#7AA116"/><ellipse cx="24" cy="15" rx="10" ry="3.2" fill="#fff"/><path d="M14 15.5v18c0 1.9 4.5 3.4 10 3.4s10-1.5 10-3.4v-18c0 1.8-4.5 3.2-10 3.2s-10-1.4-10-3.2z" fill="#fff"/><path d="M18.5 23h11M18.5 28h11" stroke="#7AA116" stroke-width="1.7" stroke-linecap="round"/></symbol>
+<symbol id="ic-eks" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><path d="M24 11.5 34.6 16.6 32 28.4 24 34.2 16 28.4 13.4 16.6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="22.5" r="3.5" fill="#fff"/><path d="M24 19v-4.3M27 20.6l4-2.1M27.5 24.9l4.1 1.4M24 26v4.4M21 24.9l-4.1 1.4M20.9 20.6l-4-2.1" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
+<symbol id="ic-lambda" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><path d="M13.5 34 24 13.5h3.6L38 34h-5.2l-7-14.9L20.6 30h6.6l1.9 4z" fill="#fff"/></symbol>
+<symbol id="ic-ecr" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><rect x="12.5" y="19" width="8.6" height="7.6" rx="1" fill="#fff"/><rect x="22.7" y="19" width="8.6" height="7.6" rx="1" fill="#fff"/><rect x="17.6" y="10.6" width="8.6" height="7.6" rx="1" fill="#fff"/><rect x="32.9" y="19" width="4" height="7.6" rx="1" fill="#fff"/><path d="M10.5 29.5h27c0 3.8-4.8 6.4-11.5 6.4S13 33 10.5 29.5z" fill="#fff"/></symbol>
+<symbol id="ic-rds" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#527FFF"/><ellipse cx="24" cy="15.5" rx="10" ry="3.6" fill="#fff"/><path d="M14 15.5v17c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5v-17" fill="#fff"/><path d="M14 21.4c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5M14 27c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5" stroke="#527FFF" stroke-width="1.6" fill="none"/></symbol>
+<symbol id="ic-vpc" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><path d="M16.5 32.5a6.6 6.6 0 0 1-.8-13.1 8.7 8.7 0 0 1 16.7-1.6 6.1 6.1 0 0 1 1.1 14.7z" fill="#fff"/><rect x="18.2" y="24" width="5.2" height="5.2" rx="1" fill="#8C4FFF"/><rect x="25.2" y="24" width="5.2" height="5.2" rx="1" fill="#8C4FFF"/></symbol>
+<symbol id="ic-cloudfront" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><circle cx="24" cy="24" r="11" fill="none" stroke="#fff" stroke-width="2.2"/><ellipse cx="24" cy="24" rx="4.6" ry="11" fill="none" stroke="#fff" stroke-width="1.7"/><path d="M13.4 20.5h21.2M13.4 27.5h21.2" stroke="#fff" stroke-width="1.7"/></symbol>
+<symbol id="ic-apigw" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M15 13.5v21M33 13.5v21" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M19.5 24h9" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M25.5 20.5 29 24l-3.5 3.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-tgw" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><circle cx="24" cy="24" r="5" fill="#fff"/><path d="M24 19v-6M24 29v6M19 24h-6M29 24h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="11.5" r="2.6" fill="#fff"/><circle cx="24" cy="36.5" r="2.6" fill="#fff"/><circle cx="11.5" cy="24" r="2.6" fill="#fff"/><circle cx="36.5" cy="24" r="2.6" fill="#fff"/></symbol>
+<symbol id="ic-iam" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><path d="M24 11 34 14.5V24c0 6.6-4.3 10.6-10 12.5C18.3 34.6 14 30.6 14 24v-9.5z" fill="#fff"/><circle cx="24" cy="21" r="3.1" fill="#DD344C"/><path d="M18.6 30.4c1-2.7 2.9-4.1 5.4-4.1s4.4 1.4 5.4 4.1z" fill="#DD344C"/></symbol>
+<symbol id="ic-kms" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><circle cx="19.5" cy="20" r="6" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M23.5 24.3 34 34.8M30 31l-3 3M27 28l-3 3" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></symbol>
+<symbol id="ic-cloudtrail" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M12 30c4-9 8-13 12-13s8 4 12 13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="4.2" fill="#fff"/></symbol>
+<symbol id="ic-orgs" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><rect x="18.8" y="10" width="10.4" height="7.2" rx="1.4" fill="#fff"/><rect x="9.6" y="30.8" width="10.4" height="7.2" rx="1.4" fill="#fff"/><rect x="28" y="30.8" width="10.4" height="7.2" rx="1.4" fill="#fff"/><path d="M24 17.2v7.4M14.8 30.8v-6.2h18.4v6.2" fill="none" stroke="#fff" stroke-width="1.9"/></symbol>
+<symbol id="ic-controltower" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M24 9 33 14v4H15v-4z" fill="#fff"/><rect x="18" y="21" width="12" height="6" rx="1.2" fill="#fff"/><rect x="14.5" y="30" width="19" height="6" rx="1.2" fill="#fff"/></symbol>
+<symbol id="ic-cloudwatch" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><circle cx="24" cy="24" r="12" fill="none" stroke="#fff" stroke-width="2.2"/><path d="M15 26.4l4-4.9 3.4 3.5 4-7.9 3 6.3 3.6-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-stepfn" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><rect x="10.5" y="11.5" width="11" height="7" rx="1.4" fill="#fff"/><rect x="26.5" y="20.5" width="11" height="7" rx="1.4" fill="#fff"/><rect x="10.5" y="29.5" width="11" height="7" rx="1.4" fill="#fff"/><path d="M21.5 15h4a1.5 1.5 0 0 1 1.5 1.5v4M26.5 24h-4a1.5 1.5 0 0 0-1.5 1.5v4" fill="none" stroke="#fff" stroke-width="1.8"/></symbol>
+<symbol id="ic-kinesis" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><path d="M10.5 16.5h14M10.5 24h20M10.5 31.5h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M27 13 33.5 16.5 27 20zM33 28 39.5 31.5 33 35z" fill="#fff"/></symbol>
+<symbol id="ic-emr" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><rect x="11.5" y="26" width="6.2" height="10.5" rx="1" fill="#fff"/><rect x="20.9" y="19" width="6.2" height="17.5" rx="1" fill="#fff"/><rect x="30.3" y="11.5" width="6.2" height="25" rx="1" fill="#fff"/></symbol>
+<symbol id="ic-sagemaker" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#01A88D"/><circle cx="14.5" cy="17" r="3.4" fill="#fff"/><circle cx="14.5" cy="31" r="3.4" fill="#fff"/><circle cx="25.5" cy="24" r="3.6" fill="#fff"/><circle cx="36" cy="17" r="3.4" fill="#fff"/><circle cx="36" cy="31" r="3.4" fill="#fff"/><path d="M17.7 18.4 22.4 22.3M17.7 29.6 22.4 25.7M28.8 22.3 32.9 18.6M28.8 25.7 32.9 29.4" stroke="#fff" stroke-width="1.7"/></symbol>
+<symbol id="ic-annotate" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#01A88D"/><rect x="11.5" y="13.5" width="25" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="16.5" y="18.5" width="9.5" height="7.5" rx="1" fill="none" stroke="#fff" stroke-width="1.8" stroke-dasharray="2.6 2"/><path d="M27.5 28.5l3.6-3.6 2.6 2.6-3.6 3.6h-2.6z" fill="#fff"/></symbol>
+<symbol id="ic-transfer" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#01A88D"/><path d="M13 19h18l-4.6-4.6M35 29H17l4.6 4.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-secrets" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><rect x="14" y="21" width="20" height="15" rx="2.2" fill="#fff"/><path d="M18.5 21v-4a5.5 5.5 0 0 1 11 0v4" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="24" cy="28.5" r="2.4" fill="#DD344C"/></symbol>
+<symbol id="ic-onprem" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#5A6B7B"/><rect x="12" y="12" width="24" height="7" rx="1.4" fill="#fff"/><rect x="12" y="20.5" width="24" height="7" rx="1.4" fill="#fff"/><rect x="12" y="29" width="24" height="7" rx="1.4" fill="#fff"/><circle cx="16.5" cy="15.5" r="1.3" fill="#5A6B7B"/><circle cx="16.5" cy="24" r="1.3" fill="#5A6B7B"/><circle cx="16.5" cy="32.5" r="1.3" fill="#5A6B7B"/></symbol>
+<symbol id="ic-camera" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#5A6B7B"/><path d="M10.5 17h17a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-17a2 2 0 0 1-2-2V19a2 2 0 0 1 2-2z" fill="#fff"/><path d="M31.5 22.4 39.5 18v12l-8-4.4z" fill="#fff"/></symbol>
+<symbol id="ic-user" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#5A6B7B"/><circle cx="24" cy="18" r="6" fill="#fff"/><path d="M12 37c1.5-7 6-10.5 12-10.5S34.5 30 36 37z" fill="#fff"/></symbol>
+<symbol id="ic-policy" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><path d="M15 10.5h13l6.5 6.5V37a1.6 1.6 0 0 1-1.6 1.6H15A1.6 1.6 0 0 1 13.4 37V12.1A1.6 1.6 0 0 1 15 10.5z" fill="#fff"/><path d="M28 10.5V17h6.5" fill="none" stroke="#DD344C" stroke-width="1.8"/><path d="M18 27.5l3.2 3.2 7.3-7.3" fill="none" stroke="#DD344C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-proposal" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M14.5 10.5h19a1.6 1.6 0 0 1 1.6 1.6V37a1.6 1.6 0 0 1-1.6 1.6h-19A1.6 1.6 0 0 1 12.9 37V12.1a1.6 1.6 0 0 1 1.6-1.6z" fill="#fff"/><path d="M17.5 17.5h13M17.5 22.5h13M17.5 27.5h7" stroke="#E7157B" stroke-width="1.9" stroke-linecap="round"/><circle cx="29.5" cy="30.5" r="3.6" fill="#E7157B"/></symbol>
+<symbol id="ic-terraform" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#7B42BC"/><path d="M11.5 12.5 20 17.4v9.7l-8.5-4.9z" fill="#fff"/><path d="M21.4 18.2 29.9 23.1v9.7l-8.5-4.9z" fill="#fff"/><path d="M31.3 23.1 39.8 18.2v9.7l-8.5 4.9z" fill="#fff"/></symbol>
+<symbol id="ic-github" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#2B3137"/><path d="M24 10a14 14 0 0 0-4.4 27.3c.7.1 1-.3 1-.7v-2.4c-3.9.8-4.7-1.9-4.7-1.9-.6-1.6-1.6-2.1-1.6-2.1-1.3-.9.1-.9.1-.9 1.4.1 2.1 1.4 2.1 1.4 1.3 2.2 3.4 1.6 4.2 1.2.1-.9.5-1.6.9-1.9-3.1-.4-6.4-1.6-6.4-7 0-1.5.6-2.8 1.4-3.8-.1-.4-.6-1.8.2-3.8 0 0 1.2-.4 3.8 1.4a13 13 0 0 1 7 0c2.6-1.8 3.8-1.4 3.8-1.4.8 2 .3 3.4.2 3.8.9 1 1.4 2.3 1.4 3.8 0 5.4-3.3 6.6-6.4 7 .5.4 1 1.3 1 2.6v3.9c0 .4.3.8 1 .7A14 14 0 0 0 24 10z" fill="#fff"/></symbol>
+<symbol id="ic-ghactions" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#2088FF"/><circle cx="24" cy="24" r="11.5" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M20.8 18.6 29.8 24l-9 5.4z" fill="#fff"/></symbol>
+<symbol id="ic-argocd" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#EF7B4D"/><circle cx="24" cy="20" r="7.8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="21.2" cy="19" r="1.6" fill="#fff"/><circle cx="26.8" cy="19" r="1.6" fill="#fff"/><path d="M18.6 26.3c-1.3 4.3-3.3 6.9-5.4 8.3M22 27.8c-.6 4.9-1.6 7.7-3 9.4M26 27.8c.6 4.9 1.6 7.7 3 9.4M29.4 26.3c1.3 4.3 3.3 6.9 5.4 8.3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="ic-helm" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#0F1689"/><circle cx="24" cy="24" r="9" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="24" cy="24" r="3.2" fill="#fff"/><path d="M24 11.5v3.6M24 32.9v3.6M13.2 17.8l3.1 1.8M31.7 28.4l3.1 1.8M13.2 30.2l3.1-1.8M31.7 19.6l3.1-1.8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="ic-grafana" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#F46800"/><path d="M25 9c1.2 5.6-3.4 6.8-6.3 10.2-2.9 3.4-4 6.8-3.4 10.2 1.2 5.6 5.5 9.6 10.6 9.6 5.6 0 10.2-4.6 10.2-10.2 0-3.4-1.7-6.4-4.2-8.4.4 2.3-.7 3.9-2.2 4.7.8-5.1-2-9.9-4.7-16.1z" fill="#fff"/></symbol>
+<symbol id="ic-gitlab" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><path d="M24 38 16.6 22h14.8z" fill="#fff"/><path d="M24 38 9.2 22h7.4z" fill="#fff" opacity=".75"/><path d="M24 38 38.8 22h-7.4z" fill="#fff" opacity=".75"/><path d="M9.2 22 11.6 12 16.6 22z" fill="#fff" opacity=".55"/><path d="M38.8 22 36.4 12 31.4 22z" fill="#fff" opacity=".55"/></symbol>
+<symbol id="ic-azure" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#0078D4"/><path d="M19.5 11h9l12.5 26H25.5l7-4.2H14z" fill="#fff"/></symbol>
+<symbol id="ic-sysdig" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#00AEC7"/><circle cx="24" cy="24" r="11.5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="24" cy="24" r="4.5" fill="#fff"/><path d="M24 12.5v-4M24 39.5v-4M12.5 24h-4M39.5 24h-4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="ic-k8s" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#326CE5"/><path d="M24 11.5 34.6 16.6 32 28.4 24 34.2 16 28.4 13.4 16.6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="22.5" r="3.5" fill="#fff"/></symbol>
+<symbol id="ic-budget" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M11 34h26" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><rect x="13" y="22" width="6" height="9" rx="1" fill="#fff"/><rect x="22" y="16" width="6" height="15" rx="1" fill="#fff"/><rect x="31" y="25" width="6" height="6" rx="1" fill="#fff"/><path d="M13 19l8-6 7 4 8-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/></symbol><symbol id="wm-milestone" viewBox="0 0 150 28"><path d="M4 22V6l6.5 10L17 6v16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><text x="24" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="16" font-weight="600" letter-spacing="-.3" fill="currentColor">Milestone</text></symbol><symbol id="wm-nvidia" viewBox="0 0 132 28"><path d="M4 14c4.6-5.4 10-8 16.5-8 7 0 12 3.4 12 8s-5 8-12 8c-6.5 0-11.9-2.6-16.5-8z" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="19" cy="14" r="4.4" fill="currentColor"/><text x="40" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="15.5" font-weight="700" letter-spacing="1.2" fill="currentColor">NVIDIA</text></symbol><symbol id="wm-lego" viewBox="0 0 88 28"><rect x="3" y="4" width="24" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="10" cy="10" r="2.1" fill="currentColor"/><circle cx="20" cy="10" r="2.1" fill="currentColor"/><circle cx="10" cy="18" r="2.1" fill="currentColor"/><circle cx="20" cy="18" r="2.1" fill="currentColor"/><text x="34" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="17" font-weight="700" letter-spacing=".6" fill="currentColor">LEGO</text></symbol><symbol id="wm-agillic" viewBox="0 0 106 28"><path d="M14 5 25 23H3z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="16" font-weight="600" letter-spacing="-.2" fill="currentColor">Agillic</text></symbol><symbol id="wm-knowit" viewBox="0 0 100 28"><path d="M5 5v18M5 14 16 5M5 14l11 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="16" font-weight="600" letter-spacing="-.2" fill="currentColor">Knowit</text></symbol><symbol id="wm-simplesite" viewBox="0 0 126 28"><rect x="3" y="6" width="20" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 11h20" stroke="currentColor" stroke-width="2.2"/><circle cx="7.5" cy="8.6" r="1.1" fill="currentColor"/><text x="30" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="15" font-weight="600" letter-spacing="-.2" fill="currentColor">SimpleSite</text></symbol><symbol id="wm-kings" viewBox="0 0 132 28"><path d="M4 22V9l5 5 5-8 5 8 5-5v13z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="14.5" font-weight="600" letter-spacing="-.2" fill="currentColor">King’s College</text></symbol><symbol id="wm-sana" viewBox="0 0 136 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M14 4v20M4 14h20" stroke="currentColor" stroke-width="2.2"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="14.5" font-weight="600" letter-spacing="-.2" fill="currentColor">Sana Tech</text></symbol><symbol id="wm-independent" viewBox="0 0 156 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="3.4 3"/><circle cx="14" cy="14" r="3.4" fill="currentColor"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="14.5" font-weight="600" letter-spacing="-.2" fill="currentColor">Independent</text></symbol></defs></svg>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark">AA</span> Abdalrahman Attya</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Case Studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="wrap">
+
+    <div class="byline">
+      <span class="avatar">
+        <picture>
+          <source type="image/webp" srcset="assets/avatar.webp 1x, assets/avatar@2x.webp 2x">
+          <img src="assets/avatar.jpg" srcset="assets/avatar.jpg 1x, assets/avatar@2x.jpg 2x"
+               width="74" height="74" alt="Abdalrahman Attya" fetchpriority="high" decoding="async">
+        </picture>
+      </span>
+      <div>
+        <div class="by-name">Abdalrahman Attya</div>
+        <div class="by-role">Principal Cloud Architect · Copenhagen · London</div>
+      </div>
+      <span class="status"><span class="dot"></span> Available</span>
+    </div>
+
+    <h1>Cloud architecture that <span class="grad">ships</span>, scales and stays secure.</h1>
+
+    <p class="lede">15 years in IT, 8 of them designing cloud platforms on AWS and Azure. I connect business strategy
+          to practical engineering delivery — landing zones, secure multi-account foundations, CI/CD, and
+          AI/ML workload enablement for organisations including Milestone Systems, NVIDIA, LEGO and Agillic.</p>
+
+    <p class="hero-role">AWS &amp; Azure · Platform Engineering · AI &amp; Data Platforms · AI-Assisted Delivery · Security &amp; DevOps</p>
+
+<div class="btns">
+        <a class="btn btn-primary" href="#contact">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
+        Start a conversation
+        </a>
+        <a class="btn btn-ghost" href="Abdalrahman-Attya-CV.pdf" download>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Download CV
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="n">15</div><div class="l">Years in IT</div></div>
+      <div class="metric"><div class="n">8</div><div class="l">Years cloud architecture</div></div>
+      <div class="metric"><div class="n">14</div><div class="l">AWS &amp; Azure certifications</div></div>
+      <div class="metric"><div class="n">85%</div><div class="l">Ops cost reduction delivered</div></div>
+    </div>
+
+    <div class="logos">
+      <div class="logos-label">Selected organisations</div>
+      <div class="logos-row">
+        <span class="client" title="Milestone Systems"><svg class="cl-mark" width="118" height="22" aria-hidden="true"><use href="#wm-milestone"/></svg><span class="sr">Milestone Systems</span></span>
+        <span class="client" title="NVIDIA"><svg class="cl-mark" width="104" height="22" aria-hidden="true"><use href="#wm-nvidia"/></svg><span class="sr">NVIDIA</span></span>
+        <span class="client" title="LEGO"><svg class="cl-mark" width="69" height="22" aria-hidden="true"><use href="#wm-lego"/></svg><span class="sr">LEGO</span></span>
+        <span class="client" title="Agillic"><svg class="cl-mark" width="83" height="22" aria-hidden="true"><use href="#wm-agillic"/></svg><span class="sr">Agillic</span></span>
+        <span class="client" title="Knowit"><svg class="cl-mark" width="79" height="22" aria-hidden="true"><use href="#wm-knowit"/></svg><span class="sr">Knowit</span></span>
+        <span class="client" title="SimpleSite"><svg class="cl-mark" width="99" height="22" aria-hidden="true"><use href="#wm-simplesite"/></svg><span class="sr">SimpleSite</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="wrap rv">
+    <div class="eyebrow">About</div>
+    <h2 class="sec-title">Strategy on one side, working systems on the other.</h2>
+    <div class="about-grid">
+      <div>
+        <p>
+          I'm a Principal Cloud Architect based between Copenhagen and London. I specialise in designing
+          secure, scalable and cost-efficient cloud platforms — the kind an engineering team can still operate six months after the
+          architecture diagrams are filed away.
+        </p>
+        <p>
+          My background spans cloud architecture, platform engineering, DevOps automation, security, data
+          platforms and AI/ML workload enablement. I've led cloud-native initiatives across SaaS, video
+          management, retail and technology environments.
+        </p>
+        <p>
+          Most recently at Milestone Systems I led the cloud architecture for <b style="color:var(--txt)">Project Hafnia</b>,
+          a collaboration with NVIDIA focused on enabling visual AI model development using high-quality,
+          regulation-compliant video data — owning the architecture from concept through production deployment.
+        </p>
+        <p>
+          I work hands-on. Alongside client engagements I designed and built the
+          <a href="#work">Secure Self-Service Cloud Platform</a> — an open-source internal developer platform
+          for provisioning policy-compliant Kubernetes environments on AWS or Azure, with policy-as-code,
+          deterministic review artifacts and fail-closed deployment workflows.
+        </p>
+        <p>
+          I work AI-assisted, and I'm deliberate about it. Agentic tooling has changed how much ground
+          one architect can cover — scaffolding infrastructure code, interrogating a policy surface,
+          producing the review artifacts that used to take a week. What it hasn't changed is who is
+          accountable for the decision, and that is the part I keep.
+        </p>
+        <p>
+          The through-line: I take a problem nobody has framed yet, turn it into a decision someone can
+          disagree with in writing, and then build the thing.
+        </p>
+      </div>
+      <div class="facts">
+        <h3>At a glance</h3>
+        <dl class="facts-list">
+          <div class="fact"><dt>Based</dt><dd>Copenhagen · London</dd></div>
+          <div class="fact"><dt>Focus</dt><dd>AWS &amp; Azure architecture</dd></div>
+          <div class="fact"><dt>Availability</dt><dd>Senior / lead roles &amp; consulting</dd></div>
+          <div class="fact"><dt>Work authorisation</dt><dd>DK &amp; UK — no sponsorship needed</dd></div>
+          <div class="fact"><dt>Education</dt><dd>MSc Cloud Computing</dd></div>
+          <div class="fact"><dt>Languages</dt><dd>Arabic (native) · English (fluent) · Danish (beginner)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services">
+  <div class="wrap rv">
+    <div class="eyebrow">Services · How I work</div>
+    <h2 class="sec-title">What I'm brought in to do</h2>
+    <p class="sec-lead">Engagements typically start with an assessment, produce a clear set of architecture decisions, and end with something running. I work AI-assisted throughout, which mostly shows up as pace.</p>
+    <div class="cards">
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-vpc"/></svg>
+        <h3>Cloud Architecture &amp; Strategy</h3>
+        <p>Target-state architecture for AWS and Azure: solution design, cloud strategy, technology selection, and the decision records that keep teams aligned six months later.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-controltower"/></svg>
+        <h3>Landing Zones &amp; Multi-Account Foundations</h3>
+        <p>AWS Organizations, Control Tower, account strategy, centralised logging, guardrails, tagging standards and cost governance built in from day one.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-iam"/></svg>
+        <h3>Cloud Security &amp; Governance</h3>
+        <p>Security by design: IAM and Entra ID models, network segmentation, secrets management, AWS Config and CloudTrail, plus compliance-focused operating practices.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-transfer"/></svg>
+        <h3>Migration &amp; Modernisation</h3>
+        <p>Assessment, migration planning and execution for business-critical workloads — plus re-platforming and refactoring toward genuinely cloud-native operation.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-eks"/></svg>
+        <h3>Platform Engineering &amp; DevOps</h3>
+        <p>Terraform, CDK, Bicep and CloudFormation; CI/CD with GitHub Actions, GitLab CI, Azure DevOps and Argo CD; Kubernetes and EKS workload platforms teams enjoy using.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-sagemaker"/></svg>
+        <h3>AI &amp; Data Platform Enablement</h3>
+        <p>Large-scale ingestion, streaming pipelines, annotation and labelling workflows, data governance, and ML training platforms on SageMaker and Kinesis Video Streams.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-budget"/></svg>
+        <h3>FinOps &amp; Cost Optimisation</h3>
+        <p>Spend analysis, right-sizing, architecture-level cost redesign and governance so savings hold after the engagement ends. Previously delivered an 85% ops cost reduction.</p>
+      </div>
+
+      <div class="card">
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-cloudwatch"/></svg>
+        <h3>Observability &amp; Operational Readiness</h3>
+        <p>CloudWatch, Grafana, ELK, Datadog and Sysdig; SLOs, alerting, incident response and disaster recovery patterns that hold up under real load.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CASE STUDIES ===================== -->
+<section id="work">
+  <div class="wrap rv">
+    <div class="eyebrow">Case studies</div>
+    <h2 class="sec-title">Selected work</h2>
+    <p class="sec-lead">Four engagements, each with the architecture that made it work. Select a project to read it.</p>
+
+    <div class="cases" id="cases">
+      <div class="tabs" role="tablist" aria-label="Case studies">
+        <button class="tab" role="tab" id="tab-ssp" aria-controls="panel-ssp"
+                aria-selected="true" tabindex="0">
+          <span class="t-org">Open source</span><span class="t-name">Self-Service Platform</span>
+        </button>
+        <button class="tab" role="tab" id="tab-hafnia" aria-controls="panel-hafnia"
+                aria-selected="false" tabindex="-1">
+          <span class="t-org">Milestone × NVIDIA</span><span class="t-name">Project Hafnia</span>
+        </button>
+        <button class="tab" role="tab" id="tab-gitops" aria-controls="panel-gitops"
+                aria-selected="false" tabindex="-1">
+          <span class="t-org">LEGO</span><span class="t-name">Distribution Hub</span>
+        </button>
+        <button class="tab" role="tab" id="tab-agillic" aria-controls="panel-agillic"
+                aria-selected="false" tabindex="-1">
+          <span class="t-org">Agillic</span><span class="t-name">Cloud Modernisation</span>
+        </button>
+      </div>
+      <div class="panels">
+      <div class="panel" role="tabpanel" id="panel-ssp" aria-labelledby="tab-ssp">
+        <div class="case-head">
+          <h3>Secure Self-Service Cloud Platform</h3>
+          <span class="case-org">Open source · MIT · v1.0.0</span>
+        </div>
+        <div class="case-meta">Designer &amp; author · <a href="https://github.com/abdalrahmanattya/secure-self-service-cloud-platform" target="_blank" rel="noopener">github.com/abdalrahmanattya</a></div>
+        <p class="sum">An internal developer platform for requesting secure, policy-compliant Kubernetes environments on AWS or Azure. Developers request through a portal, API or CLI; every request is evaluated against policy and turned into a deterministic, reviewable proposal. Execution is deliberately handed off to protected, approval-gated workflows.</p>
+
+        <figure class="diagram">
+          <div class="diagram-scroll"><svg viewBox="0 0 1020 372" role="img" aria-labelledby="dgSspt dgSspd"><title id="dgSspt">Secure Self-Service Cloud Platform request flow</title><desc id="dgSspd">A developer submits a request through the portal, API or CLI. A policy engine evaluates it and either returns field-level feedback or produces a deterministic proposal. The proposal is reviewed in GitHub, then a protected workflow plans, gains approval and applies against an AWS or Azure Terraform root.</desc><text x="20" y="20" class="d-h">REQUEST &#8594; POLICY &#8594; PROPOSAL &#8594; PROTECTED APPLY</text><use href="#ic-user" x="55" y="44" width="46" height="46"/><text x="78" y="107" class="d-t" text-anchor="middle">Developer</text><text x="78" y="123" class="d-s" text-anchor="middle">portal · API · CLI</text><use href="#ic-policy" x="235" y="44" width="46" height="46"/><text x="258" y="107" class="d-t" text-anchor="middle">Policy engine</text><text x="258" y="123" class="d-s" text-anchor="middle">cost · network</text><text x="258" y="138" class="d-s" text-anchor="middle">encryption · expiry</text><use href="#ic-proposal" x="415" y="44" width="46" height="46"/><text x="438" y="107" class="d-t" text-anchor="middle">Proposal</text><text x="438" y="123" class="d-s" text-anchor="middle">IDs · hashes</text><text x="438" y="138" class="d-s" text-anchor="middle">expected resources</text><use href="#ic-github" x="595" y="44" width="46" height="46"/><text x="618" y="107" class="d-t" text-anchor="middle">Human review</text><text x="618" y="123" class="d-s" text-anchor="middle">pull request</text><text x="618" y="138" class="d-s" text-anchor="middle">required approval</text><use href="#ic-ghactions" x="789" y="44" width="46" height="46"/><text x="812" y="107" class="d-t" text-anchor="middle">Protected workflow</text><text x="812" y="123" class="d-s" text-anchor="middle">plan → approve → apply</text><text x="812" y="138" class="d-s" text-anchor="middle">short-lived OIDC</text><path d="M114 67H222" class="d-line" marker-end="url(#arw)"/><path d="M294 67H402" class="d-line" marker-end="url(#arw)"/><path d="M474 67H582" class="d-line acc" marker-end="url(#arwa)"/><path d="M654 67H776" class="d-line acc" marker-end="url(#arwa)"/><path d="M258 152v30H78v-24" class="d-line dash" marker-end="url(#arw)"/><text x="168" y="198" class="d-s" text-anchor="middle">denied &#8594; field-level feedback</text><path d="M528 32v186" class="d-line dash"/><text x="400" y="236" class="d-h" text-anchor="middle">SAFETY BOUNDARY</text><text x="400" y="254" class="d-s" text-anchor="middle">`terraform apply` is never exposed to the portal, API or CLI</text><path d="M812 152v96" class="d-line"/><path d="M640 248h240" class="d-line"/><path d="M640 248v18M880 248v18" class="d-line" marker-end="url(#arw)"/><use href="#ic-terraform" x="617" y="274" width="46" height="46"/><text x="640" y="337" class="d-t" text-anchor="middle">AWS Terraform root</text><text x="640" y="353" class="d-s" text-anchor="middle">VPC · EKS · IAM · KMS</text><use href="#ic-azure" x="857" y="274" width="46" height="46"/><text x="880" y="337" class="d-t" text-anchor="middle">Azure Terraform root</text><text x="880" y="353" class="d-s" text-anchor="middle">VNet · AKS · Key Vault</text></svg></div>
+          <figcaption><b>Request-to-apply flow.</b> The self-service surface proposes; a protected workflow disposes — every apply bound to an exact proposal hash and commit.</figcaption>
+        </figure>
+
+        <ul>
+          <li><b>Policy engine with readable feedback</b> across ownership, cost, network, encryption, logging and expiry.</li>
+          <li><b>Deterministic evidence</b> — request IDs, fingerprints and content hashes, so reviewers verify exactly what will be created.</li>
+          <li><b>Fail-closed GitHub workflows</b> bound to an exact proposal hash, with approval gates and short-lived OIDC credentials.</li>
+          <li><b>Separate AWS and Azure Terraform roots</b>, each with provider-native network, identity, encryption and budget design.</li>
+        </ul>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">Python · FastAPI</span><span class="tag">Policy as code</span><span class="tag">OIDC</span></div>
+        <p style="margin:20px 0 0"><a href="https://github.com/abdalrahmanattya/secure-self-service-cloud-platform" target="_blank" rel="noopener">View the repository →</a>&nbsp;·&nbsp;<a href="https://abdalrahmanattya.github.io/secure-self-service-cloud-platform/" target="_blank" rel="noopener">Read the documentation →</a></p>
+      </div>
+      <div class="panel" role="tabpanel" id="panel-hafnia" aria-labelledby="tab-hafnia">
+        <div class="case-head">
+          <h3>Project Hafnia — Visual AI &amp; Data Insights Platform</h3>
+          <span class="case-org">Milestone Systems × NVIDIA</span>
+        </div>
+        <div class="case-meta">Principal Cloud Architect · Copenhagen · Jan 2022 – Oct 2024</div>
+        <p class="sum">Cloud architecture lead for a Milestone × NVIDIA collaboration enabling visual AI model development on annotated, regulation-compliant video data. Owned from concept through production deployment as the primary architecture authority.</p>
+
+        <figure class="diagram">
+          <div class="diagram-scroll"><svg viewBox="0 0 1020 340" role="img" aria-labelledby="dgHaft dgHafd"><title id="dgHaft">Visual AI data platform architecture</title><desc id="dgHafd">Video from on-premises and edge sources is ingested through Kinesis Video Streams into an Amazon S3 landing zone, prepared and annotated, curated into a governed data lake, and used to train models in SageMaker. AWS Organizations, Control Tower, IAM, KMS and CloudWatch form a cross-cutting governance foundation.</desc><text x="20" y="20" class="d-h">DATA &amp; AI PIPELINE</text><use href="#ic-camera" x="57" y="44" width="46" height="46"/><text x="80" y="107" class="d-t" text-anchor="middle">Video sources</text><text x="80" y="123" class="d-s" text-anchor="middle">on-prem + edge</text><use href="#ic-kinesis" x="227" y="44" width="46" height="46"/><text x="250" y="107" class="d-t" text-anchor="middle">Kinesis Video</text><text x="250" y="123" class="d-s" text-anchor="middle">secure ingestion</text><use href="#ic-s3" x="397" y="44" width="46" height="46"/><text x="420" y="107" class="d-t" text-anchor="middle">Amazon S3</text><text x="420" y="123" class="d-s" text-anchor="middle">raw landing zone</text><use href="#ic-annotate" x="567" y="44" width="46" height="46"/><text x="590" y="107" class="d-t" text-anchor="middle">Annotation</text><text x="590" y="123" class="d-s" text-anchor="middle">labelling workflows</text><use href="#ic-s3" x="737" y="44" width="46" height="46"/><text x="760" y="107" class="d-t" text-anchor="middle">Curated data</text><text x="760" y="123" class="d-s" text-anchor="middle">governed lake</text><use href="#ic-sagemaker" x="907" y="44" width="46" height="46"/><text x="930" y="107" class="d-t" text-anchor="middle">SageMaker</text><text x="930" y="123" class="d-s" text-anchor="middle">model training</text><path d="M116 67H214" class="d-line" marker-end="url(#arw)"/><path d="M286 67H384" class="d-line" marker-end="url(#arw)"/><path d="M456 67H554" class="d-line" marker-end="url(#arw)"/><path d="M626 67H724" class="d-line" marker-end="url(#arw)"/><path d="M796 67H894" class="d-line acc" marker-end="url(#arwa)"/><path d="M80 140v28" class="d-line dash"/><path d="M250 140v28" class="d-line dash"/><path d="M420 140v28" class="d-line dash"/><path d="M590 140v28" class="d-line dash"/><path d="M760 140v28" class="d-line dash"/><path d="M930 140v28" class="d-line dash"/><rect x="20" y="168" width="980" height="150" rx="12" class="d-band"/><text x="38" y="192" class="d-h">CROSS-CUTTING PLATFORM FOUNDATION</text><use href="#ic-orgs" x="117" y="200" width="46" height="46"/><text x="140" y="263" class="d-t" text-anchor="middle">Organizations</text><text x="140" y="279" class="d-s" text-anchor="middle">multi-account</text><use href="#ic-controltower" x="377" y="200" width="46" height="46"/><text x="400" y="263" class="d-t" text-anchor="middle">Control Tower</text><text x="400" y="279" class="d-s" text-anchor="middle">guardrails</text><use href="#ic-iam" x="637" y="200" width="46" height="46"/><text x="660" y="263" class="d-t" text-anchor="middle">IAM &amp; KMS</text><text x="660" y="279" class="d-s" text-anchor="middle">access · encryption</text><use href="#ic-cloudwatch" x="877" y="200" width="46" height="46"/><text x="900" y="263" class="d-t" text-anchor="middle">CloudWatch</text><text x="900" y="279" class="d-s" text-anchor="middle">logging · cost</text></svg></div>
+          <figcaption><b>Platform shape.</b> The pipeline is the visible part; the governance layer beneath it is what made compliant video data usable for model training.</figcaption>
+        </figure>
+
+        <ul>
+          <li><b>Enterprise AI/data platform on AWS and Azure</b> for building, training and operationalising visual AI models.</li>
+          <li><b>Multi-account AWS foundation</b> — Organizations, Control Tower, centralised logging and cost governance.</li>
+          <li><b>Secure hybrid integration</b> between on-premises infrastructure and AWS for reliable, controlled data movement.</li>
+          <li><b>ML enablement via SageMaker and Kinesis Video Streams</b>, plus large-scale ingestion, annotation and training pipelines.</li>
+          <li><b>AWS partnership initiative</b> contribution involving a forthcoming AWS service planned for public release.</li>
+        </ul>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Control Tower</span><span class="tag">SageMaker</span><span class="tag">Kinesis Video Streams</span><span class="tag">Data governance</span></div>
+        
+      </div>
+      <div class="panel" role="tabpanel" id="panel-gitops" aria-labelledby="tab-gitops">
+        <div class="case-head">
+          <h3>Distribution Centers Hub Platform</h3>
+          <span class="case-org">LEGO</span>
+        </div>
+        <div class="case-meta">Senior Cloud Engineer · Billund / Copenhagen · May – Oct 2021</div>
+        <p class="sum">Cloud infrastructure and automation for LEGO's distribution centre platform — Infrastructure as Code, CI/CD and Kubernetes operations, with the emphasis on deployment reliability. In a logistics context a failed release is not an inconvenience; it is pallets not moving.</p>
+
+        <figure class="diagram">
+          <div class="diagram-scroll"><svg viewBox="0 0 1020 308" role="img" aria-labelledby="dgGitt dgGitd"><title id="dgGitt">GitOps delivery pipeline on Amazon EKS</title><desc id="dgGitd">Commits to a Git repository trigger GitHub Actions to build, test and scan a container image which is pushed to a registry. Argo CD syncs the declared state to an Amazon EKS cluster running Helm releases. Terraform provisions the underlying AWS infrastructure and Sysdig with PagerDuty covers monitoring and incident response.</desc><text x="20" y="20" class="d-h">GITOPS DELIVERY PIPELINE</text><use href="#ic-github" x="67" y="44" width="46" height="46"/><text x="90" y="107" class="d-t" text-anchor="middle">Git repository</text><text x="90" y="123" class="d-s" text-anchor="middle">application + IaC</text><use href="#ic-ghactions" x="262" y="44" width="46" height="46"/><text x="285" y="107" class="d-t" text-anchor="middle">GitHub Actions</text><text x="285" y="123" class="d-s" text-anchor="middle">build · test · scan</text><use href="#ic-ecr" x="457" y="44" width="46" height="46"/><text x="480" y="107" class="d-t" text-anchor="middle">Image registry</text><text x="480" y="123" class="d-s" text-anchor="middle">immutable tags</text><use href="#ic-argocd" x="652" y="44" width="46" height="46"/><text x="675" y="107" class="d-t" text-anchor="middle">Argo CD</text><text x="675" y="123" class="d-s" text-anchor="middle">declarative sync</text><use href="#ic-eks" x="867" y="44" width="46" height="46"/><text x="890" y="107" class="d-t" text-anchor="middle">Amazon EKS</text><text x="890" y="123" class="d-s" text-anchor="middle">Helm releases</text><path d="M126 67H249" class="d-line" marker-end="url(#arw)"/><path d="M321 67H444" class="d-line" marker-end="url(#arw)"/><path d="M516 67H639" class="d-line" marker-end="url(#arw)"/><path d="M711 67H854" class="d-line acc" marker-end="url(#arwa)"/><path d="M890 140v26" class="d-line dash"/><rect x="20" y="166" width="980" height="124" rx="12" class="d-band"/><text x="38" y="190" class="d-h">INFRASTRUCTURE FOUNDATION</text><use href="#ic-terraform" x="107" y="196" width="46" height="46"/><text x="130" y="259" class="d-t" text-anchor="middle">Terraform</text><text x="130" y="275" class="d-s" text-anchor="middle">VPC · EKS · IAM</text><use href="#ic-rds" x="347" y="196" width="46" height="46"/><text x="370" y="259" class="d-t" text-anchor="middle">RDS MySQL</text><text x="370" y="275" class="d-s" text-anchor="middle">managed data tier</text><use href="#ic-helm" x="597" y="196" width="46" height="46"/><text x="620" y="259" class="d-t" text-anchor="middle">Helm</text><text x="620" y="275" class="d-s" text-anchor="middle">release packaging</text><use href="#ic-sysdig" x="847" y="196" width="46" height="46"/><text x="870" y="259" class="d-t" text-anchor="middle">Sysdig · PagerDuty</text><text x="870" y="275" class="d-s" text-anchor="middle">monitoring · on-call</text></svg></div>
+          <figcaption><b>Delivery model.</b> Git is the source of truth and Argo CD reconciles toward it, so a deployment becomes a reviewable diff rather than a manual operation.</figcaption>
+        </figure>
+
+        <ul>
+          <li><b>Terraform-managed AWS infrastructure</b> enabling repeatable, reliable environment provisioning.</li>
+          <li><b>CI/CD with GitHub Actions and Argo CD</b>, cutting manual deployment effort substantially.</li>
+          <li><b>Containerised workloads on Amazon EKS</b>, packaged and configured with Helm.</li>
+          <li><b>IAM hardening</b> plus Sysdig and PagerDuty for monitoring and incident response.</li>
+        </ul>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">Amazon EKS</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">Argo CD</span><span class="tag">Helm</span></div>
+        
+      </div>
+      <div class="panel" role="tabpanel" id="panel-agillic" aria-labelledby="tab-agillic">
+        <div class="case-head">
+          <h3>Cloud Modernisation, Migration &amp; Operations</h3>
+          <span class="case-org">Agillic</span>
+        </div>
+        <div class="case-meta">Cloud Operations Engineer · Copenhagen · Aug 2019 – May 2021</div>
+        <p class="sum">A full reshaping of the cloud operating model for a production SaaS business — migration, automation, monitoring, security and disaster recovery. The headline saving came from architecture redesign rather than tactical right-sizing, with performance improving at the same time.</p>
+
+        <figure class="diagram">
+          <div class="diagram-scroll"><svg viewBox="0 0 1020 400" role="img" aria-labelledby="dgAgit dgAgid"><title id="dgAgit">Agillic cloud modernisation architecture</title><desc id="dgAgid">Legacy on-premises workloads including IBM SPSS Modeler and content delivery were migrated to AWS using Transfer Family and secure streaming, then re-architected onto Lambda, Step Functions, EMR, S3, API Gateway and CloudFront. AWS Organizations, Control Tower, CloudWatch, Grafana and GitLab CI provide governance and operations. The redesign delivered an 85% reduction in operational cost.</desc><text x="20" y="20" class="d-h">MIGRATION &amp; COST MODERNISATION</text><use href="#ic-onprem" x="67" y="48" width="46" height="46"/><text x="90" y="111" class="d-t" text-anchor="middle">Legacy workloads</text><text x="90" y="127" class="d-s" text-anchor="middle">SPSS · content</text><text x="90" y="142" class="d-s" text-anchor="middle">delivery</text><use href="#ic-transfer" x="257" y="48" width="46" height="46"/><text x="280" y="111" class="d-t" text-anchor="middle">Migration</text><text x="280" y="127" class="d-s" text-anchor="middle">Transfer Family</text><text x="280" y="142" class="d-s" text-anchor="middle">secure streaming</text><path d="M126 71H244" class="d-line" marker-end="url(#arw)"/><path d="M316 71H420" class="d-line acc" marker-end="url(#arwa)"/><rect x="440" y="20" width="560" height="208" rx="12" class="d-band"/><text x="458" y="44" class="d-h">RE-ARCHITECTED ON AWS</text><use href="#ic-lambda" x="507" y="46" width="46" height="46"/><text x="530" y="109" class="d-t" text-anchor="middle">Lambda</text><text x="530" y="125" class="d-s" text-anchor="middle">event compute</text><use href="#ic-stepfn" x="667" y="46" width="46" height="46"/><text x="690" y="109" class="d-t" text-anchor="middle">Step Functions</text><text x="690" y="125" class="d-s" text-anchor="middle">orchestration</text><use href="#ic-emr" x="827" y="46" width="46" height="46"/><text x="850" y="109" class="d-t" text-anchor="middle">EMR</text><text x="850" y="125" class="d-s" text-anchor="middle">batch analytics</text><use href="#ic-s3" x="507" y="130" width="46" height="46"/><text x="530" y="193" class="d-t" text-anchor="middle">Amazon S3</text><text x="530" y="209" class="d-s" text-anchor="middle">tiered storage</text><use href="#ic-apigw" x="667" y="130" width="46" height="46"/><text x="690" y="193" class="d-t" text-anchor="middle">API Gateway</text><text x="690" y="209" class="d-s" text-anchor="middle">managed APIs</text><use href="#ic-cloudfront" x="827" y="130" width="46" height="46"/><text x="850" y="193" class="d-t" text-anchor="middle">CloudFront</text><text x="850" y="209" class="d-s" text-anchor="middle">content delivery</text><path d="M720 228v34" class="d-line dash"/><rect x="20" y="262" width="980" height="120" rx="12" class="d-band"/><text x="38" y="286" class="d-h">GOVERNANCE &amp; OPERATIONS</text><use href="#ic-orgs" x="107" y="290" width="46" height="46"/><text x="130" y="353" class="d-t" text-anchor="middle">Organizations</text><text x="130" y="369" class="d-s" text-anchor="middle">multi-account</text><use href="#ic-controltower" x="347" y="290" width="46" height="46"/><text x="370" y="353" class="d-t" text-anchor="middle">Control Tower</text><text x="370" y="369" class="d-s" text-anchor="middle">compliance</text><use href="#ic-cloudwatch" x="587" y="290" width="46" height="46"/><text x="610" y="353" class="d-t" text-anchor="middle">CloudWatch</text><text x="610" y="369" class="d-s" text-anchor="middle">central monitoring</text><use href="#ic-grafana" x="837" y="290" width="46" height="46"/><text x="860" y="353" class="d-t" text-anchor="middle">Grafana · GitLab CI</text><text x="860" y="369" class="d-s" text-anchor="middle">dashboards · CI/CD</text><rect x="20" y="152" width="330" height="82" rx="12" class="d-box hi"/><text x="185" y="188" class="d-t" text-anchor="middle" style="font-size:24px">85% lower operational cost</text><text x="185" y="212" class="d-s" text-anchor="middle">while improving performance and scalability</text></svg></div>
+          <figcaption><b>Migration and redesign.</b> The 85% saving came from re-architecting onto managed and event-driven services, not from trimming instance sizes.</figcaption>
+        </figure>
+
+        <ul>
+          <li><b>85% reduction in operational cost</b> through AWS architecture redesign, with performance and scalability gains.</li>
+          <li><b>AWS migrations</b> for business-critical systems including IBM SPSS Modeler and content delivery workloads.</li>
+          <li><b>Multi-account governance</b> with Organizations and Control Tower for compliance and operational control.</li>
+          <li><b>Disaster recovery patterns</b> and automated CI/CD delivered via Terraform and GitLab CI.</li>
+        </ul>
+        <div class="tags"><span class="tag">S3</span><span class="tag">Lambda</span><span class="tag">EMR</span><span class="tag">Step Functions</span><span class="tag">CloudFront</span><span class="tag">Control Tower</span></div>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <div class="wrap rv">
+    <div class="eyebrow">Experience</div>
+    <h2 class="sec-title">Career timeline</h2>
+    <p class="sec-lead">From infrastructure engineering to principal-level cloud architecture — 15 years, four countries.</p>
+    <div class="tl">
+
+      <div class="tl-item now">
+        <div class="tl-role">Cloud Solutions Architect</div>
+        <div class="tl-org"><svg class="tl-mark" width="95" height="17" aria-hidden="true"><use href="#wm-independent"/></svg><span class="sr">Independent Consultant</span><span class="tl-loc">Denmark &amp; UK</span></div>
+        <div class="tl-when">May 2025 — Present</div>
+        <p class="tl-note">Cloud strategy, solution design, infrastructure modernisation, automation and secure platform delivery across AWS and Azure. Assessing existing setups for reliability, automation, cost efficiency and governance gaps.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">Principal Cloud Architect</div>
+        <div class="tl-org"><svg class="tl-mark" width="91" height="17" aria-hidden="true"><use href="#wm-milestone"/></svg><span class="sr">Milestone Systems</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-when">Jan 2022 — Oct 2024</div>
+        <p class="tl-note">Architecture authority for Project Hafnia, the Milestone × NVIDIA visual AI data platform — from concept to production.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">Cloud Architect Consultant</div>
+        <div class="tl-org"><svg class="tl-mark" width="61" height="17" aria-hidden="true"><use href="#wm-knowit"/></svg><span class="sr">Knowit</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-when">Oct 2021 — Aug 2022</div>
+        <p class="tl-note">Senior cloud architect supporting the early architecture, design and implementation of Project Hafnia for client Milestone Systems. <em style="color:var(--txt-3);font-style:normal">The dates overlap with the role above because I continued on the same project after moving from consultancy to Milestone directly.</em></p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">Senior Cloud Engineer</div>
+        <div class="tl-org"><svg class="tl-mark" width="53" height="17" aria-hidden="true"><use href="#wm-lego"/></svg><span class="sr">LEGO</span><span class="tl-loc">Billund</span></div>
+        <div class="tl-when">May 2021 — Oct 2021</div>
+        <p class="tl-note">Infrastructure as Code, CI/CD and Kubernetes operations for the Distribution Centers Hub platform.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">Cloud Operations Engineer</div>
+        <div class="tl-org"><svg class="tl-mark" width="64" height="17" aria-hidden="true"><use href="#wm-agillic"/></svg><span class="sr">Agillic</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-when">Aug 2019 — May 2021</div>
+        <p class="tl-note">Led AWS modernisation, migration, governance and DR work across production SaaS environments; 85% operational cost reduction.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">IT Operations Engineer</div>
+        <div class="tl-org"><svg class="tl-mark" width="76" height="17" aria-hidden="true"><use href="#wm-simplesite"/></svg><span class="sr">SimpleSite</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-when">Sep 2018 — Aug 2019</div>
+        <p class="tl-note">Windows Server and Linux administration, Active Directory, SharePoint and DNS, plus early cloud infrastructure work.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">Lecturer</div>
+        <div class="tl-org"><svg class="tl-mark" width="80" height="17" aria-hidden="true"><use href="#wm-kings"/></svg><span class="sr">King’s College</span><span class="tl-loc">Kuala Lumpur</span></div>
+        <div class="tl-when">Dec 2017 — Jul 2018</div>
+        <p class="tl-note">Delivered lectures and practical sessions in IT and computing subjects — where the habit of explaining complex systems simply started.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-role">IT Infrastructure Engineer</div>
+        <div class="tl-org"><svg class="tl-mark" width="83" height="17" aria-hidden="true"><use href="#wm-sana"/></svg><span class="sr">Sana Technology</span><span class="tl-loc">Alexandria</span></div>
+        <div class="tl-when">2011 — 2017</div>
+        <p class="tl-note">Designed and deployed servers, networks, storage and enterprise systems, with backup, DR and security measures.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="wrap rv">
+    <div class="eyebrow">Core skills</div>
+    <h2 class="sec-title">Technical toolkit</h2>
+    <p class="sec-lead">Depth in AWS and Azure, with the platform, security and automation layers that turn architecture into something deliverable.</p>
+
+    <div class="logo-grid">
+
+      <div class="logo" title="Amazon Web Services" style="--brand:#FF9900">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+          <text x="16" y="15" text-anchor="middle" fill="currentColor" stroke="none" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="-.5">aws</text>
+          <path d="M4.5 21.5c3.6 2.7 7.4 4 11.5 4s7.9-1.3 11.5-4" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M23.4 19.6l4.6 1.6-1.8 4.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="nm">AWS</div>
+      </div>
+
+      <div class="logo" title="Microsoft Azure" style="--brand:#3AA0EA">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M13.6 3h6.6l9.3 25h-8.2l-4.8-14.6-4.1 9.9h5.1l3.3 4.7H2.5z" fill="currentColor"/>
+        </svg>
+        <div class="nm">Azure</div>
+      </div>
+
+      <div class="logo" title="Terraform" style="--brand:#9A6BE0">
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor">
+          <g transform="translate(2.4 2.6) scale(0.84)">
+            <path d="M2.9 0.5 11.3 5.4V15.1L2.9 10.2z"/>
+            <path d="M12.3 5.9 20.7 10.8V20.5L12.3 15.6z"/>
+            <path d="M21.6 10.8 30 5.9V15.6L21.6 20.5z"/>
+            <path d="M12.3 16.9 20.7 21.8V31.5L12.3 26.6z"/>
+          </g>
+        </svg>
+        <div class="nm">Terraform</div>
+      </div>
+
+      <div class="logo" title="Kubernetes" style="--brand:#4C86F0">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 2.2 26.8 7.4 29.5 19.1 22 28.4H10L2.6 19.1 5.2 7.4z"/>
+          <circle cx="16" cy="16" r="4.4"/>
+          <path d="M16 11.4V5M19.6 13.1l5-4M20.5 17l6.2 1.4M18 20.1l2.8 5.8M14 20.1l-2.8 5.8M11.5 17 5.3 18.4M12.4 13.1l-5-4" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="nm">Kubernetes</div>
+      </div>
+
+      <div class="logo" title="Docker" style="--brand:#2E9BEE">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <g fill="currentColor">
+            <rect x="6.5" y="13" width="4.4" height="4.4" rx=".5"/>
+            <rect x="11.8" y="13" width="4.4" height="4.4" rx=".5"/>
+            <rect x="17.1" y="13" width="4.4" height="4.4" rx=".5"/>
+            <rect x="11.8" y="7.8" width="4.4" height="4.4" rx=".5"/>
+            <rect x="17.1" y="7.8" width="4.4" height="4.4" rx=".5"/>
+            <rect x="22.4" y="13" width="4.4" height="4.4" rx=".5"/>
+          </g>
+          <path d="M2.5 18.8h27c0 5.6-4.4 9.4-11.2 9.4-7.2 0-12.9-3-15.8-9.4z" fill="currentColor"/>
+          <path d="M25.6 11.6c2.3-1.6 4.6-.5 5.2.8.5-2.4-1.4-3.6-3.6-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <div class="nm">Docker</div>
+      </div>
+
+      <div class="logo" title="Helm" style="--brand:#5560E0">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+          <circle cx="16" cy="16" r="8.4"/>
+          <circle cx="16" cy="16" r="3"/>
+          <path d="M16 4.2v3.4M16 24.4v3.4M5.8 10.1l3 1.7M23.2 20.2l3 1.7M5.8 21.9l3-1.7M23.2 11.8l3-1.7" stroke-linecap="round"/>
+        </svg>
+        <div class="nm">Helm</div>
+      </div>
+
+      <div class="logo" title="Argo CD" style="--brand:#EF7B4D">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+          <path d="M16 3.6c4.2 0 7.4 3.3 7.4 7.4 0 2.5-.8 3.9-2.3 5.4H10.9C9.4 14.9 8.6 13.5 8.6 11c0-4.1 3.2-7.4 7.4-7.4z"/>
+          <circle cx="13" cy="10.6" r="1.3" fill="currentColor" stroke="none"/>
+          <circle cx="19" cy="10.6" r="1.3" fill="currentColor" stroke="none"/>
+          <path d="M11.2 17.4c-1.4 4-3.3 6.3-5.6 7.6M14.2 18.2c-.6 4.9-1.6 7.7-3.1 9.6M17.8 18.2c.6 4.9 1.6 7.7 3.1 9.6M20.8 17.4c1.4 4 3.3 6.3 5.6 7.6" stroke-linecap="round" stroke-width="1.7"/>
+        </svg>
+        <div class="nm">Argo CD</div>
+      </div>
+
+      <div class="logo" title="GitHub Actions" style="--brand:#2088FF">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M27.4 16A11.4 11.4 0 1 1 21 5.7" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20.8 3.6l6.4 2.6-2.6 6.3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.6 11.6l7.4 4.4-7.4 4.4z" fill="currentColor" stroke="none"/>
+        </svg>
+        <div class="nm">GitHub Actions</div>
+      </div>
+
+      <div class="logo" title="Python" style="--brand:#5A9FD4">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+          <path d="M15.8 2c-3.7 0-6.6 1.2-6.6 4.6v3.5h6.9v1H6.5C3.2 11.1 1.6 13.4 1.6 16.8s1.6 5.7 4.9 5.7h2.4v-3.9c0-3.2 2.5-5.8 5.7-5.8h5.7c2.6 0 4.7-2.2 4.7-4.9V6.6C25 4 22.7 2 19.1 2h-3.3zm-3.6 2.3a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/>
+          <path d="M16.2 30c3.7 0 6.6-1.2 6.6-4.6v-3.5h-6.9v-1h9.6c3.3 0 4.9-2.3 4.9-5.7s-1.6-5.7-4.9-5.7h-2.4v3.9c0 3.2-2.5 5.8-5.7 5.8h-5.7c-2.6 0-4.7 2.2-4.7 4.9v2.3C7 28 9.3 30 12.9 30h3.3zm3.6-2.3a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8z"/>
+        </svg>
+        <div class="nm">Python</div>
+      </div>
+
+      <div class="logo" title="React" style="--brand:#61DAFB">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="16" cy="16" r="2.7" fill="currentColor" stroke="none"/>
+          <ellipse cx="16" cy="16" rx="13" ry="5"/>
+          <ellipse cx="16" cy="16" rx="13" ry="5" transform="rotate(60 16 16)"/>
+          <ellipse cx="16" cy="16" rx="13" ry="5" transform="rotate(120 16 16)"/>
+        </svg>
+        <div class="nm">React</div>
+      </div>
+
+      <div class="logo" title="FastAPI" style="--brand:#12A594">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" aria-hidden="true">
+          <circle cx="16" cy="16" r="12.6" stroke-width="2.2"/>
+          <path d="M17.6 6.4 9.8 17.9h5.6L14.4 25.6l7.8-11.5h-5.6z" fill="currentColor" stroke="none"/>
+        </svg>
+        <div class="nm">FastAPI</div>
+      </div>
+
+      <div class="logo" title="Grafana" style="--brand:#F46800">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16.5 1.8c1.1 5.3-3.2 6.4-5.9 9.6-2.7 3.2-3.8 6.4-3.2 9.6C8.5 26.6 12.6 30.4 17.4 30.4c5.3 0 9.6-4.3 9.6-9.6 0-3.2-1.6-6-4-7.9.4 2.2-.6 3.7-2 4.4.7-4.8-1.9-9.3-4.5-15.5z" fill="currentColor"/>
+        </svg>
+        <div class="nm">Grafana</div>
+      </div>
+
+      <div class="logo" title="Git" style="--brand:#F05032">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="6.4" y="6.4" width="19.2" height="19.2" rx="3" transform="rotate(45 16 16)"/>
+          <path d="M11.6 20.4 20.4 11.6" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="13.4" cy="18.6" r="2.1" fill="var(--panel)" stroke="none"/>
+          <circle cx="18.6" cy="13.4" r="2.1" fill="var(--panel)" stroke="none"/>
+          <circle cx="19.4" cy="19.4" r="2.1" fill="var(--panel)" stroke="none"/>
+          <path d="M17.6 17.6 16 16" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <div class="nm">Git</div>
+      </div>
+
+      <div class="logo" title="Linux" style="--brand:#F5C542">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 1.8c-3.5 0-5.8 2.7-5.8 6.3 0 2.1-.3 3.5-1.4 5.1-1.5 2.1-3.4 4.6-3.4 8 0 1.7.5 2.8 1.4 3.4-.6 1.3-.3 2.5.6 3.2 1.3.8 3.5.7 5.3-.2 1 .4 2.2.6 3.3.6s2.3-.2 3.3-.6c1.8.9 4 1 5.3.2.9-.7 1.2-1.9.6-3.2.9-.6 1.4-1.7 1.4-3.4 0-3.4-1.9-5.9-3.4-8-1.1-1.6-1.4-3-1.4-5.1 0-3.6-2.3-6.3-5.8-6.3z" fill="currentColor"/>
+          <circle cx="13.3" cy="9.2" r="1.9" fill="var(--panel)" stroke="none"/>
+          <circle cx="18.7" cy="9.2" r="1.9" fill="var(--panel)" stroke="none"/>
+          <path d="M16 11.8 13.4 14 16 15.7 18.6 14z" fill="var(--panel)" stroke="none"/>
+        </svg>
+        <div class="nm">Linux</div>
+      </div>
+
+    </div>
+
+    <div class="skill-grid">
+
+      <div class="skill">
+        <h3>Cloud &amp; Architecture</h3>
+        <div class="chips">
+          <span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Landing zones</span>
+          <span class="chip">Multi-account strategy</span><span class="chip">Solution architecture</span>
+          <span class="chip">Cloud strategy</span><span class="chip">FinOps</span><span class="chip">Cloud migration</span>
+          <span class="chip">Networking</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>AI / Data Enablement</h3>
+        <div class="chips">
+          <span class="chip">Data ingestion</span><span class="chip">Streaming pipelines</span>
+          <span class="chip">Data annotation</span><span class="chip">Data governance</span>
+          <span class="chip">ML workload enablement</span><span class="chip">SageMaker</span>
+          <span class="chip">Kinesis Video Streams</span><span class="chip">AI platform architecture</span>
+          <span class="chip">Agentic AI tooling</span><span class="chip">AI-assisted delivery</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>DevOps &amp; Platform</h3>
+        <div class="chips">
+          <span class="chip">CI/CD</span><span class="chip">Platform engineering</span><span class="chip">Argo CD</span>
+          <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Amazon EKS</span><span class="chip">Helm</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>IaC &amp; Automation</h3>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">Terraform</span><span class="chip">CloudFormation</span>
+          <span class="chip">AWS CDK</span><span class="chip">Bicep</span><span class="chip">ARM Templates</span>
+          <span class="chip">GitHub Actions</span><span class="chip">GitLab CI</span><span class="chip">Azure DevOps</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Security &amp; Governance</h3>
+        <div class="chips">
+          <span class="chip">IAM</span><span class="chip">Entra ID</span><span class="chip">Control Tower</span>
+          <span class="chip">AWS Organizations</span><span class="chip">AWS Config</span><span class="chip">CloudTrail</span>
+          <span class="chip">Security by design</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Observability &amp; Operations</h3>
+        <div class="chips">
+          <span class="chip">CloudWatch</span><span class="chip">Grafana</span><span class="chip">ELK</span>
+          <span class="chip">Datadog</span><span class="chip">Sysdig</span><span class="chip">Opsgenie</span>
+          <span class="chip">Incident response</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications">
+  <div class="wrap rv">
+    <div class="eyebrow">Certifications</div>
+    <h2 class="sec-title">Verified across both major clouds</h2>
+    <p class="sec-lead">Fourteen AWS and Microsoft certifications. Three sit at professional or expert level — the tier that requires demonstrating architecture judgement rather than service knowledge.</p>
+
+    <div class="cert-feature">
+      <a class="cert-feat" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">
+        <span class="cf-art" style="--badge:url('assets/badges/aws-certified-solutions-architect-professional.png')" aria-hidden="true"></span>
+        <div class="cf-body">
+          <div class="cf-name">Solutions Architect</div>
+          <div class="cf-issuer">AWS Certified · Professional</div>
+          <p class="cf-note">The senior AWS architecture credential — multi-tier, multi-account design under real cost and compliance constraints.</p>
+        </div>
+      </a>
+      <a class="cert-feat" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">
+        <span class="cf-art" style="--badge:url('assets/badges/aws-certified-devops-engineer-professional.png')" aria-hidden="true"></span>
+        <div class="cf-body">
+          <div class="cf-name">DevOps Engineer</div>
+          <div class="cf-issuer">AWS Certified · Professional</div>
+          <p class="cf-note">Provisioning, operating and managing distributed systems, with CI/CD and automated governance at its core.</p>
+        </div>
+      </a>
+      <a class="cert-feat" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">
+        <span class="cf-art" style="--badge:url('assets/badges/microsoft-certified-azure-solutions-architect-expert.png')" aria-hidden="true"></span>
+        <div class="cf-body">
+          <div class="cf-name">Azure Solutions Architect</div>
+          <div class="cf-issuer">Microsoft Certified · Expert</div>
+          <p class="cf-note">The equivalent expert-level Azure credential, covering identity, networking, storage and compute strategy.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="cert-rule"><span>The other eleven</span></div>
+
+    <div class="cert-grid">
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Security — Specialty">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-security-specialty.png')" aria-hidden="true"></span>
+          <span class="c-name">Security</span>
+          <span class="c-lv">Specialty</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Data Analytics — Specialty">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-data-analytics-specialty.png')" aria-hidden="true"></span>
+          <span class="c-name">Data Analytics</span>
+          <span class="c-lv">Specialty</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Solutions Architect — Associate">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-solutions-architect-associate.png')" aria-hidden="true"></span>
+          <span class="c-name">Solutions Architect</span>
+          <span class="c-lv">Associate</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="SysOps Administrator — Associate">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-sysops-administrator-associate.png')" aria-hidden="true"></span>
+          <span class="c-name">SysOps Administrator</span>
+          <span class="c-lv">Associate</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Developer — Associate">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-developer-associate.png')" aria-hidden="true"></span>
+          <span class="c-name">Developer</span>
+          <span class="c-lv">Associate</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Machine Learning Engineer — Associate">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-machine-learning-engineer-associate.png')" aria-hidden="true"></span>
+          <span class="c-name">Machine Learning Engineer</span>
+          <span class="c-lv">Associate</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Azure Administrator — Associate">
+          <span class="c-art" style="--badge:url('assets/badges/microsoft-certified-azure-administrator-associate.png')" aria-hidden="true"></span>
+          <span class="c-name">Azure Administrator</span>
+          <span class="c-lv">Associate</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="AI Practitioner — Foundational">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-ai-practitioner.png')" aria-hidden="true"></span>
+          <span class="c-name">AI Practitioner</span>
+          <span class="c-lv">Foundational</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Cloud Practitioner — Foundational">
+          <span class="c-art" style="--badge:url('assets/badges/aws-certified-cloud-practitioner.png')" aria-hidden="true"></span>
+          <span class="c-name">Cloud Practitioner</span>
+          <span class="c-lv">Foundational</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Azure Fundamentals — Foundational">
+          <span class="c-art" style="--badge:url('assets/badges/microsoft-certified-azure-fundamentals.png')" aria-hidden="true"></span>
+          <span class="c-name">Azure Fundamentals</span>
+          <span class="c-lv">Foundational</span>
+        </a>
+        <a class="cert" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener" title="Azure Data Fundamentals — Foundational">
+          <span class="c-art" style="--badge:url('assets/badges/microsoft-certified-azure-data-fundamentals.png')" aria-hidden="true"></span>
+          <span class="c-name">Azure Data Fundamentals</span>
+          <span class="c-lv">Foundational</span>
+        </a>
+    </div>
+
+    <p class="cert-verify"><a href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">Verify every badge on Credly →</a></p>
+
+    <div class="edu-block">
+      <div class="eyebrow">Education</div>
+      <div class="edu-grid">
+        <div class="edu"><div class="deg">MSc, Cloud Computing</div><div class="inst">Munster Technological University, Ireland</div><div class="yr">2021</div></div>
+        <div class="edu"><div class="deg">MSc, Computer Science</div><div class="inst">Università degli Studi di Messina, Italy</div><div class="yr">2017</div></div>
+        <div class="edu"><div class="deg">Graduate Diploma, Computer Science</div><div class="inst">Arab Academy for Science, Technology &amp; Maritime Transport, Egypt</div><div class="yr">2015 – 2017</div></div>
+        <div class="edu"><div class="deg">BSc, Information Systems</div><div class="inst">High Institute for Computers &amp; Management Information Systems, Egypt</div><div class="yr">2006 – 2010</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact">
+  <div class="wrap rv">
+    <div class="eyebrow" style="justify-content:center">Contact</div>
+    <h2 class="sec-title">Let's talk architecture</h2>
+    <p class="sec-lead">Open to senior and lead cloud architecture roles in Denmark and the United Kingdom, and to consulting engagements. No sponsorship required.</p>
+    <div class="contact-cards">
+
+      <a class="cc" href="mailto:abdalrahman.esmail.attya@gmail.com">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <div class="k">Email</div>
+        <div class="v">abdalrahman.esmail.attya@gmail.com</div>
+      </a>
+
+      <a class="cc" href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5V17M7.5 7.4v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg>
+        <div class="k">LinkedIn</div>
+        <div class="v">/in/abdalrahman-attya</div>
+      </a>
+
+      <a class="cc" href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+        <div class="k">GitHub</div>
+        <div class="v">@abdalrahmanattya</div>
+      </a>
+
+      <a class="cc" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.8-1.3 6.7L12 18l4.8 2.5-1.3-6.7"/></svg>
+        <div class="k">Certifications</div>
+        <div class="v">Verify on Credly</div>
+      </a>
+
+      <a class="cc" href="tel:+4550362520">
+        <svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+        <div class="k">Phone</div>
+        <div class="v">+45 50 36 25 20 · +44 7848 425941</div>
+      </a>
+
+    </div>
+
+    <div class="btns" style="justify-content:center;margin-top:36px">
+      <a class="btn btn-primary" href="mailto:abdalrahman.esmail.attya@gmail.com?subject=Cloud%20architecture%20enquiry">Send an email</a>
+      <a class="btn btn-ghost" href="Abdalrahman-Attya-CV.pdf" download>Download CV (PDF)</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr">2026</span> Abdalrahman Attya · Principal Cloud Architect</div>
+    <div>
+      Copenhagen · London —
+      <a href="mailto:abdalrahman.esmail.attya@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">Credly</a>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile nav
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  // Scroll reveal
+  var items = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  items.forEach(function(el){ io.observe(el); });
+
+
+  // Case study tabs — progressive enhancement, full keyboard support
+  var cases = document.getElementById('cases');
+  if (cases) {
+    var tabs   = Array.prototype.slice.call(cases.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(cases.querySelectorAll('[role="tabpanel"]'));
+    cases.classList.add('js');
+    panels.forEach(function(pn,i){ if(i) pn.hidden = true; });
+
+    function select(i, focus){
+      tabs.forEach(function(t,j){
+        var on = i === j;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        panels[j].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener('click', function(){ select(i); });
+      t.addEventListener('keydown', function(e){
+        var k = e.key, n = null;
+        if (k === 'ArrowRight' || k === 'ArrowDown') n = (i + 1) % tabs.length;
+        else if (k === 'ArrowLeft' || k === 'ArrowUp') n = (i - 1 + tabs.length) % tabs.length;
+        else if (k === 'Home') n = 0;
+        else if (k === 'End') n = tabs.length - 1;
+        if (n !== null) { e.preventDefault(); select(n, true); }
+      });
+    });
+
+    // Printing should show every case, not just the open one
+    window.addEventListener('beforeprint', function(){ panels.forEach(function(pn){ pn.hidden = false; }); });
+    window.addEventListener('afterprint', function(){
+      var sel = tabs.findIndex ? tabs.findIndex(function(t){ return t.getAttribute('aria-selected') === 'true'; }) : 0;
+      panels.forEach(function(pn,j){ pn.hidden = j !== (sel < 0 ? 0 : sel); });
+    });
+  }
+
+  // Active-section nav highlighting
+  var navMap = {};
+  links.querySelectorAll('a[href^="#"]').forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    if (document.getElementById(id)) navMap[id] = a;
+  });
+  var sections = Object.keys(navMap).map(function(id){ return document.getElementById(id); });
+  var current = null;
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var id = en.target.id;
+      if (id === current) return;
+      if (current && navMap[current]) navMap[current].classList.remove('active');
+      current = id;
+      navMap[id].classList.add('active');
+    });
+  }, { rootMargin: '-64px 0px -55% 0px', threshold: 0 });
+  sections.forEach(function(el){ spy.observe(el); });
+})();
+</script>
+</body>
+</html>

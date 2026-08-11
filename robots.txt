@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdalrahmanattya.github.io/sitemap.xml
+
+# Social preview card lives at /assets/og-card.png
