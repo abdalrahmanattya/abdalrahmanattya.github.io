@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Static portfolio publication architecture</title>
+  <desc id="desc">The site owner reviews content in a GitHub repository. GitHub Pages publishes the main branch static files. A visitor's browser receives the HTML, CSS, inline JavaScript, SVG, fonts, images, CV, and metadata. There is no application server or cloud runtime.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#a9b8c9"/></marker>
+    <style>
+      .bg{fill:#0a0f17}.box{stroke-width:2}.source{fill:#16212f;stroke:#38e2c8}.host{fill:#102d45;stroke:#5aa9ff}.user{fill:#1c2732;stroke:#a9b8c9}.title{fill:#e6edf5;font:700 21px Arial,sans-serif}.label{fill:#e6edf5;font:700 17px Arial,sans-serif}.small{fill:#a9b8c9;font:14px Arial,sans-serif}.line{stroke:#a9b8c9;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="360" rx="18"/>
+  <text class="title" x="40" y="48">STATIC PORTFOLIO PUBLICATION</text>
+  <text class="small" x="40" y="74">Repository files are published directly; no app server, database, or runtime cloud dependency.</text>
+  <rect class="box source" x="40" y="125" width="220" height="112" rx="14"/>
+  <text class="label" x="150" y="160" text-anchor="middle">Site owner</text>
+  <text class="small" x="150" y="186" text-anchor="middle">reviewed content</text>
+  <text class="small" x="150" y="207" text-anchor="middle">merge to main</text>
+  <rect class="box source" x="330" y="125" width="230" height="112" rx="14"/>
+  <text class="label" x="445" y="160" text-anchor="middle">GitHub repository</text>
+  <text class="small" x="445" y="186" text-anchor="middle">index.html + assets</text>
+  <text class="small" x="445" y="207" text-anchor="middle">robots · sitemap · .nojekyll</text>
+  <rect class="box host" x="630" y="125" width="230" height="112" rx="14"/>
+  <text class="label" x="745" y="160" text-anchor="middle">GitHub Pages</text>
+  <text class="small" x="745" y="186" text-anchor="middle">static hosting</text>
+  <text class="small" x="745" y="207" text-anchor="middle">HTTPS publication</text>
+  <rect class="box user" x="930" y="125" width="230" height="112" rx="14"/>
+  <text class="label" x="1045" y="160" text-anchor="middle">Visitor browser</text>
+  <text class="small" x="1045" y="186" text-anchor="middle">HTML · CSS · JS · SVG</text>
+  <text class="small" x="1045" y="207" text-anchor="middle">local fonts and images</text>
+  <path class="line" d="M260 181 H324"/>
+  <path class="line" d="M560 181 H624"/>
+  <path class="line" d="M860 181 H924"/>
+  <rect class="box source" x="330" y="275" width="530" height="48" rx="12"/>
+  <text class="small" x="595" y="305" text-anchor="middle">Relative assets: assets/ · fonts/ · CV PDF · metadata</text>
+  <path d="M445 237 V268" stroke="#38e2c8" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M745 237 V268" stroke="#38e2c8" stroke-width="2" stroke-dasharray="6 5"/>
+</svg>

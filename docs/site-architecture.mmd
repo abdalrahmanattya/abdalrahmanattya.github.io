@@ -1,0 +1,19 @@
+%% Static publication architecture: no application server or cloud runtime.
+flowchart LR
+    author[Site owner\ncommits reviewed content]
+    repo[GitHub repository\nmain branch + static files]
+    pages[GitHub Pages\nstatic hosting configuration]
+    browser[Visitor browser\nHTML · CSS · inline JS · SVG]
+    assets[Local assets\nfonts · images · CV · metadata]
+
+    author -->|review and merge| repo
+    repo -->|Pages publishes root files| pages
+    pages -->|HTTPS static response| browser
+    assets -->|served as relative files| browser
+
+    classDef source fill:#16212f,stroke:#38e2c8,color:#e6edf5;
+    classDef host fill:#102d45,stroke:#5aa9ff,color:#e6edf5;
+    classDef user fill:#1c2732,stroke:#a9b8c9,color:#e6edf5;
+    class author,repo,assets source;
+    class pages host;
+    class browser user;
