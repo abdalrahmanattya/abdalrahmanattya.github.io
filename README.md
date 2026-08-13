@@ -15,6 +15,11 @@ The site is intentionally a small, fast static publication. It presents:
 - technology focus areas and delivery outcomes; and
 - contact and professional-network links.
 
+It is useful to prospective clients, hiring teams, and technical peers because
+it provides a concise, evidence-aware view of cloud architecture experience,
+delivery capabilities, and selected system designs in one fast, accessible
+publication.
+
 ## How the site works
 
 The site has no application server, database, API, build framework, or runtime
