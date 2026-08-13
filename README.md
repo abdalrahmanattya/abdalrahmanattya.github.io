@@ -80,8 +80,10 @@ repository and must not be inferred from the files here.
 | --- | --- |
 | [`index.html`](index.html) | Complete portfolio page, including inline styles, SVG drawings, and progressive-enhancement JavaScript |
 | [`404.html`](404.html) | Static not-found page |
-| [`assets/`](assets/) | Headshots, avatar variants, certification badges, and social preview card |
+| [`assets/`](assets/) | Headshots, avatar variants, certification badges, social preview card, and self-hosted first-party toolkit marks |
+| [`assets/aa-mark.svg`](assets/aa-mark.svg) | Reusable site-owner monogram used by the favicon and 404 page |
 | [`fonts/`](fonts/) | Self-hosted Lato and DejaVu Sans Mono webfonts |
+| [`docs/asset-register.md`](docs/asset-register.md) | Provenance, usage, and fallback policy for logos and icon families |
 | [`docs/site-architecture.mmd`](docs/site-architecture.mmd) | Maintainable Mermaid source for the publication diagram |
 | [`docs/site-architecture.svg`](docs/site-architecture.svg) | Accessible rendered diagram shown above |
 | [`robots.txt`](robots.txt) | Crawler guidance |
@@ -97,6 +99,14 @@ inline diagrams, local fonts, Open Graph metadata, JSON-LD profile metadata,
 and a no-script fallback for case studies. Content claims and certification
 details are maintained by the site owner; the repository does not make them
 independent third-party attestations.
+
+The visual system uses a reusable AA monogram, genuine public organisation
+marks, exact AWS/Azure service icons in the case-study diagrams, and eight
+distinct neutral outline concepts for the service cards and non-vendor steps.
+The Technical Toolkit grid retains its original inline visual treatment; the
+self-hosted vendor assets are documented for diagram use. See
+[`docs/asset-register.md`](docs/asset-register.md) before adding any future
+vendor or organisation logo.
 
 ## Privacy, security, and non-goals
 

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">AA monogram</title>
+  <desc id="desc">Abdalrahman Attya monogram in teal on a dark field.</desc>
+  <rect width="64" height="64" rx="14" fill="#0a0f17"/>
+  <path d="M14 44 24 19h5l10 25h-6l-2.1-5.7H22L20 44zm10-10h5l-2.5-7.2zM39 44l5.7-14.2h4.5L55 44h-5l-1.2-3.6h-4.6L43 44z" fill="#38e2c8"/>
+</svg>

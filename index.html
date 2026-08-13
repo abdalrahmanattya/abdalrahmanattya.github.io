@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://abdalrahmanattya.github.io/assets/og-card.png">
 <meta name="theme-color" content="#0a0f17">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0f17'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%2338e2c8' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="assets/aa-mark.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -84,7 +84,7 @@
     --accent-2:#5aa9ff;
     --accent-dim:rgba(56,226,200,.12);
     --radius:14px;
-    --maxw:1120px;
+    --maxw:1180px;
     /* To swap in a different typeface, change these two lines only. */
     --mono:"Site Mono",ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
     --sans:"Site Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -132,8 +132,7 @@
   .brand:hover{text-decoration:none}
   .brand-mark{
     width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    color:#04120f;font-size:13px;font-weight:800;font-family:var(--mono)
+    object-fit:cover
   }
   .nav-links{display:flex;align-items:center;gap:26px}
   .nav-links a{color:var(--txt-2);font-size:14px;font-weight:500}
@@ -165,7 +164,7 @@
   .sec-lead{color:var(--txt-2);max-width:64ch;margin-bottom:44px;font-size:1.03rem}
 
   /* ============ Hero ============ */
-  .hero{padding:52px 0 48px;border-bottom:1px solid var(--line-soft)}
+  .hero{padding:64px 0 56px;border-bottom:1px solid var(--line-soft)}
 
   .byline{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:34px}
   .avatar{
@@ -213,10 +212,11 @@
 
   .logos{margin-top:26px;padding-top:22px;border-top:1px solid var(--line-soft)}
   .logos-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-3);margin-bottom:16px}
-  .logos-row{display:flex;flex-wrap:wrap;gap:16px 38px;align-items:center}
-  .client{display:inline-flex;align-items:center;color:var(--txt-3);transition:color .2s ease}
-  .client:hover{color:var(--accent)}
-  .cl-mark{display:block}
+  .logos-row{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
+  .client{display:inline-flex;align-items:center;min-height:34px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(17,26,38,.72);color:var(--txt-2);font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;transition:color .2s ease,border-color .2s ease,background .2s ease}
+  .client:hover{color:var(--accent);border-color:rgba(56,226,200,.45);background:var(--panel-2)}
+  .org-mark{display:block;width:auto;height:18px;max-width:112px;object-fit:contain}
+  .cl-mark{display:none}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 
@@ -239,7 +239,7 @@
     transition:border-color .2s ease,transform .2s ease,background .2s ease
   }
   .card:hover{border-color:rgba(56,226,200,.45);transform:translateY(-3px);background:var(--panel-2)}
-  .card .ico{display:block;margin-bottom:18px;border-radius:9px}
+  .card .ico{display:block;width:42px;height:42px;margin-bottom:18px;padding:9px;border:1px solid rgba(56,226,200,.35);border-radius:12px;background:var(--accent-dim);color:var(--accent)}
   .card h3{font-size:1.08rem;margin-bottom:10px}
   .card p{color:var(--txt-2);font-size:.94rem;margin:0}
 
@@ -251,11 +251,11 @@
   }
   /* ============ Tabbed case studies ============ */
   .tabs{
-    display:flex;gap:6px;flex-wrap:wrap;margin-bottom:-1px;position:relative;z-index:2
+    display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;margin-bottom:-1px;position:relative;z-index:2;padding-bottom:1px
   }
   .tab{
     display:flex;flex-direction:column;gap:3px;align-items:flex-start;
-    background:var(--bg-2);border:1px solid var(--line);border-bottom-color:transparent;
+    flex:0 0 auto;background:var(--bg-2);border:1px solid var(--line);border-bottom-color:transparent;
     border-radius:10px 10px 0 0;padding:13px 20px;cursor:pointer;
     font-family:inherit;color:var(--txt-2);text-align:left;
     transition:color .18s ease,background .18s ease,border-color .18s ease
@@ -304,7 +304,8 @@
   .tl-item.now::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 4px var(--accent-dim)}
   .tl-role{font-size:1.05rem;font-weight:650;margin-bottom:3px}
   .tl-org{display:flex;align-items:center;gap:11px;flex-wrap:wrap;color:var(--txt-3);margin-top:5px}
-  .tl-mark{display:block;color:var(--txt-2);transition:color .2s ease}
+  .tl-mark{display:none;color:var(--txt-2);transition:color .2s ease}
+  .tl-org .org-name{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--txt-2)}
   .tl-item:hover .tl-mark{color:var(--accent)}
   .tl-loc{font-family:var(--mono);font-size:.76rem;letter-spacing:.03em}
   .tl-when{font-family:var(--mono);font-size:.79rem;color:var(--txt-3);margin-top:3px;letter-spacing:.03em}
@@ -332,8 +333,9 @@
     margin:30px 0 0;border:1px solid var(--line);background:var(--panel);
     border-radius:var(--radius);padding:22px 22px 18px
   }
-  .diagram-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .diagram-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
   .diagram-scroll svg{width:100%;min-width:680px;height:auto;display:block}
+  .diagram-scroll::after{content:"Swipe to explore the architecture →";display:block;margin-top:8px;color:var(--txt-3);font:10px var(--mono);letter-spacing:.06em;text-align:right}
   .diagram figcaption{
     margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft);
     font-size:.85rem;color:var(--txt-3);line-height:1.55
@@ -433,14 +435,19 @@
 
   /* ============ Responsive ============ */
   @media (max-width:900px){
+    .nav-inner{padding-inline:16px;gap:10px}
+    .brand{white-space:nowrap}
+    .nav-links{gap:14px}
+    .nav-links a{font-size:12px}
+    .nav-cta{padding:7px 11px;white-space:nowrap}
     .about-grid{grid-template-columns:1fr;gap:44px}
     .cert-feature{grid-template-columns:1fr}
     .cert-feat{grid-template-columns:76px 1fr;gap:18px;padding:22px 20px}
-    .metrics{grid-template-columns:repeat(2,1fr);margin-top:44px}
+    .metrics{grid-template-columns:repeat(2,1fr);margin-top:32px}
   }
   @media (max-width:720px){
     section{padding:68px 0}
-    .hero{padding:44px 0 48px}
+    .hero{padding:38px 0 42px}
     .status{margin-left:0;order:3}
     .byline{gap:14px;margin-bottom:32px}
     .avatar{width:62px;height:62px}
@@ -453,13 +460,21 @@
     .nav-links.open{display:flex}
     .nav-links a{padding:12px 0;border-bottom:1px solid var(--line-soft)}
     .nav-cta{text-align:center;margin-top:12px;border-bottom:0 !important}
-    .panels{padding:24px 20px}
+    .tabs{margin-inline:-24px;padding-inline:24px}
+    .tab{padding:11px 14px}
+    .panels{padding:24px 20px;border-radius:0 0 var(--radius) var(--radius)}
+    .panel .case-head{display:block}
+    .panel .case-org{display:block;margin-top:5px}
     .fact{flex-direction:column;gap:2px}
     .fact dd{text-align:left}
   }
   @media (max-width:480px){
     .btn{width:100%;justify-content:center}
     .cert-grid{grid-template-columns:repeat(2,1fr)}
+    .metric{padding:15px 14px}
+    .metric .l{font-size:.72rem}
+    .logos-row{gap:8px}
+    .client{font-size:.67rem;padding:6px 9px}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none !important;transition:none !important}
@@ -481,53 +496,61 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- Shared arrow markers + AWS/tooling service icons, referenced by every diagram -->
+<!-- Service diagrams use exact vendor marks for named products and a distinct neutral outline for conceptual steps. -->
 <svg width="0" height="0" style="position:absolute;left:-9999px" aria-hidden="true" focusable="false"><defs>
 <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#8b9bb0"/></marker>
 <marker id="arwa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#38e2c8" opacity=".85"/></marker>
-<symbol id="ic-s3" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#7AA116"/><ellipse cx="24" cy="15" rx="10" ry="3.2" fill="#fff"/><path d="M14 15.5v18c0 1.9 4.5 3.4 10 3.4s10-1.5 10-3.4v-18c0 1.8-4.5 3.2-10 3.2s-10-1.4-10-3.2z" fill="#fff"/><path d="M18.5 23h11M18.5 28h11" stroke="#7AA116" stroke-width="1.7" stroke-linecap="round"/></symbol>
-<symbol id="ic-eks" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><path d="M24 11.5 34.6 16.6 32 28.4 24 34.2 16 28.4 13.4 16.6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="22.5" r="3.5" fill="#fff"/><path d="M24 19v-4.3M27 20.6l4-2.1M27.5 24.9l4.1 1.4M24 26v4.4M21 24.9l-4.1 1.4M20.9 20.6l-4-2.1" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
-<symbol id="ic-lambda" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><path d="M13.5 34 24 13.5h3.6L38 34h-5.2l-7-14.9L20.6 30h6.6l1.9 4z" fill="#fff"/></symbol>
-<symbol id="ic-ecr" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><rect x="12.5" y="19" width="8.6" height="7.6" rx="1" fill="#fff"/><rect x="22.7" y="19" width="8.6" height="7.6" rx="1" fill="#fff"/><rect x="17.6" y="10.6" width="8.6" height="7.6" rx="1" fill="#fff"/><rect x="32.9" y="19" width="4" height="7.6" rx="1" fill="#fff"/><path d="M10.5 29.5h27c0 3.8-4.8 6.4-11.5 6.4S13 33 10.5 29.5z" fill="#fff"/></symbol>
-<symbol id="ic-rds" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#527FFF"/><ellipse cx="24" cy="15.5" rx="10" ry="3.6" fill="#fff"/><path d="M14 15.5v17c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5v-17" fill="#fff"/><path d="M14 21.4c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5M14 27c0 2 4.5 3.5 10 3.5s10-1.5 10-3.5" stroke="#527FFF" stroke-width="1.6" fill="none"/></symbol>
-<symbol id="ic-vpc" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><path d="M16.5 32.5a6.6 6.6 0 0 1-.8-13.1 8.7 8.7 0 0 1 16.7-1.6 6.1 6.1 0 0 1 1.1 14.7z" fill="#fff"/><rect x="18.2" y="24" width="5.2" height="5.2" rx="1" fill="#8C4FFF"/><rect x="25.2" y="24" width="5.2" height="5.2" rx="1" fill="#8C4FFF"/></symbol>
-<symbol id="ic-cloudfront" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><circle cx="24" cy="24" r="11" fill="none" stroke="#fff" stroke-width="2.2"/><ellipse cx="24" cy="24" rx="4.6" ry="11" fill="none" stroke="#fff" stroke-width="1.7"/><path d="M13.4 20.5h21.2M13.4 27.5h21.2" stroke="#fff" stroke-width="1.7"/></symbol>
-<symbol id="ic-apigw" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M15 13.5v21M33 13.5v21" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M19.5 24h9" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M25.5 20.5 29 24l-3.5 3.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-tgw" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><circle cx="24" cy="24" r="5" fill="#fff"/><path d="M24 19v-6M24 29v6M19 24h-6M29 24h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="11.5" r="2.6" fill="#fff"/><circle cx="24" cy="36.5" r="2.6" fill="#fff"/><circle cx="11.5" cy="24" r="2.6" fill="#fff"/><circle cx="36.5" cy="24" r="2.6" fill="#fff"/></symbol>
-<symbol id="ic-iam" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><path d="M24 11 34 14.5V24c0 6.6-4.3 10.6-10 12.5C18.3 34.6 14 30.6 14 24v-9.5z" fill="#fff"/><circle cx="24" cy="21" r="3.1" fill="#DD344C"/><path d="M18.6 30.4c1-2.7 2.9-4.1 5.4-4.1s4.4 1.4 5.4 4.1z" fill="#DD344C"/></symbol>
-<symbol id="ic-kms" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><circle cx="19.5" cy="20" r="6" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M23.5 24.3 34 34.8M30 31l-3 3M27 28l-3 3" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></symbol>
-<symbol id="ic-cloudtrail" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M12 30c4-9 8-13 12-13s8 4 12 13" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="4.2" fill="#fff"/></symbol>
-<symbol id="ic-orgs" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><rect x="18.8" y="10" width="10.4" height="7.2" rx="1.4" fill="#fff"/><rect x="9.6" y="30.8" width="10.4" height="7.2" rx="1.4" fill="#fff"/><rect x="28" y="30.8" width="10.4" height="7.2" rx="1.4" fill="#fff"/><path d="M24 17.2v7.4M14.8 30.8v-6.2h18.4v6.2" fill="none" stroke="#fff" stroke-width="1.9"/></symbol>
-<symbol id="ic-controltower" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M24 9 33 14v4H15v-4z" fill="#fff"/><rect x="18" y="21" width="12" height="6" rx="1.2" fill="#fff"/><rect x="14.5" y="30" width="19" height="6" rx="1.2" fill="#fff"/></symbol>
-<symbol id="ic-cloudwatch" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><circle cx="24" cy="24" r="12" fill="none" stroke="#fff" stroke-width="2.2"/><path d="M15 26.4l4-4.9 3.4 3.5 4-7.9 3 6.3 3.6-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-stepfn" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><rect x="10.5" y="11.5" width="11" height="7" rx="1.4" fill="#fff"/><rect x="26.5" y="20.5" width="11" height="7" rx="1.4" fill="#fff"/><rect x="10.5" y="29.5" width="11" height="7" rx="1.4" fill="#fff"/><path d="M21.5 15h4a1.5 1.5 0 0 1 1.5 1.5v4M26.5 24h-4a1.5 1.5 0 0 0-1.5 1.5v4" fill="none" stroke="#fff" stroke-width="1.8"/></symbol>
-<symbol id="ic-kinesis" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><path d="M10.5 16.5h14M10.5 24h20M10.5 31.5h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M27 13 33.5 16.5 27 20zM33 28 39.5 31.5 33 35z" fill="#fff"/></symbol>
-<symbol id="ic-emr" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#8C4FFF"/><rect x="11.5" y="26" width="6.2" height="10.5" rx="1" fill="#fff"/><rect x="20.9" y="19" width="6.2" height="17.5" rx="1" fill="#fff"/><rect x="30.3" y="11.5" width="6.2" height="25" rx="1" fill="#fff"/></symbol>
-<symbol id="ic-sagemaker" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#01A88D"/><circle cx="14.5" cy="17" r="3.4" fill="#fff"/><circle cx="14.5" cy="31" r="3.4" fill="#fff"/><circle cx="25.5" cy="24" r="3.6" fill="#fff"/><circle cx="36" cy="17" r="3.4" fill="#fff"/><circle cx="36" cy="31" r="3.4" fill="#fff"/><path d="M17.7 18.4 22.4 22.3M17.7 29.6 22.4 25.7M28.8 22.3 32.9 18.6M28.8 25.7 32.9 29.4" stroke="#fff" stroke-width="1.7"/></symbol>
-<symbol id="ic-annotate" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#01A88D"/><rect x="11.5" y="13.5" width="25" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2.2"/><rect x="16.5" y="18.5" width="9.5" height="7.5" rx="1" fill="none" stroke="#fff" stroke-width="1.8" stroke-dasharray="2.6 2"/><path d="M27.5 28.5l3.6-3.6 2.6 2.6-3.6 3.6h-2.6z" fill="#fff"/></symbol>
-<symbol id="ic-transfer" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#01A88D"/><path d="M13 19h18l-4.6-4.6M35 29H17l4.6 4.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-secrets" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><rect x="14" y="21" width="20" height="15" rx="2.2" fill="#fff"/><path d="M18.5 21v-4a5.5 5.5 0 0 1 11 0v4" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="24" cy="28.5" r="2.4" fill="#DD344C"/></symbol>
-<symbol id="ic-onprem" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#5A6B7B"/><rect x="12" y="12" width="24" height="7" rx="1.4" fill="#fff"/><rect x="12" y="20.5" width="24" height="7" rx="1.4" fill="#fff"/><rect x="12" y="29" width="24" height="7" rx="1.4" fill="#fff"/><circle cx="16.5" cy="15.5" r="1.3" fill="#5A6B7B"/><circle cx="16.5" cy="24" r="1.3" fill="#5A6B7B"/><circle cx="16.5" cy="32.5" r="1.3" fill="#5A6B7B"/></symbol>
-<symbol id="ic-camera" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#5A6B7B"/><path d="M10.5 17h17a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-17a2 2 0 0 1-2-2V19a2 2 0 0 1 2-2z" fill="#fff"/><path d="M31.5 22.4 39.5 18v12l-8-4.4z" fill="#fff"/></symbol>
-<symbol id="ic-user" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#5A6B7B"/><circle cx="24" cy="18" r="6" fill="#fff"/><path d="M12 37c1.5-7 6-10.5 12-10.5S34.5 30 36 37z" fill="#fff"/></symbol>
-<symbol id="ic-policy" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#DD344C"/><path d="M15 10.5h13l6.5 6.5V37a1.6 1.6 0 0 1-1.6 1.6H15A1.6 1.6 0 0 1 13.4 37V12.1A1.6 1.6 0 0 1 15 10.5z" fill="#fff"/><path d="M28 10.5V17h6.5" fill="none" stroke="#DD344C" stroke-width="1.8"/><path d="M18 27.5l3.2 3.2 7.3-7.3" fill="none" stroke="#DD344C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-proposal" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M14.5 10.5h19a1.6 1.6 0 0 1 1.6 1.6V37a1.6 1.6 0 0 1-1.6 1.6h-19A1.6 1.6 0 0 1 12.9 37V12.1a1.6 1.6 0 0 1 1.6-1.6z" fill="#fff"/><path d="M17.5 17.5h13M17.5 22.5h13M17.5 27.5h7" stroke="#E7157B" stroke-width="1.9" stroke-linecap="round"/><circle cx="29.5" cy="30.5" r="3.6" fill="#E7157B"/></symbol>
-<symbol id="ic-terraform" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#7B42BC"/><path d="M11.5 12.5 20 17.4v9.7l-8.5-4.9z" fill="#fff"/><path d="M21.4 18.2 29.9 23.1v9.7l-8.5-4.9z" fill="#fff"/><path d="M31.3 23.1 39.8 18.2v9.7l-8.5 4.9z" fill="#fff"/></symbol>
-<symbol id="ic-github" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#2B3137"/><path d="M24 10a14 14 0 0 0-4.4 27.3c.7.1 1-.3 1-.7v-2.4c-3.9.8-4.7-1.9-4.7-1.9-.6-1.6-1.6-2.1-1.6-2.1-1.3-.9.1-.9.1-.9 1.4.1 2.1 1.4 2.1 1.4 1.3 2.2 3.4 1.6 4.2 1.2.1-.9.5-1.6.9-1.9-3.1-.4-6.4-1.6-6.4-7 0-1.5.6-2.8 1.4-3.8-.1-.4-.6-1.8.2-3.8 0 0 1.2-.4 3.8 1.4a13 13 0 0 1 7 0c2.6-1.8 3.8-1.4 3.8-1.4.8 2 .3 3.4.2 3.8.9 1 1.4 2.3 1.4 3.8 0 5.4-3.3 6.6-6.4 7 .5.4 1 1.3 1 2.6v3.9c0 .4.3.8 1 .7A14 14 0 0 0 24 10z" fill="#fff"/></symbol>
-<symbol id="ic-ghactions" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#2088FF"/><circle cx="24" cy="24" r="11.5" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M20.8 18.6 29.8 24l-9 5.4z" fill="#fff"/></symbol>
-<symbol id="ic-argocd" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#EF7B4D"/><circle cx="24" cy="20" r="7.8" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="21.2" cy="19" r="1.6" fill="#fff"/><circle cx="26.8" cy="19" r="1.6" fill="#fff"/><path d="M18.6 26.3c-1.3 4.3-3.3 6.9-5.4 8.3M22 27.8c-.6 4.9-1.6 7.7-3 9.4M26 27.8c.6 4.9 1.6 7.7 3 9.4M29.4 26.3c1.3 4.3 3.3 6.9 5.4 8.3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></symbol>
-<symbol id="ic-helm" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#0F1689"/><circle cx="24" cy="24" r="9" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="24" cy="24" r="3.2" fill="#fff"/><path d="M24 11.5v3.6M24 32.9v3.6M13.2 17.8l3.1 1.8M31.7 28.4l3.1 1.8M13.2 30.2l3.1-1.8M31.7 19.6l3.1-1.8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></symbol>
-<symbol id="ic-grafana" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#F46800"/><path d="M25 9c1.2 5.6-3.4 6.8-6.3 10.2-2.9 3.4-4 6.8-3.4 10.2 1.2 5.6 5.5 9.6 10.6 9.6 5.6 0 10.2-4.6 10.2-10.2 0-3.4-1.7-6.4-4.2-8.4.4 2.3-.7 3.9-2.2 4.7.8-5.1-2-9.9-4.7-16.1z" fill="#fff"/></symbol>
-<symbol id="ic-gitlab" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#ED7100"/><path d="M24 38 16.6 22h14.8z" fill="#fff"/><path d="M24 38 9.2 22h7.4z" fill="#fff" opacity=".75"/><path d="M24 38 38.8 22h-7.4z" fill="#fff" opacity=".75"/><path d="M9.2 22 11.6 12 16.6 22z" fill="#fff" opacity=".55"/><path d="M38.8 22 36.4 12 31.4 22z" fill="#fff" opacity=".55"/></symbol>
-<symbol id="ic-azure" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#0078D4"/><path d="M19.5 11h9l12.5 26H25.5l7-4.2H14z" fill="#fff"/></symbol>
-<symbol id="ic-sysdig" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#00AEC7"/><circle cx="24" cy="24" r="11.5" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="24" cy="24" r="4.5" fill="#fff"/><path d="M24 12.5v-4M24 39.5v-4M12.5 24h-4M39.5 24h-4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></symbol>
-<symbol id="ic-k8s" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#326CE5"/><path d="M24 11.5 34.6 16.6 32 28.4 24 34.2 16 28.4 13.4 16.6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="22.5" r="3.5" fill="#fff"/></symbol>
-<symbol id="ic-budget" viewBox="0 0 48 48"><rect width="48" height="48" rx="9" fill="#E7157B"/><path d="M11 34h26" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><rect x="13" y="22" width="6" height="9" rx="1" fill="#fff"/><rect x="22" y="16" width="6" height="15" rx="1" fill="#fff"/><rect x="31" y="25" width="6" height="6" rx="1" fill="#fff"/><path d="M13 19l8-6 7 4 8-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/></symbol><symbol id="wm-milestone" viewBox="0 0 150 28"><path d="M4 22V6l6.5 10L17 6v16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><text x="24" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="16" font-weight="600" letter-spacing="-.3" fill="currentColor">Milestone</text></symbol><symbol id="wm-nvidia" viewBox="0 0 132 28"><path d="M4 14c4.6-5.4 10-8 16.5-8 7 0 12 3.4 12 8s-5 8-12 8c-6.5 0-11.9-2.6-16.5-8z" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="19" cy="14" r="4.4" fill="currentColor"/><text x="40" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="15.5" font-weight="700" letter-spacing="1.2" fill="currentColor">NVIDIA</text></symbol><symbol id="wm-lego" viewBox="0 0 88 28"><rect x="3" y="4" width="24" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="10" cy="10" r="2.1" fill="currentColor"/><circle cx="20" cy="10" r="2.1" fill="currentColor"/><circle cx="10" cy="18" r="2.1" fill="currentColor"/><circle cx="20" cy="18" r="2.1" fill="currentColor"/><text x="34" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="17" font-weight="700" letter-spacing=".6" fill="currentColor">LEGO</text></symbol><symbol id="wm-agillic" viewBox="0 0 106 28"><path d="M14 5 25 23H3z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="16" font-weight="600" letter-spacing="-.2" fill="currentColor">Agillic</text></symbol><symbol id="wm-knowit" viewBox="0 0 100 28"><path d="M5 5v18M5 14 16 5M5 14l11 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><text x="24" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="16" font-weight="600" letter-spacing="-.2" fill="currentColor">Knowit</text></symbol><symbol id="wm-simplesite" viewBox="0 0 126 28"><rect x="3" y="6" width="20" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 11h20" stroke="currentColor" stroke-width="2.2"/><circle cx="7.5" cy="8.6" r="1.1" fill="currentColor"/><text x="30" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="15" font-weight="600" letter-spacing="-.2" fill="currentColor">SimpleSite</text></symbol><symbol id="wm-kings" viewBox="0 0 132 28"><path d="M4 22V9l5 5 5-8 5 8 5-5v13z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="14.5" font-weight="600" letter-spacing="-.2" fill="currentColor">King’s College</text></symbol><symbol id="wm-sana" viewBox="0 0 136 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M14 4v20M4 14h20" stroke="currentColor" stroke-width="2.2"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="14.5" font-weight="600" letter-spacing="-.2" fill="currentColor">Sana Tech</text></symbol><symbol id="wm-independent" viewBox="0 0 156 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="3.4 3"/><circle cx="14" cy="14" r="3.4" fill="currentColor"/><text x="32" y="21" font-family="Helvetica,Arial,Liberation Sans,sans-serif" font-size="14.5" font-weight="600" letter-spacing="-.2" fill="currentColor">Independent</text></symbol></defs></svg>
-
+<symbol id="ic-s3" viewBox="0 0 48 48"><image href="assets/diagram/aws/s3.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-eks" viewBox="0 0 48 48"><image href="assets/diagram/aws/eks.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-lambda" viewBox="0 0 48 48"><image href="assets/diagram/aws/lambda.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-ecr" viewBox="0 0 48 48"><image href="assets/diagram/aws/ecr.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-rds" viewBox="0 0 48 48"><image href="assets/diagram/aws/rds.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-vpc" viewBox="0 0 48 48"><image href="assets/diagram/aws/vpc.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-cloudfront" viewBox="0 0 48 48"><image href="assets/diagram/aws/cloudfront.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-apigw" viewBox="0 0 48 48"><image href="assets/diagram/aws/apigw.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-tgw" viewBox="0 0 48 48"><image href="assets/diagram/aws/tgw.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-iam" viewBox="0 0 48 48"><image href="assets/diagram/aws/iam.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-kms" viewBox="0 0 48 48"><image href="assets/diagram/aws/kms.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-cloudtrail" viewBox="0 0 48 48"><image href="assets/diagram/aws/cloudtrail.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-orgs" viewBox="0 0 48 48"><image href="assets/diagram/aws/organizations.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-controltower" viewBox="0 0 48 48"><image href="assets/diagram/aws/control-tower.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-cloudwatch" viewBox="0 0 48 48"><image href="assets/diagram/aws/cloudwatch.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-stepfn" viewBox="0 0 48 48"><image href="assets/diagram/aws/step-functions.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-kinesis" viewBox="0 0 48 48"><image href="assets/diagram/aws/kinesis-video.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-emr" viewBox="0 0 48 48"><image href="assets/diagram/aws/emr.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-sagemaker" viewBox="0 0 48 48"><image href="assets/diagram/aws/sagemaker.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-transfer" viewBox="0 0 48 48"><image href="assets/diagram/aws/transfer.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-secrets" viewBox="0 0 48 48"><image href="assets/diagram/aws/secrets.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-annotate" viewBox="0 0 48 48"><path d="M11 35 29 17l8 8-18 18H11z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 19l4-4 8 8-4 4" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 43h9" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-onprem" viewBox="0 0 48 48"><path d="M10 8h28v32H10z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 15h18M15 22h18M15 29h18M15 36h8" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33" cy="36" r="1.5" fill="#38e2c8"/></symbol>
+<symbol id="ic-camera" viewBox="0 0 48 48"><path d="M9 16h7l3-4h10l3 4h7v22H9z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="27" r="7" fill="none" stroke="#38e2c8" stroke-width="2"/><circle cx="24" cy="27" r="2" fill="#38e2c8"/></symbol>
+<symbol id="ic-user" viewBox="0 0 48 48"><path d="M24 25a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 41c1.5-7 6-10 13-10s11.5 3 13 10" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-policy" viewBox="0 0 48 48"><path d="M24 7 38 13v10c0 9-5.8 15.8-14 19-8.2-3.2-14-10-14-19V13z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-proposal" viewBox="0 0 48 48"><path d="M13 7h16l7 7v27H13z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 7v8h7M19 24h10M19 31h10" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-terraform" viewBox="0 0 48 48"><image href="assets/toolkit/terraform.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-github" viewBox="0 0 48 48"><image href="assets/toolkit/github.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-ghactions" viewBox="0 0 48 48"><image href="assets/toolkit/github-actions.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-argocd" viewBox="0 0 48 48"><image href="assets/toolkit/argocd.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-helm" viewBox="0 0 48 48"><image href="assets/toolkit/helm.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-grafana" viewBox="0 0 48 48"><image href="assets/toolkit/grafana.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-gitlab" viewBox="0 0 48 48"><path d="M12 16h24v20H12z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 16v-4h14v4M17 24h14M17 30h8" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-azure" viewBox="0 0 48 48"><image href="assets/diagram/azure-vnet.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-sysdig" viewBox="0 0 48 48"><path d="M8 30h7l4-12 6 20 5-13 4 6h8" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10h32" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ic-k8s" viewBox="0 0 48 48"><image href="assets/toolkit/kubernetes.svg" x="4" y="4" width="40" height="40" preserveAspectRatio="xMidYMid meet"/></symbol>
+<symbol id="ic-budget" viewBox="0 0 48 48"><path d="M10 39V25M19 39V18M28 39V12M37 39V7" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 40h32" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="service-architecture" viewBox="0 0 48 48"><path d="M24 8v8M24 16 13 24M24 16l11 8M13 24v11M35 24v11" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="8" r="3" fill="none" stroke="#38e2c8" stroke-width="2"/><circle cx="13" cy="35" r="3" fill="none" stroke="#38e2c8" stroke-width="2"/><circle cx="35" cy="35" r="3" fill="none" stroke="#38e2c8" stroke-width="2"/></symbol>
+<symbol id="service-foundation" viewBox="0 0 48 48"><path d="M10 14h28M10 24h28M10 34h28" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10h20v28H14z" fill="none" stroke="#38e2c8" stroke-width="2" opacity=".55"/></symbol>
+<symbol id="service-security" viewBox="0 0 48 48"><path d="M24 7 38 13v10c0 9-5.8 15.8-14 19-8.2-3.2-14-10-14-19V13z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="service-migration" viewBox="0 0 48 48"><path d="M8 17h25M27 10l7 7-7 7M40 31H15M21 24l-7 7 7 7" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="service-platform" viewBox="0 0 48 48"><path d="M24 8 38 16v16L24 40 10 32V16z" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 16l14 8 14-8M24 24v16" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="service-ai" viewBox="0 0 48 48"><path d="M24 8v32M8 24h32M13 13l22 22M35 13 13 35" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="5" fill="none" stroke="#38e2c8" stroke-width="2"/></symbol>
+<symbol id="service-finops" viewBox="0 0 48 48"><path d="M9 39h30M13 35V25M21 35V19M29 35V28M37 35V12" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14l8-6 7 5 12-8" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="service-observability" viewBox="0 0 48 48"><path d="M7 27h7l4-10 6 17 5-13 4 6h8" fill="none" stroke="#38e2c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
 <!-- ===================== NAV ===================== -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top"><span class="brand-mark">AA</span> Abdalrahman Attya</a>
+    <a class="brand" href="#top"><img class="brand-mark" src="assets/aa-mark.svg" alt="" aria-hidden="true"> Abdalrahman Attya</a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
@@ -592,12 +615,12 @@
     <div class="logos">
       <div class="logos-label">Selected organisations</div>
       <div class="logos-row">
-        <span class="client" title="Milestone Systems"><svg class="cl-mark" width="118" height="22" aria-hidden="true"><use href="#wm-milestone"/></svg><span class="sr">Milestone Systems</span></span>
-        <span class="client" title="NVIDIA"><svg class="cl-mark" width="104" height="22" aria-hidden="true"><use href="#wm-nvidia"/></svg><span class="sr">NVIDIA</span></span>
-        <span class="client" title="LEGO"><svg class="cl-mark" width="69" height="22" aria-hidden="true"><use href="#wm-lego"/></svg><span class="sr">LEGO</span></span>
-        <span class="client" title="Agillic"><svg class="cl-mark" width="83" height="22" aria-hidden="true"><use href="#wm-agillic"/></svg><span class="sr">Agillic</span></span>
-        <span class="client" title="Knowit"><svg class="cl-mark" width="79" height="22" aria-hidden="true"><use href="#wm-knowit"/></svg><span class="sr">Knowit</span></span>
-        <span class="client" title="SimpleSite"><svg class="cl-mark" width="99" height="22" aria-hidden="true"><use href="#wm-simplesite"/></svg><span class="sr">SimpleSite</span></span>
+        <span class="client" title="Milestone Systems"><img class="org-mark" src="assets/organisations/milestone.svg" alt="Milestone Systems logo"></span>
+        <span class="client" title="NVIDIA">NVIDIA</span>
+        <span class="client" title="LEGO"><img class="org-mark" src="assets/organisations/lego.svg" alt="LEGO logo"></span>
+        <span class="client" title="Agillic">Agillic</span>
+        <span class="client" title="Knowit">Knowit</span>
+        <span class="client" title="SimpleSite">SimpleSite</span>
       </div>
     </div>
   </div>
@@ -666,49 +689,49 @@
     <div class="cards">
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-vpc"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-architecture"/></svg>
         <h3>Cloud Architecture &amp; Strategy</h3>
         <p>Target-state architecture for AWS and Azure: solution design, cloud strategy, technology selection, and the decision records that keep teams aligned six months later.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-controltower"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-foundation"/></svg>
         <h3>Landing Zones &amp; Multi-Account Foundations</h3>
         <p>AWS Organizations, Control Tower, account strategy, centralised logging, guardrails, tagging standards and cost governance built in from day one.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-iam"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-security"/></svg>
         <h3>Cloud Security &amp; Governance</h3>
         <p>Security by design: IAM and Entra ID models, network segmentation, secrets management, AWS Config and CloudTrail, plus compliance-focused operating practices.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-transfer"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-migration"/></svg>
         <h3>Migration &amp; Modernisation</h3>
         <p>Assessment, migration planning and execution for business-critical workloads — plus re-platforming and refactoring toward genuinely cloud-native operation.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-eks"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-platform"/></svg>
         <h3>Platform Engineering &amp; DevOps</h3>
         <p>Terraform, CDK, Bicep and CloudFormation; CI/CD with GitHub Actions, GitLab CI, Azure DevOps and Argo CD; Kubernetes and EKS workload platforms teams enjoy using.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-sagemaker"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-ai"/></svg>
         <h3>AI &amp; Data Platform Enablement</h3>
         <p>Large-scale ingestion, streaming pipelines, annotation and labelling workflows, data governance, and ML training platforms on SageMaker and Kinesis Video Streams.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-budget"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-finops"/></svg>
         <h3>FinOps &amp; Cost Optimisation</h3>
         <p>Spend analysis, right-sizing, architecture-level cost redesign and governance so savings hold after the engagement ends. Previously delivered an 85% ops cost reduction.</p>
       </div>
 
       <div class="card">
-        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#ic-cloudwatch"/></svg>
+        <svg class="ico" width="44" height="44" aria-hidden="true"><use href="#service-observability"/></svg>
         <h3>Observability &amp; Operational Readiness</h3>
         <p>CloudWatch, Grafana, ELK, Datadog and Sysdig; SLOs, alerting, incident response and disaster recovery patterns that hold up under real load.</p>
       </div>
@@ -849,56 +872,56 @@
 
       <div class="tl-item now">
         <div class="tl-role">Cloud Solutions Architect</div>
-        <div class="tl-org"><svg class="tl-mark" width="95" height="17" aria-hidden="true"><use href="#wm-independent"/></svg><span class="sr">Independent Consultant</span><span class="tl-loc">Denmark &amp; UK</span></div>
+        <div class="tl-org"><span class="org-name">Independent Consultant</span><span class="tl-loc">Denmark &amp; UK</span></div>
         <div class="tl-when">May 2025 — Present</div>
         <p class="tl-note">Cloud strategy, solution design, infrastructure modernisation, automation and secure platform delivery across AWS and Azure. Assessing existing setups for reliability, automation, cost efficiency and governance gaps.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Principal Cloud Architect</div>
-        <div class="tl-org"><svg class="tl-mark" width="91" height="17" aria-hidden="true"><use href="#wm-milestone"/></svg><span class="sr">Milestone Systems</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-org"><img class="org-mark" src="assets/organisations/milestone.svg" alt=""><span class="org-name sr">Milestone Systems</span><span class="tl-loc">Copenhagen</span></div>
         <div class="tl-when">Jan 2022 — Oct 2024</div>
         <p class="tl-note">Architecture authority for Project Hafnia, the Milestone × NVIDIA visual AI data platform — from concept to production.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Cloud Architect Consultant</div>
-        <div class="tl-org"><svg class="tl-mark" width="61" height="17" aria-hidden="true"><use href="#wm-knowit"/></svg><span class="sr">Knowit</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-org"><span class="org-name">Knowit</span><span class="tl-loc">Copenhagen</span></div>
         <div class="tl-when">Oct 2021 — Aug 2022</div>
         <p class="tl-note">Senior cloud architect supporting the early architecture, design and implementation of Project Hafnia for client Milestone Systems. <em style="color:var(--txt-3);font-style:normal">The dates overlap with the role above because I continued on the same project after moving from consultancy to Milestone directly.</em></p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Senior Cloud Engineer</div>
-        <div class="tl-org"><svg class="tl-mark" width="53" height="17" aria-hidden="true"><use href="#wm-lego"/></svg><span class="sr">LEGO</span><span class="tl-loc">Billund</span></div>
+        <div class="tl-org"><img class="org-mark" src="assets/organisations/lego.svg" alt=""><span class="org-name sr">LEGO</span><span class="tl-loc">Billund</span></div>
         <div class="tl-when">May 2021 — Oct 2021</div>
         <p class="tl-note">Infrastructure as Code, CI/CD and Kubernetes operations for the Distribution Centers Hub platform.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Cloud Operations Engineer</div>
-        <div class="tl-org"><svg class="tl-mark" width="64" height="17" aria-hidden="true"><use href="#wm-agillic"/></svg><span class="sr">Agillic</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-org"><span class="org-name">Agillic</span><span class="tl-loc">Copenhagen</span></div>
         <div class="tl-when">Aug 2019 — May 2021</div>
         <p class="tl-note">Led AWS modernisation, migration, governance and DR work across production SaaS environments; 85% operational cost reduction.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">IT Operations Engineer</div>
-        <div class="tl-org"><svg class="tl-mark" width="76" height="17" aria-hidden="true"><use href="#wm-simplesite"/></svg><span class="sr">SimpleSite</span><span class="tl-loc">Copenhagen</span></div>
+        <div class="tl-org"><span class="org-name">SimpleSite</span><span class="tl-loc">Copenhagen</span></div>
         <div class="tl-when">Sep 2018 — Aug 2019</div>
         <p class="tl-note">Windows Server and Linux administration, Active Directory, SharePoint and DNS, plus early cloud infrastructure work.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Lecturer</div>
-        <div class="tl-org"><svg class="tl-mark" width="80" height="17" aria-hidden="true"><use href="#wm-kings"/></svg><span class="sr">King’s College</span><span class="tl-loc">Kuala Lumpur</span></div>
+        <div class="tl-org"><span class="org-name">King’s College</span><span class="tl-loc">Kuala Lumpur</span></div>
         <div class="tl-when">Dec 2017 — Jul 2018</div>
         <p class="tl-note">Delivered lectures and practical sessions in IT and computing subjects — where the habit of explaining complex systems simply started.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">IT Infrastructure Engineer</div>
-        <div class="tl-org"><svg class="tl-mark" width="83" height="17" aria-hidden="true"><use href="#wm-sana"/></svg><span class="sr">Sana Technology</span><span class="tl-loc">Alexandria</span></div>
+        <div class="tl-org"><span class="org-name">Sana Technology</span><span class="tl-loc">Alexandria</span></div>
         <div class="tl-when">2011 — 2017</div>
         <p class="tl-note">Designed and deployed servers, networks, storage and enterprise systems, with backup, DR and security measures.</p>
       </div>
