@@ -103,7 +103,9 @@ independent third-party attestations.
 The visual system uses a reusable AA monogram, genuine public organisation
 marks, exact AWS/Azure service icons in four public-project and three
 professional case-study diagrams, and eight distinct neutral outline concepts
-for the service cards and non-vendor steps.
+for the service cards and non-vendor steps. The publication keeps a concise
+five-anchor navigation (Work, Services, About, Experience, Contact), a spacious
+editorial hero, and a focused contact surface with no form backend.
 The Technical Toolkit grid retains its original inline visual treatment; the
 self-hosted vendor assets are documented for diagram use. See
 [`docs/asset-register.md`](docs/asset-register.md) before adding any future

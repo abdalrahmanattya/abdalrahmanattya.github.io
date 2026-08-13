@@ -119,7 +119,7 @@
   h1{letter-spacing:-.032em}
   p{margin:0 0 1rem;text-wrap:pretty}
   /* Numerals line up in columns instead of jittering */
-  .metric .n,.tl-when,.d-s,.c-lv,.edu .yr{font-variant-numeric:tabular-nums}
+  .proof-signal .n,.tl-when,.d-s,.c-lv,.edu .yr{font-variant-numeric:tabular-nums}
 
   /* ============ Nav ============ */
   .nav{
@@ -127,7 +127,7 @@
     background:rgba(10,15,23,.82);backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line-soft);
   }
-  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--txt);letter-spacing:-.01em}
   .brand:hover{text-decoration:none}
   .brand-mark{
@@ -150,10 +150,10 @@
     transition:background .18s ease,color .18s ease;
   }
   .nav-cta:hover{background:var(--accent);color:#04120f !important}
-  .nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:7px 11px;font-size:16px;cursor:pointer}
+  .nav-toggle{display:none;min-width:44px;min-height:44px;background:none;border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:7px 11px;font-size:16px;cursor:pointer}
 
   /* ============ Layout helpers ============ */
-  section{padding:96px 0;scroll-margin-top:64px}
+  section{padding:96px 0;scroll-margin-top:68px}
   section:nth-of-type(even){background:var(--bg-2);border-block:1px solid var(--line-soft)}
   .eyebrow{
     font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
@@ -164,33 +164,27 @@
   .sec-lead{color:var(--txt-2);max-width:64ch;margin-bottom:44px;font-size:1.03rem}
 
   /* ============ Hero ============ */
-  .hero{padding:64px 0 56px;border-bottom:1px solid var(--line-soft)}
+  .hero{padding:72px 0 48px;border-bottom:1px solid var(--line-soft)}
+  .hero-grid{display:block}
+  .hero-copy{max-width:960px}
 
-  .byline{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:34px}
+  .byline{display:flex;align-items:center;gap:18px;margin-bottom:36px}
   .avatar{
-    width:74px;height:74px;border-radius:50%;overflow:hidden;flex:none;
+    width:70px;height:70px;border-radius:50%;overflow:hidden;flex:none;
     border:1px solid var(--line);box-shadow:0 0 0 4px rgba(56,226,200,.09)
   }
   .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   .by-name{font-size:1.14rem;font-weight:700;letter-spacing:-.018em;color:var(--txt)}
-  .by-role{font-family:var(--mono);font-size:.76rem;letter-spacing:.07em;color:var(--txt-3);margin-top:4px}
-  .status{
-    display:inline-flex;align-items:center;gap:9px;padding:6px 14px;border-radius:999px;
-    border:1px solid rgba(56,226,200,.35);background:var(--accent-dim);
-    font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.04em;
-    margin-left:auto
-  }
+  .by-role{font-family:var(--mono);font-size:.76rem;letter-spacing:.055em;color:var(--txt-3);margin-top:5px}
   .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(56,226,200,.6);animation:pulse 2.4s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(56,226,200,.55)}70%{box-shadow:0 0 0 9px rgba(56,226,200,0)}100%{box-shadow:0 0 0 0 rgba(56,226,200,0)}}
 
-  .hero h1{font-size:clamp(2.3rem,5.2vw,3.6rem);max-width:900px;margin-bottom:20px}
-  .hero h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.lede{color:var(--txt-2);font-size:1.08rem;max-width:64ch;margin-bottom:18px}
-  .hero-role{
-    font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--txt-3);
-    padding-top:14px;border-top:1px solid var(--line-soft);max-width:76ch;margin-bottom:0
-  }
-  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .hero h1{font-size:clamp(2.65rem,6.2vw,4.65rem);line-height:1.04;letter-spacing:-.045em;max-width:920px;margin-bottom:22px}
+  .hero h1 .accent{color:var(--accent)}
+  .hero p.lede{color:var(--txt-2);font-size:clamp(1.03rem,1.6vw,1.15rem);line-height:1.65;max-width:62ch;margin-bottom:18px}
+  .availability{display:flex;align-items:center;gap:9px;color:var(--txt-3);font:12px var(--mono);letter-spacing:.045em;margin:0;max-width:76ch}
+  .availability .dot{flex:none}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
   .btn{
     display:inline-flex;align-items:center;gap:9px;padding:12px 24px;border-radius:10px;
     font-weight:600;font-size:.95rem;border:1px solid transparent;transition:transform .16s ease,background .18s ease,border-color .18s ease
@@ -201,29 +195,37 @@
   .btn-ghost{border-color:var(--line);color:var(--txt)}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 
-  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
-  .metric{
-    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);
-    padding:18px 20px;transition:border-color .2s ease,transform .2s ease
-  }
-  .metric:hover{border-color:rgba(56,226,200,.5);transform:translateY(-2px)}
-  .metric .n{font-family:var(--mono);font-size:1.85rem;font-weight:700;color:var(--accent);line-height:1.1}
-  .metric .l{font-size:.83rem;color:var(--txt-3);text-transform:uppercase;letter-spacing:.09em;margin-top:6px}
+  .hero-utilities{display:flex;flex-wrap:wrap;gap:16px;margin-top:15px;font:.72rem var(--mono);letter-spacing:.06em}
+  .hero-utilities a{color:var(--txt-3)}
+  .hero-utilities a:hover{color:var(--accent)}
+  .cv-link{color:var(--txt-2) !important}
+  .proof-strip{display:flex;flex-wrap:wrap;margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:920px}
+  .proof-signal{flex:1 1 0;min-width:190px;padding:18px 22px 18px 0}
+  .proof-signal + .proof-signal{padding-left:22px;border-left:1px solid var(--line-soft)}
+  .proof-signal .n{display:block;font-family:var(--mono);font-size:1.75rem;font-weight:700;line-height:1.1;color:var(--accent)}
+  .proof-signal .l{display:block;margin-top:7px;color:var(--txt-3);font-size:.72rem;text-transform:uppercase;letter-spacing:.09em}
 
-  .logos{margin-top:26px;padding-top:22px;border-top:1px solid var(--line-soft)}
+  .logos{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft)}
   .logos-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-3);margin-bottom:16px}
-  .logos-row{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
-  .client{display:inline-flex;align-items:center;min-height:34px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(17,26,38,.72);color:var(--txt-2);font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;transition:color .2s ease,border-color .2s ease,background .2s ease}
+  .logos-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;align-items:stretch}
+  .client{display:flex;align-items:center;justify-content:center;min-height:48px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(17,26,38,.72);color:var(--txt-2);font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;text-align:center;transition:color .2s ease,border-color .2s ease,background .2s ease}
   .client:hover{color:var(--accent);border-color:rgba(56,226,200,.45);background:var(--panel-2)}
-  .org-mark{display:block;width:auto;height:18px;max-width:112px;object-fit:contain}
+  .org-mark{display:block;width:auto;height:21px;max-width:112px;object-fit:contain}
+  .client img[src*="lego"]{width:26px;height:26px}
+  .tl-org .org-mark{height:22px;max-width:118px}
   .cl-mark{display:none}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 
   /* ============ About ============ */
   .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:56px}
-  .about-grid p{color:var(--txt-2)}
-  .about-grid p:first-of-type{font-size:1.1rem;color:var(--txt)}
+  .about-copy{display:grid;gap:18px}
+  .about-block{color:var(--txt-2);font-size:1rem;line-height:1.65}
+  .about-block strong{color:var(--txt)}
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0 0;padding:0;list-style:none}
+  .principles li{border-top:1px solid var(--line);padding-top:11px}
+  .principles strong{display:block;color:var(--txt);font-size:.83rem}
+  .principles span{display:block;color:var(--txt-3);font-size:.78rem;line-height:1.45;margin-top:4px}
   .facts{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:26px;height:fit-content}
   .facts h3{font-size:.78rem;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
   .fact{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:.92rem}
@@ -293,23 +295,19 @@
   .cases:not(.js) .panel + .panel{margin-top:40px;padding-top:40px;border-top:1px solid var(--line)}
 
   /* ============ Timeline ============ */
-  .tl{position:relative;padding-left:30px}
-  .tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--accent),var(--line) 55%,transparent)}
-  .tl-item{position:relative;padding-bottom:34px}
+  .tl{display:grid;gap:0}
+  .tl-item{position:relative;display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);column-gap:36px;padding:24px 0;border-top:1px solid var(--line)}
   .tl-item:last-child{padding-bottom:0}
-  .tl-item::before{
-    content:"";position:absolute;left:-28px;top:7px;width:11px;height:11px;border-radius:50%;
-    background:var(--bg-2);border:2px solid var(--line)
-  }
-  .tl-item.now::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 4px var(--accent-dim)}
-  .tl-role{font-size:1.05rem;font-weight:650;margin-bottom:3px}
+  .tl-item:first-child{border-top:0;padding-top:0}
+  .tl-role{grid-column:1;font-size:1.05rem;font-weight:650;margin-bottom:3px}
   .tl-org{display:flex;align-items:center;gap:11px;flex-wrap:wrap;color:var(--txt-3);margin-top:5px}
   .tl-mark{display:none;color:var(--txt-2);transition:color .2s ease}
   .tl-org .org-name{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--txt-2)}
   .tl-item:hover .tl-mark{color:var(--accent)}
   .tl-loc{font-family:var(--mono);font-size:.76rem;letter-spacing:.03em}
-  .tl-when{font-family:var(--mono);font-size:.79rem;color:var(--txt-3);margin-top:3px;letter-spacing:.03em}
-  .tl-note{color:var(--txt-2);font-size:.93rem;margin-top:8px;max-width:70ch}
+  .tl-when{grid-column:1;font-family:var(--mono);font-size:.79rem;color:var(--txt-3);margin-top:3px;letter-spacing:.03em}
+  .tl-note{grid-column:2;grid-row:1 / span 3;color:var(--txt-2);font-size:.93rem;margin:0;max-width:70ch;align-self:start;line-height:1.6}
+  .tl-item.earlier{background:rgba(17,26,38,.28);padding-inline:18px}
 
   /* ============ Tech logo grid ============ */
   .logo-grid{
@@ -417,15 +415,24 @@
   /* ============ Contact ============ */
   .contact{text-align:center}
   .contact .sec-lead{margin-left:auto;margin-right:auto}
-  .contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+  .contact-panel{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;margin-top:8px;text-align:left}
+  .contact-cards{display:contents}
   .cc{
-    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:26px 20px;
+    border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:24px 22px;
     display:block;color:inherit;transition:border-color .2s ease,transform .2s ease
   }
   .cc:hover{border-color:var(--accent);transform:translateY(-3px);text-decoration:none}
   .cc svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
   .cc .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--txt-3);margin-bottom:6px}
   .cc .v{font-size:.94rem;font-weight:550;word-break:break-word}
+  .cc-primary{display:flex;align-items:center;gap:18px;background:linear-gradient(145deg,rgba(17,26,38,.95),rgba(10,15,23,.86))}
+  .cc-primary svg{flex:none;width:28px;height:28px;margin:0}
+  .cc-primary .k{margin:0 0 4px}
+  .cc-primary .v{font-size:1.05rem}
+  .contact-utilities,.phone-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+  .contact-utilities a,.phone-row a{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:var(--txt-2);font:.75rem var(--mono)}
+  .contact-utilities a:hover,.phone-row a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .phone-row{padding-top:14px;border-top:1px solid var(--line-soft)}
 
   /* ============ Footer ============ */
   footer{border-top:1px solid var(--line-soft);padding:34px 0;background:var(--bg)}
@@ -449,23 +456,22 @@
     .about-grid{grid-template-columns:1fr;gap:44px}
     .cert-feature{grid-template-columns:1fr}
     .cert-feat{grid-template-columns:76px 1fr;gap:18px;padding:22px 20px}
-    .metrics{grid-template-columns:repeat(2,1fr);margin-top:32px}
+    .logos-row{grid-template-columns:repeat(3,1fr)}
+    .tl-item{grid-template-columns:minmax(170px,.65fr) minmax(0,1.35fr);column-gap:24px}
   }
   @media (max-width:720px){
     section{padding:68px 0}
-    .hero{padding:38px 0 42px}
-    .status{margin-left:0;order:3}
-    .byline{gap:14px;margin-bottom:32px}
+    .hero{padding:38px 0 34px}
+    .byline{gap:14px;margin-bottom:28px}
     .avatar{width:62px;height:62px}
     .nav-toggle{display:block}
     .nav-links{
-      display:none;position:absolute;top:64px;left:0;right:0;
+      display:none;position:absolute;top:68px;left:0;right:0;
       flex-direction:column;align-items:stretch;gap:0;
       background:var(--bg-2);border-bottom:1px solid var(--line);padding:8px 24px 18px
     }
     .nav-links.open{display:flex}
-    .nav-links a{padding:12px 0;border-bottom:1px solid var(--line-soft)}
-    .nav-cta{text-align:center;margin-top:12px;border-bottom:0 !important}
+    .nav-links a{display:flex;align-items:center;min-height:44px;padding:8px 0;border-bottom:1px solid var(--line-soft)}
     .tabs{margin-inline:-24px;padding-inline:24px}
     .tab{padding:11px 14px}
     .panels{padding:24px 20px;border-radius:0 0 var(--radius) var(--radius)}
@@ -474,14 +480,24 @@
     .case-status{display:block;margin-top:5px;text-align:left}
     .case-group-head{display:block;margin-bottom:16px}
     .case-group-head p{margin-top:8px}
+    .hero h1{font-size:clamp(2.35rem,10.5vw,3.2rem);line-height:1.06}
+    .by-role{font-size:.68rem;line-height:1.55;letter-spacing:.035em}
+    .availability{font-size:.68rem;line-height:1.55}
+    .proof-strip{display:grid;grid-template-columns:1fr;margin-top:34px}
+    .proof-signal,.proof-signal + .proof-signal{padding:15px 0;border-left:0}
+    .proof-signal + .proof-signal{border-top:1px solid var(--line-soft)}
     .fact{flex-direction:column;gap:2px}
     .fact dd{text-align:left}
+    .principles{grid-template-columns:1fr;gap:14px}
+    .tl-item{display:block;padding:22px 0}
+    .tl-note{margin-top:12px}
+    .tl-item.earlier{padding-inline:14px}
+    .contact-panel{grid-template-columns:1fr}
+    .cc-primary{align-items:flex-start}
   }
   @media (max-width:480px){
     .btn{width:100%;justify-content:center}
     .cert-grid{grid-template-columns:repeat(2,1fr)}
-    .metric{padding:15px 14px}
-    .metric .l{font-size:.72rem}
     .logos-row{gap:8px}
     .client{font-size:.67rem;padding:6px 9px}
   }
@@ -564,13 +580,11 @@
     <a class="brand" href="#top"><img class="brand-mark" src="assets/aa-mark.svg" alt="" aria-hidden="true"> Abdalrahman Attya</a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="#work">Case Studies</a>
+      <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#skills">Skills</a>
-      <a class="nav-cta" href="#contact">Get in touch</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -579,48 +593,46 @@
 <!-- ===================== HERO ===================== -->
 <header class="hero" id="top">
   <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="byline">
+          <span class="avatar">
+            <picture>
+              <source type="image/webp" srcset="assets/avatar.webp 1x, assets/avatar@2x.webp 2x">
+              <img src="assets/avatar.jpg" srcset="assets/avatar.jpg 1x, assets/avatar@2x.jpg 2x"
+                   width="74" height="74" alt="Abdalrahman Attya" fetchpriority="high" decoding="async">
+            </picture>
+          </span>
+          <div>
+            <div class="by-name">Abdalrahman Attya</div>
+            <div class="by-role">Principal Cloud Architect · AWS &amp; Azure · Copenhagen &amp; London</div>
+          </div>
+        </div>
 
-    <div class="byline">
-      <span class="avatar">
-        <picture>
-          <source type="image/webp" srcset="assets/avatar.webp 1x, assets/avatar@2x.webp 2x">
-          <img src="assets/avatar.jpg" srcset="assets/avatar.jpg 1x, assets/avatar@2x.jpg 2x"
-               width="74" height="74" alt="Abdalrahman Attya" fetchpriority="high" decoding="async">
-        </picture>
-      </span>
-      <div>
-        <div class="by-name">Abdalrahman Attya</div>
-        <div class="by-role">Principal Cloud Architect · Copenhagen · London</div>
+        <h1>I turn cloud strategy into <span class="accent">secure, operable platforms.</span></h1>
+
+        <p class="lede">Principal Cloud Architect designing AWS and Azure foundations, delivery platforms, and AI/data environments that teams can run with confidence.</p>
+
+        <p class="availability"><span class="dot" aria-hidden="true"></span>Open to senior and lead roles · Available for focused consulting</p>
+
+        <div class="btns">
+          <a class="btn btn-primary" href="#work">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg>
+            View selected work
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
+            Start a conversation
+          </a>
+        </div>
+        <div class="hero-utilities"><a class="cv-link" href="Abdalrahman-Attya-CV.pdf" download>Download CV</a><a href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
-      <span class="status"><span class="dot"></span> Available</span>
     </div>
 
-    <h1>Cloud architecture that <span class="grad">ships</span>, scales and stays secure.</h1>
-
-    <p class="lede">15 years in IT, 8 of them designing cloud platforms on AWS and Azure. I connect business strategy
-          to practical engineering delivery — landing zones, secure multi-account foundations, CI/CD, and
-          AI/ML workload enablement for organisations including Milestone Systems, NVIDIA, LEGO and Agillic.</p>
-
-    <p class="hero-role">AWS &amp; Azure · Platform Engineering · AI &amp; Data Platforms · AI-Assisted Delivery · Security &amp; DevOps</p>
-
-<div class="btns">
-        <a class="btn btn-primary" href="#contact">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
-        Start a conversation
-        </a>
-        <a class="btn btn-ghost" href="Abdalrahman-Attya-CV.pdf" download>
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
-        Download CV
-        </a>
-        <a class="btn btn-ghost" href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-
-    <div class="metrics">
-      <div class="metric"><div class="n">15</div><div class="l">Years in IT</div></div>
-      <div class="metric"><div class="n">8</div><div class="l">Years cloud architecture</div></div>
-      <div class="metric"><div class="n">14</div><div class="l">AWS &amp; Azure certifications</div></div>
-      <div class="metric"><div class="n">85%</div><div class="l">Ops cost reduction delivered</div></div>
+    <div class="proof-strip" aria-label="Selected proof points">
+      <div class="proof-signal"><span class="n">15</span><span class="l">Years in IT</span></div>
+      <div class="proof-signal"><span class="n">14</span><span class="l">AWS &amp; Azure certifications</span></div>
+      <div class="proof-signal"><span class="n">85%</span><span class="l">Operational cost reduction</span></div>
     </div>
 
     <div class="logos">
@@ -843,38 +855,15 @@
     <div class="eyebrow">About</div>
     <h2 class="sec-title">Strategy on one side, working systems on the other.</h2>
     <div class="about-grid">
-      <div>
-        <p>
-          I'm a Principal Cloud Architect based between Copenhagen and London. I specialise in designing
-          secure, scalable and cost-efficient cloud platforms — the kind an engineering team can still operate six months after the
-          architecture diagrams are filed away.
-        </p>
-        <p>
-          My background spans cloud architecture, platform engineering, DevOps automation, security, data
-          platforms and AI/ML workload enablement. I've led cloud-native initiatives across SaaS, video
-          management, retail and technology environments.
-        </p>
-        <p>
-          Most recently at Milestone Systems I led the cloud architecture for <b style="color:var(--txt)">Project Hafnia</b>,
-          a collaboration with NVIDIA focused on enabling visual AI model development using high-quality,
-          regulation-compliant video data — owning the architecture from concept through production deployment.
-        </p>
-        <p>
-          I work hands-on. Alongside client engagements I designed and built the
-          <a href="#work">Secure Self-Service Cloud Platform</a> — an open-source internal developer platform
-          for provisioning policy-compliant Kubernetes environments on AWS or Azure, with policy-as-code,
-          deterministic review artifacts and fail-closed deployment workflows.
-        </p>
-        <p>
-          I work AI-assisted, and I'm deliberate about it. Agentic tooling has changed how much ground
-          one architect can cover — scaffolding infrastructure code, interrogating a policy surface,
-          producing the review artifacts that used to take a week. What it hasn't changed is who is
-          accountable for the decision, and that is the part I keep.
-        </p>
-        <p>
-          The through-line: I take a problem nobody has framed yet, turn it into a decision someone can
-          disagree with in writing, and then build the thing.
-        </p>
+      <div class="about-copy">
+        <div class="about-block"><strong>Architecture philosophy.</strong> I'm a Principal Cloud Architect based between Copenhagen and London. I design secure, scalable and cost-efficient platforms — the kind an engineering team can still operate six months after the diagrams are filed away.</div>
+        <div class="about-block"><strong>Representative delivery.</strong> At Milestone Systems I led the architecture for <b>Project Hafnia</b>, a Milestone × NVIDIA collaboration for regulation-compliant visual AI data. Alongside client work I designed the <a href="#work">Secure Self-Service Cloud Platform</a>, an open-source, policy-driven platform with deterministic review artifacts and fail-closed workflows.</div>
+        <div class="about-block"><strong>Accountable AI-assisted work.</strong> Agentic tooling helps me cover more ground — scaffolding infrastructure code, interrogating policy surfaces and producing review artifacts. It has not changed who is accountable for the decision, and that is the part I keep.</div>
+        <ul class="principles" aria-label="Working principles">
+          <li><strong>Clear decisions</strong><span>Make trade-offs explicit and reviewable.</span></li>
+          <li><strong>Operable systems</strong><span>Design for the team after handover.</span></li>
+          <li><strong>Accountable delivery</strong><span>Use speed without outsourcing judgment.</span></li>
+        </ul>
       </div>
       <div class="facts">
         <h3>At a glance</h3>
@@ -903,14 +892,14 @@
         <div class="tl-role">Cloud Solutions Architect</div>
         <div class="tl-org"><span class="org-name">Independent Consultant</span><span class="tl-loc">Denmark &amp; UK</span></div>
         <div class="tl-when">May 2025 — Present</div>
-        <p class="tl-note">Cloud strategy, solution design, infrastructure modernisation, automation and secure platform delivery across AWS and Azure. Assessing existing setups for reliability, automation, cost efficiency and governance gaps.</p>
+        <p class="tl-note">Cloud strategy, solution design and secure platform delivery across AWS and Azure, with current work focused on reliability, automation, cost efficiency and governance gaps.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Principal Cloud Architect</div>
         <div class="tl-org"><img class="org-mark" src="assets/organisations/milestone.svg" alt=""><span class="org-name sr">Milestone Systems</span><span class="tl-loc">Copenhagen</span></div>
         <div class="tl-when">Jan 2022 — Oct 2024</div>
-        <p class="tl-note">Architecture authority for Project Hafnia, the Milestone × NVIDIA visual AI data platform — from concept to production.</p>
+        <p class="tl-note">Architecture authority for Project Hafnia, the Milestone × NVIDIA visual AI data platform, taking the collaboration from concept through production deployment.</p>
       </div>
 
       <div class="tl-item">
@@ -924,35 +913,21 @@
         <div class="tl-role">Senior Cloud Engineer</div>
         <div class="tl-org"><img class="org-mark" src="assets/organisations/lego.svg" alt=""><span class="org-name sr">LEGO</span><span class="tl-loc">Billund</span></div>
         <div class="tl-when">May 2021 — Oct 2021</div>
-        <p class="tl-note">Infrastructure as Code, CI/CD and Kubernetes operations for the Distribution Centers Hub platform.</p>
+        <p class="tl-note">Infrastructure as Code, CI/CD and Kubernetes operations for the Distribution Centers Hub platform, with deployment reliability as the central outcome.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-role">Cloud Operations Engineer</div>
         <div class="tl-org"><span class="org-name">Agillic</span><span class="tl-loc">Copenhagen</span></div>
         <div class="tl-when">Aug 2019 — May 2021</div>
-        <p class="tl-note">Led AWS modernisation, migration, governance and DR work across production SaaS environments; 85% operational cost reduction.</p>
+        <p class="tl-note">Led AWS modernisation, migration, governance and disaster-recovery work across production SaaS environments, delivering an 85% operational cost reduction.</p>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-role">IT Operations Engineer</div>
-        <div class="tl-org"><span class="org-name">SimpleSite</span><span class="tl-loc">Copenhagen</span></div>
-        <div class="tl-when">Sep 2018 — Aug 2019</div>
-        <p class="tl-note">Windows Server and Linux administration, Active Directory, SharePoint and DNS, plus early cloud infrastructure work.</p>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-role">Lecturer</div>
-        <div class="tl-org"><span class="org-name">King’s College</span><span class="tl-loc">Kuala Lumpur</span></div>
-        <div class="tl-when">Dec 2017 — Jul 2018</div>
-        <p class="tl-note">Delivered lectures and practical sessions in IT and computing subjects — where the habit of explaining complex systems simply started.</p>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-role">IT Infrastructure Engineer</div>
-        <div class="tl-org"><span class="org-name">Sana Technology</span><span class="tl-loc">Alexandria</span></div>
-        <div class="tl-when">2011 — 2017</div>
-        <p class="tl-note">Designed and deployed servers, networks, storage and enterprise systems, with backup, DR and security measures.</p>
+      <div class="tl-item earlier">
+        <div class="tl-role">Earlier career</div>
+        <div class="tl-org"><span class="org-name">SimpleSite · King’s College · Sana Technology</span></div>
+        <div class="tl-when">2011 — 2019</div>
+        <p class="tl-note">Built the operating foundation across Windows Server and Linux administration, Active Directory, SharePoint, DNS, infrastructure, backup and disaster recovery, while teaching IT and computing along the way.</p>
       </div>
 
     </div>
@@ -1282,43 +1257,26 @@
     <div class="eyebrow" style="justify-content:center">Contact</div>
     <h2 class="sec-title">Let's talk architecture</h2>
     <p class="sec-lead">Open to senior and lead cloud architecture roles in Denmark and the United Kingdom, and to consulting engagements. No sponsorship required.</p>
-    <div class="contact-cards">
-
-      <a class="cc" href="mailto:abdalrahman.esmail.attya@gmail.com">
-        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        <div class="k">Email</div>
-        <div class="v">abdalrahman.esmail.attya@gmail.com</div>
-      </a>
-
-      <a class="cc" href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5V17M7.5 7.4v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg>
-        <div class="k">LinkedIn</div>
-        <div class="v">/in/abdalrahman-attya</div>
-      </a>
-
-      <a class="cc" href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-        <div class="k">GitHub</div>
-        <div class="v">@abdalrahmanattya</div>
-      </a>
-
-      <a class="cc" href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.8-1.3 6.7L12 18l4.8 2.5-1.3-6.7"/></svg>
-        <div class="k">Certifications</div>
-        <div class="v">Verify on Credly</div>
-      </a>
-
-      <a class="cc" href="tel:+4550362520">
-        <svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
-        <div class="k">Phone</div>
-        <div class="v">+45 50 36 25 20 · +44 7848 425941</div>
-      </a>
-
+    <div class="contact-panel">
+      <div class="contact-cards">
+        <a class="cc cc-primary" href="mailto:abdalrahman.esmail.attya@gmail.com?subject=Cloud%20architecture%20enquiry">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <div><div class="k">Email · preferred</div><div class="v">abdalrahman.esmail.attya@gmail.com</div></div>
+        </a>
+        <a class="cc" href="https://www.linkedin.com/in/abdalrahman-attya-567488186" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10.5V17M7.5 7.4v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg>
+          <div class="k">LinkedIn · connect</div><div class="v">/in/abdalrahman-attya</div>
+        </a>
+      </div>
     </div>
-
-    <div class="btns" style="justify-content:center;margin-top:36px">
-      <a class="btn btn-primary" href="mailto:abdalrahman.esmail.attya@gmail.com?subject=Cloud%20architecture%20enquiry">Send an email</a>
-      <a class="btn btn-ghost" href="Abdalrahman-Attya-CV.pdf" download>Download CV (PDF)</a>
+    <div class="contact-utilities">
+      <a href="https://github.com/abdalrahmanattya" target="_blank" rel="noopener">GitHub · @abdalrahmanattya</a>
+      <a href="https://www.credly.com/users/abdalrahman-attya" target="_blank" rel="noopener">Credly · certifications</a>
+      <a href="Abdalrahman-Attya-CV.pdf" download>Download CV (PDF)</a>
+    </div>
+    <div class="phone-row" aria-label="Phone numbers">
+      <a href="tel:+4550362520">DK +45 50 36 25 20</a>
+      <a href="tel:+447848425941">UK +44 7848 425941</a>
     </div>
   </div>
 </section>
@@ -1344,32 +1302,40 @@
   // Year
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Mobile nav
+  // Mobile nav: keyboard-safe toggle with outside-click and Escape close.
   var toggle = document.getElementById('navToggle');
   var links  = document.getElementById('navLinks');
+  function closeNav(restoreFocus){
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    if (restoreFocus) toggle.focus();
+  }
   toggle.addEventListener('click', function(){
     var open = links.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   links.addEventListener('click', function(e){
-    if (e.target.tagName === 'A') {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-    }
+    if (e.target.tagName === 'A') closeNav(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && links.classList.contains('open')) closeNav(true);
+  });
+  document.addEventListener('click', function(e){
+    if (links.classList.contains('open') && !links.contains(e.target) && e.target !== toggle) closeNav(false);
   });
 
   // Scroll reveal
   var items = document.querySelectorAll('.rv');
   if (!('IntersectionObserver' in window)) {
     items.forEach(function(el){ el.classList.add('in'); });
-    return;
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function(el){ io.observe(el); });
   }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-  items.forEach(function(el){ io.observe(el); });
 
 
   // Case study tabs — progressive enhancement, full keyboard support per group
@@ -1420,17 +1386,22 @@
   });
   var sections = Object.keys(navMap).map(function(id){ return document.getElementById(id); });
   var current = null;
-  var spy = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if (!en.isIntersecting) return;
-      var id = en.target.id;
-      if (id === current) return;
-      if (current && navMap[current]) navMap[current].classList.remove('active');
-      current = id;
-      navMap[id].classList.add('active');
-    });
-  }, { rootMargin: '-64px 0px -55% 0px', threshold: 0 });
-  sections.forEach(function(el){ spy.observe(el); });
+  function setActive(id){
+    if (!navMap[id] || id === current) return;
+    if (current && navMap[current]) navMap[current].classList.remove('active');
+    current = id;
+    navMap[id].classList.add('active');
+  }
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) setActive(en.target.id);
+      });
+    }, { rootMargin: '-68px 0px -55% 0px', threshold: 0 });
+    sections.forEach(function(el){ spy.observe(el); });
+  } else {
+    setActive(navMap[location.hash.slice(1)] ? location.hash.slice(1) : 'work');
+  }
 })();
 </script>
 </body>
