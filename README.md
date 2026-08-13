@@ -101,8 +101,9 @@ details are maintained by the site owner; the repository does not make them
 independent third-party attestations.
 
 The visual system uses a reusable AA monogram, genuine public organisation
-marks, exact AWS/Azure service icons in the case-study diagrams, and eight
-distinct neutral outline concepts for the service cards and non-vendor steps.
+marks, exact AWS/Azure service icons in four public-project and three
+professional case-study diagrams, and eight distinct neutral outline concepts
+for the service cards and non-vendor steps.
 The Technical Toolkit grid retains its original inline visual treatment; the
 self-hosted vendor assets are documented for diagram use. See
 [`docs/asset-register.md`](docs/asset-register.md) before adding any future
