@@ -1,136 +1,174 @@
-# Abdalrahman Attya — Portfolio site
+<!-- reader-first-readme:v1 -->
 
-![Abdalrahman Attya — Principal Cloud Architect](assets/og-card.png)
+# Abdalrahman Attya — Professional website
 
-This repository publishes the personal portfolio of **Abdalrahman Attya**, a
-Principal Cloud Architect working across AWS, Azure, platform engineering,
-security, DevOps, AI, and data platforms. The public site is available at
-<https://abdalrahmanattya.github.io/>.
+This website gives visitors one friendly place to understand Abdalrahman Attya's cloud architecture experience, the problems he works on, and ways to contact him. It combines a concise professional profile with selected work, services, experience, certifications, and explanatory architecture drawings.
 
-The site is intentionally a small, fast static publication. It presents:
+The public site is available at <https://abdalrahmanattya.github.io/>.
 
-- professional profile, locations, experience, education, and certifications;
-- cloud architecture and platform-engineering services;
-- selected case studies with explanatory architecture drawings;
-- technology focus areas and delivery outcomes; and
-- contact and professional-network links.
+![Abdalrahman Attya, Principal Cloud Architect working across AWS, Azure, platform engineering, security, AI, and data](assets/og-card.png)
 
-It is useful to prospective clients, hiring teams, and technical peers because
-it provides a concise, evidence-aware view of cloud architecture experience,
-delivery capabilities, and selected system designs in one fast, accessible
-publication.
+## The 30-second overview
 
-## How the site works
+A visitor can move through the site without needing to understand cloud technology:
 
-The site has no application server, database, API, build framework, or runtime
-cloud dependency. GitHub Pages serves the repository's static files; a browser
-loads `index.html`, its self-hosted fonts, local images, and inline CSS/SVG/JS.
-The JavaScript is progressive enhancement for navigation, case-study tabs, and
-small presentation behaviors. The page remains readable when scripting is
-unavailable because the case-study panels render in sequence without JavaScript.
+1. The opening introduces Abdalrahman's role, locations, and main areas of work.
+2. Selected work explains business problems, technical decisions, and delivery boundaries through short case studies.
+3. Services describe the kinds of cloud, security, migration, platform, AI, cost, and reliability outcomes he supports.
+4. About and Experience provide professional context and employment history.
+5. Certifications and the technical toolkit show verified credentials and working technologies.
+6. Contact provides direct email and professional-network links; there is no form or visitor account.
 
-![Static portfolio publication architecture](docs/site-architecture.svg)
+The page is intentionally static and fast. It does not require an application server, database, analytics service, or third-party font request.
 
-Source for the diagram is maintained in
-[`docs/site-architecture.mmd`](docs/site-architecture.mmd). It describes the
-publication path, not a separate cloud application or an infrastructure
-deployment.
+## What people can do
 
-## Run and preview locally
+- Understand the professional focus and available services in plain language.
+- Explore selected public work and professional-impact case studies.
+- Read architecture diagrams with text explanations and accessible labels.
+- Review experience, education, and cloud certifications.
+- Download the public CV.
+- Follow links to GitHub, LinkedIn, and credential verification.
+- Make contact by email or telephone.
+- Navigate by keyboard, on a phone, or with JavaScript unavailable.
 
-No package installation is required. From the repository root:
+## A representative visitor journey
+
+Suppose an engineering leader needs help improving a cloud platform. They arrive on the home page and first see Abdalrahman's role, 15 years of technology experience, cloud focus, and availability. In Selected Work, they open a relevant case study and see the problem, architecture, security boundary, delivery evidence, and what remains planned rather than deployed.
+
+They continue to Services to understand the available engagement areas, then use Experience and Certifications to establish context. If the fit looks promising, they can open LinkedIn, download the CV, or send an email directly. The site does not ask them to register, accept tracking code, or submit information to a form backend.
+
+## Privacy and trust boundaries
+
+- The site is public, so tracked files must never contain private client material, credentials, tokens, private endpoints, or unpublished project data.
+- Images, fonts, diagrams, and icons are served locally instead of loading from third-party asset services at runtime.
+- Contact details and external professional links are intentionally public.
+- There are no visitor accounts, forms, payments, application programming interfaces, analytics scripts, or application database.
+- External sites receive a request only when a visitor chooses one of their links; those sites then apply their own privacy terms.
+- Case-study diagrams explain architecture and delivery decisions. They are not infrastructure manifests or proof that a depicted environment is currently running.
+- Certification claims link to their verification surface, while other professional claims remain maintained by the site owner rather than independently attested by this repository.
+
+## System architecture: what happens in a visitor's browser
+
+![Professional website runtime diagram showing the visitor, static browser document, local assets, optional JavaScript enhancements, external links, and absence of application data collection](docs/visitor-runtime.svg)
+
+In plain language:
+
+1. A visitor's browser receives a single semantic HTML document with inline styling.
+2. Relative links load the local fonts, images, service icons, social card, and downloadable CV from the same website.
+3. Small inline JavaScript improves navigation and case-study tabs when it is available.
+4. The content remains readable without JavaScript because the case studies appear sequentially as a fallback.
+5. Email, GitHub, LinkedIn, and credential pages are separate external destinations opened only through visitor-selected links.
+
+## Technology guide in plain English
+
+| Technology | Its job in this site |
+| --- | --- |
+| HTML | Gives the page its headings, sections, links, images, and accessible meaning. |
+| CSS | Controls the visual layout, responsive sizes, colors, typography, and visible keyboard focus. |
+| JavaScript | Adds small conveniences such as mobile navigation and case-study tabs; it is not required to read the core content. |
+| SVG | Keeps architecture drawings, the AA mark, and many icons sharp at different screen sizes. |
+| JSON-LD | Adds structured profile information that search engines can understand. |
+| Open Graph metadata | Provides the title, description, and preview image used when the page is shared. |
+| GitHub Pages | Publishes the repository's static files over HTTPS without a custom application server. |
+| `.nojekyll` | Tells GitHub Pages to serve the files directly without running the Jekyll site generator. |
+
+## Hosting and publication architecture
+
+The site uses GitHub Pages rather than a separately managed cloud application.
+
+![GitHub Pages publication architecture showing reviewed content moving from the main branch to static hosting and a visitor browser](docs/site-architecture.svg)
+
+For official provider icon provenance, the diagram's GitHub repository node uses the official GitHub mark from the MIT-licensed [Primer Octicons project](https://github.com/primer/octicons). A local copy and full asset provenance are maintained in the [asset and icon register](docs/asset-register.md). Cloud-service icons do not otherwise apply because this repository contains no AWS, Azure, or other infrastructure resources.
+
+The site owner reviews content and merges it to the repository's `main` branch. GitHub Pages publishes the root files through the repository's existing Pages configuration. A visitor then receives `index.html` and its relative assets over HTTPS. There is no build pipeline, deployment package, runtime API, or infrastructure-as-code layer in between.
+
+### Deployment status
+
+The website is currently published at the public address above. The repository itself records the files and `.nojekyll` publishing choice; GitHub account settings, Pages availability, domain-name service, transport security, and platform controls remain externally managed and must not be inferred solely from this code.
+
+## What was tested
+
+Recorded repository work includes:
+
+- HTML structure, unique identifiers, internal anchors, link safety attributes, and references to local assets.
+- SVG parsing and accessible titles/descriptions.
+- Responsive overflow checks at phone, tablet, desktop, and wide-screen sizes.
+- Mobile call-to-action placement, keyboard navigation, case-study interaction, and active navigation mapping.
+- No-script case-study fallback and checks for browser console errors.
+- Visual inspection of genuine organization marks, official cloud-service icons, neutral service illustrations, portraits, certification badges, and the social preview card.
+- Local static-server requests for the page and key assets.
+
+This repository has no dependency installation, compilation, unit-test framework, server-side behavior, or cloud-infrastructure test because none is part of the site. Visual and accessibility checks should be repeated whenever presentation or content changes.
+
+## Important limitations
+
+- Content, case studies, certification details, and availability can become outdated and require owner review.
+- The site provides professional context, not an independent verification of every employment or delivery claim.
+- There is no content-management system; updates are made directly in the repository.
+- There is no search, localization, visitor personalization, form processing, analytics, or visitor-account functionality.
+- GitHub Pages platform availability and controls are outside this repository.
+- JavaScript improves interaction but the no-script version is less compact because case studies render in sequence.
+- The contact surface intentionally exposes professional contact details to the public internet.
+
+## Running the project locally
+
+This section is for someone changing or operating the website. A non-technical reader can stop here without missing the site explanation.
+
+### 1. Start a local web server
+
+No package installation or cloud credentials are required. From the repository folder, run:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Open <http://127.0.0.1:8000/> and check the responsive layout, navigation,
-case-study tabs, images, fonts, contact links, and the 404 page at
-<http://127.0.0.1:8000/404.html>.
+Open <http://127.0.0.1:8000/>. The not-found page is available at <http://127.0.0.1:8000/404.html>.
 
-For a lightweight static smoke test, use a second terminal while the server is
-running:
+### 2. Review the experience
+
+Check the navigation, every case-study tab, local images and fonts, CV download, contact links, keyboard focus, and responsive layout at phone and desktop widths. Disable JavaScript once to verify that the case studies remain readable.
+
+### 3. Run lightweight delivery checks
+
+With the local server still running, use a second terminal:
 
 ```sh
 curl --fail --silent http://127.0.0.1:8000/ | grep -q "Principal Cloud Architect"
 curl --fail --silent -I http://127.0.0.1:8000/assets/og-card.png
 curl --fail --silent -I http://127.0.0.1:8000/robots.txt
+curl --fail --silent -I http://127.0.0.1:8000/docs/visitor-runtime.svg
 ```
 
-The repository has no build step or dependency lockfile. Before changing
-content, validate HTML with an HTML validator available in your environment
-and inspect the rendered page at desktop and mobile widths.
+Stop the server with `Ctrl+C` when finished.
 
-## Publishing and hosting
+## How to deploy using GitHub Pages
 
-The intended hosting model is GitHub Pages at the custom repository URL above.
-There is no tracked GitHub Actions deployment workflow in this repository and
-no infrastructure-as-code deployment configuration. When Pages is enabled for
-the repository's `main` branch and root directory, GitHub publishes the static
-files directly; `.nojekyll` keeps the publication a plain static site.
+The exact deployment method is a repository update; there is no tracked deployment workflow or build command.
 
-Publishing is therefore a repository operation: review the content change,
-merge it to `main`, and let the existing Pages configuration serve the updated
-files. Hosting settings, DNS, TLS, and GitHub account controls are outside this
-repository and must not be inferred from the files here.
+1. Confirm that every referenced asset is committed and the page passes local review.
+2. Review the complete change for public information, link safety, accessibility, and asset provenance.
+3. Commit the approved static files and push or merge them to the repository's `main` branch.
+4. In repository settings, GitHub Pages must be configured to deploy from the `main` branch and repository root.
+5. Wait for GitHub Pages to publish, then open <https://abdalrahmanattya.github.io/> and verify the changed content, main assets, navigation, and `404.html`.
+
+Rollback uses the same path: revert the faulty content commit, merge or push the reviewed revert to `main`, and verify the public address after Pages republishes it. Changing repository, Pages, domain, or account settings is a separate administrative action.
 
 ## Repository map
 
-| Path | Purpose |
+| Location | Contents |
 | --- | --- |
-| [`index.html`](index.html) | Complete portfolio page, including inline styles, SVG drawings, and progressive-enhancement JavaScript |
-| [`404.html`](404.html) | Static not-found page |
-| [`assets/`](assets/) | Headshots, avatar variants, certification badges, social preview card, and self-hosted first-party toolkit marks |
-| [`assets/aa-mark.svg`](assets/aa-mark.svg) | Reusable site-owner monogram used by the favicon and 404 page |
-| [`fonts/`](fonts/) | Self-hosted Lato and DejaVu Sans Mono webfonts |
-| [`docs/asset-register.md`](docs/asset-register.md) | Provenance, usage, and fallback policy for logos and icon families |
-| [`docs/site-architecture.mmd`](docs/site-architecture.mmd) | Maintainable Mermaid source for the publication diagram |
-| [`docs/site-architecture.svg`](docs/site-architecture.svg) | Accessible rendered diagram shown above |
-| [`robots.txt`](robots.txt) | Crawler guidance |
-| [`sitemap.xml`](sitemap.xml) | Homepage sitemap entry |
-| [`.nojekyll`](.nojekyll) | Tells GitHub Pages to publish as a plain static site |
-| [`Abdalrahman-Attya-CV.pdf`](Abdalrahman-Attya-CV.pdf) | Downloadable CV linked from the portfolio |
+| `index.html` | Complete single-page website, including inline styles, SVG symbols, structured metadata, and progressive-enhancement JavaScript. |
+| `404.html` | Static not-found page. |
+| `assets` | Portraits, avatar variants, badges, diagrams, organization marks, toolkit marks, and the social preview card. |
+| `fonts` | Self-hosted Lato and DejaVu Sans Mono files. |
+| `docs/visitor-runtime.svg` | Browser experience and application-boundary diagram. |
+| `docs/site-architecture.svg` | GitHub Pages publication and hosting diagram. |
+| `docs/site-architecture.mmd` | Maintainable Mermaid source for the publication flow. |
+| `docs/asset-register.md` | Sources, usage rules, and fallback decisions for visual assets. |
+| `robots.txt` | Search-engine crawler guidance. |
+| `sitemap.xml` | Public homepage sitemap entry. |
+| `.nojekyll` | Direct static-publication instruction for GitHub Pages. |
+| `Abdalrahman-Attya-CV.pdf` | Downloadable public CV. |
 
-## Current status
-
-The published page is a stable, single-page portfolio with responsive layout,
-keyboard-visible focus styles, semantic landmarks, accessible labels for
-inline diagrams, local fonts, Open Graph metadata, JSON-LD profile metadata,
-and a no-script fallback for case studies. Content claims and certification
-details are maintained by the site owner; the repository does not make them
-independent third-party attestations.
-
-The visual system uses a reusable AA monogram, genuine public organisation
-marks, exact AWS/Azure service icons in four public-project and three
-professional case-study diagrams, and eight distinct neutral outline concepts
-for the service cards and non-vendor steps. The publication keeps a concise
-five-anchor navigation (Work, Services, About, Experience, Contact), a spacious
-editorial hero, and a focused contact surface with no form backend.
-The Technical Toolkit grid retains its original inline visual treatment; the
-self-hosted vendor assets are documented for diagram use. See
-[`docs/asset-register.md`](docs/asset-register.md) before adding any future
-vendor or organisation logo.
-
-## Privacy, security, and non-goals
-
-- The site is a public professional profile. Do not place secrets, private
-  client information, credentials, tokens, private endpoints, or unpublished
-  project data in tracked files.
-- Assets and fonts are served locally to avoid third-party runtime requests.
-- The contact email and external professional links are intentionally public
-  because they are part of the portfolio's contact surface.
-- This repository does not provide authentication, visitor accounts, forms,
-  analytics, payments, application APIs, cloud control-plane access, or
-  infrastructure provisioning.
-- Architecture drawings describe portfolio case studies and professional
-  experience; they are explanatory illustrations, not deployment manifests or
-  evidence that the depicted customer environments are currently running.
-- Local working instructions and orchestration notes must remain untracked and
-  excluded through `.git/info/exclude`; they are not part of the public site.
-
-## Contributing content
-
-Keep the publication static and dependency-free unless the site owner approves
-a change in hosting or build model. Preserve accessible text alternatives for
-drawings, keep links relative where possible, optimize new images, and verify
-the rendered page locally before merging.
+When contributing, keep the site static and dependency-free unless its owner approves a different hosting model. Preserve accessible text alternatives, prefer relative links, optimize new images, and add any new third-party mark to the asset register.
