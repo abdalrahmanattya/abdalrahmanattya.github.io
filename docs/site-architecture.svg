@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">Static portfolio publication architecture</title>
-  <desc id="desc">The site owner reviews content in a GitHub repository. GitHub Pages publishes the main branch static files. A visitor's browser receives the HTML, CSS, inline JavaScript, SVG, fonts, images, CV, and metadata. There is no application server or cloud runtime.</desc>
+  <title id="title">Static professional website publication architecture</title>
+  <desc id="desc">The site owner reviews content in a GitHub repository. GitHub Pages publishes the main branch static files. A visitor's browser receives the HTML pages, shared CSS, small JavaScript, SVG diagrams, fonts, images, CV, and metadata. There is no application server or cloud runtime.</desc>
   <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#a9b8c9"/></marker>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#667984"/></marker>
     <style>
-      .bg{fill:#0a0f17}.box{stroke-width:2}.source{fill:#16212f;stroke:#38e2c8}.host{fill:#102d45;stroke:#5aa9ff}.user{fill:#1c2732;stroke:#a9b8c9}.title{fill:#e6edf5;font:700 21px Arial,sans-serif}.label{fill:#e6edf5;font:700 17px Arial,sans-serif}.small{fill:#a9b8c9;font:14px Arial,sans-serif}.line{stroke:#a9b8c9;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .bg{fill:#f7f6f2}.box{stroke-width:2}.source{fill:#fff;stroke:#146c7e}.host{fill:#e6f0f2;stroke:#146c7e}.user{fill:#f1f4f5;stroke:#9fb0b7}.title{fill:#102334;font:700 21px Arial,sans-serif}.label{fill:#102334;font:700 17px Arial,sans-serif}.small{fill:#5a6d78;font:14px Arial,sans-serif}.line{stroke:#667984;stroke-width:2;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
   <rect class="bg" width="1200" height="360" rx="18"/>
-  <text class="title" x="40" y="48">STATIC PORTFOLIO PUBLICATION</text>
+  <text class="title" x="40" y="48">STATIC WEBSITE PUBLICATION</text>
   <text class="small" x="40" y="74">Repository files are published directly; no app server, database, or runtime cloud dependency.</text>
   <rect class="box source" x="40" y="125" width="220" height="112" rx="14"/>
   <text class="label" x="150" y="160" text-anchor="middle">Site owner</text>
   <text class="small" x="150" y="186" text-anchor="middle">reviewed content</text>
   <text class="small" x="150" y="207" text-anchor="middle">merge to main</text>
   <rect class="box source" x="330" y="125" width="230" height="112" rx="14"/>
-  <circle cx="360" cy="154" r="18" fill="#e6edf5"/>
-  <path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943" transform="translate(348 142)" fill="#0a0f17"/>
+  <circle cx="360" cy="154" r="18" fill="#102334"/>
+  <path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943" transform="translate(348 142)" fill="#fff"/>
   <text class="label" x="445" y="160" text-anchor="middle">GitHub repository</text>
-  <text class="small" x="445" y="186" text-anchor="middle">index.html + assets</text>
+  <text class="small" x="445" y="186" text-anchor="middle">HTML + CSS + local assets</text>
   <text class="small" x="445" y="207" text-anchor="middle">robots · sitemap · .nojekyll</text>
   <rect class="box host" x="630" y="125" width="230" height="112" rx="14"/>
   <text class="label" x="745" y="160" text-anchor="middle">GitHub Pages</text>
@@ -33,6 +33,6 @@
   <path class="line" d="M860 181 H924"/>
   <rect class="box source" x="330" y="275" width="530" height="48" rx="12"/>
   <text class="small" x="595" y="305" text-anchor="middle">Relative assets: assets/ · fonts/ · CV PDF · metadata</text>
-  <path d="M445 237 V268" stroke="#38e2c8" stroke-width="2" stroke-dasharray="6 5"/>
-  <path d="M745 237 V268" stroke="#38e2c8" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M445 237 V268" stroke="#146c7e" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M745 237 V268" stroke="#146c7e" stroke-width="2" stroke-dasharray="6 5"/>
 </svg>

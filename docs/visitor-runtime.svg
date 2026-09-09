@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
   <title id="title">Professional website visitor runtime</title>
-  <desc id="desc">A visitor requests the public website. The browser receives one HTML page and local assets, presents profile, work, services, experience, and contact content, and optionally enhances navigation with small inline JavaScript. External links leave the site only when selected by the visitor.</desc>
+  <desc id="desc">A visitor requests the public website. The browser receives static HTML pages, a shared stylesheet, and local assets, presents profile, selected work, capabilities, experience, and contact content, and optionally enhances homepage navigation with small JavaScript. External links leave the site only when selected by the visitor.</desc>
   <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#a9b8c9"/></marker>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#667984"/></marker>
     <style>
-      .bg{fill:#0a0f17}.card{fill:#16212f;stroke:#38e2c8;stroke-width:2}.content{fill:#102d45;stroke:#5aa9ff;stroke-width:2}.boundary{fill:#1c2732;stroke:#a9b8c9;stroke-width:2}.title{fill:#e6edf5;font:700 21px Arial,sans-serif}.label{fill:#e6edf5;font:700 17px Arial,sans-serif}.small{fill:#a9b8c9;font:14px Arial,sans-serif}.line{stroke:#a9b8c9;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke:#38e2c8;stroke-width:2;fill:none;stroke-dasharray:7 6;marker-end:url(#arrow)}
+      .bg{fill:#f7f6f2}.card{fill:#fff;stroke:#146c7e;stroke-width:2}.content{fill:#e6f0f2;stroke:#146c7e;stroke-width:2}.boundary{fill:#f1f4f5;stroke:#9fb0b7;stroke-width:2}.title{fill:#102334;font:700 21px Arial,sans-serif}.label{fill:#102334;font:700 17px Arial,sans-serif}.small{fill:#5a6d78;font:14px Arial,sans-serif}.line{stroke:#667984;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke:#146c7e;stroke-width:2;fill:none;stroke-dasharray:7 6;marker-end:url(#arrow)}
     </style>
   </defs>
   <rect class="bg" width="1200" height="480" rx="18"/>
   <text class="title" x="40" y="48">VISITOR EXPERIENCE IN THE BROWSER</text>
-  <text class="small" x="40" y="75">One static page remains readable without JavaScript; local assets avoid third-party runtime requests.</text>
+  <text class="small" x="40" y="75">Static pages remain readable without JavaScript; local assets avoid third-party runtime requests.</text>
   <rect class="card" x="40" y="145" width="200" height="125" rx="14"/>
   <text class="label" x="140" y="184" text-anchor="middle">Visitor</text>
   <text class="small" x="140" y="212" text-anchor="middle">opens public URL</text>
   <text class="small" x="140" y="235" text-anchor="middle">uses keyboard or pointer</text>
   <rect class="content" x="320" y="115" width="260" height="185" rx="14"/>
-  <text class="label" x="450" y="154" text-anchor="middle">Browser document</text>
-  <text class="small" x="450" y="184" text-anchor="middle">semantic HTML + inline CSS</text>
-  <text class="small" x="450" y="208" text-anchor="middle">profile · work · services</text>
+  <text class="label" x="450" y="154" text-anchor="middle">Browser documents</text>
+  <text class="small" x="450" y="184" text-anchor="middle">semantic HTML + shared CSS</text>
+  <text class="small" x="450" y="208" text-anchor="middle">profile · selected work · capabilities</text>
   <text class="small" x="450" y="232" text-anchor="middle">experience · contact</text>
   <text class="small" x="450" y="267" text-anchor="middle">readable without JavaScript</text>
   <rect class="card" x="665" y="95" width="235" height="125" rx="14"/>
   <text class="label" x="782" y="134" text-anchor="middle">Local assets</text>
-  <text class="small" x="782" y="164" text-anchor="middle">images · fonts · SVG icons</text>
-  <text class="small" x="782" y="188" text-anchor="middle">CV · social metadata</text>
+  <text class="small" x="782" y="164" text-anchor="middle">images · fonts · official icons</text>
+  <text class="small" x="782" y="188" text-anchor="middle">diagrams · CV · sharing card</text>
   <rect class="card" x="665" y="260" width="235" height="125" rx="14"/>
   <text class="label" x="782" y="299" text-anchor="middle">Progressive enhancement</text>
-  <text class="small" x="782" y="329" text-anchor="middle">navigation · case-study tabs</text>
-  <text class="small" x="782" y="353" text-anchor="middle">small presentation behavior</text>
+  <text class="small" x="782" y="329" text-anchor="middle">homepage navigation</text>
+  <text class="small" x="782" y="353" text-anchor="middle">small presentation behavior only</text>
   <rect class="boundary" x="980" y="145" width="180" height="125" rx="14"/>
   <text class="label" x="1070" y="184" text-anchor="middle">External sites</text>
   <text class="small" x="1070" y="212" text-anchor="middle">email · LinkedIn</text>

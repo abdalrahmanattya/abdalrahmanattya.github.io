@@ -2,19 +2,21 @@
 
 # Abdalrahman Attya — Professional website
 
-This website gives visitors one friendly place to understand Abdalrahman Attya's cloud architecture experience, the problems he works on, and ways to contact him. It combines a concise professional profile with selected work, services, experience, certifications, and explanatory architecture drawings.
+This website gives visitors one place to understand Abdalrahman Attya's work across cloud architecture, agentic AI, and platform engineering. It connects current agentic-system work with the architecture, security, migration, and operational experience behind it, then provides selected projects, capabilities, professional context, credentials, and ways to make contact.
+
+The benefit for engineering leaders is a concise view of both sides of production agentic AI: bounded agent behavior and the cloud architecture needed to make it secure, observable, reliable, and operable.
 
 The public site is available at <https://abdalrahmanattya.github.io/>.
 
-![Abdalrahman Attya, Principal Cloud Architect working across AWS, Azure, platform engineering, security, AI, and data](assets/og-card.png)
+![Abdalrahman Attya working across cloud architecture, agentic AI, platform engineering, security, and data](assets/og-card-v2.png)
 
 ## The 30-second overview
 
-A visitor can move through the site without needing to understand cloud technology:
+A visitor can move through the site without needing to understand cloud or AI technology:
 
-1. The opening introduces Abdalrahman's role, locations, and main areas of work.
-2. Selected work explains business problems, technical decisions, and delivery boundaries through short case studies.
-3. Services describe the kinds of cloud, security, migration, platform, AI, cost, and reliability outcomes he supports.
+1. The opening introduces Abdalrahman as a cloud architect whose current focus includes agentic AI and platform engineering.
+2. Selected work leads with agentic applications, then shows the developer-platform, modernization, and delivery foundations behind them.
+3. Capabilities cover agent behavior, controlled tools, evaluation, coding-agent workflows, cloud architecture, data platforms, modernization, security, cost, and reliability.
 4. About and Experience provide professional context and employment history.
 5. Certifications and the technical toolkit show verified credentials and working technologies.
 6. Contact provides direct email and professional-network links; there is no form or visitor account.
@@ -23,7 +25,7 @@ The page is intentionally static and fast. It does not require an application se
 
 ## What people can do
 
-- Understand the professional focus and available services in plain language.
+- Understand how agentic AI and cloud architecture fit together in the professional focus.
 - Explore selected public work and professional-impact case studies.
 - Read architecture diagrams with text explanations and accessible labels.
 - Review experience, education, and cloud certifications.
@@ -34,7 +36,7 @@ The page is intentionally static and fast. It does not require an application se
 
 ## A representative visitor journey
 
-Suppose an engineering leader needs help improving a cloud platform. They arrive on the home page and first see Abdalrahman's role, 15 years of technology experience, cloud focus, and availability. In Selected Work, they open a relevant case study and see the problem, architecture, security boundary, delivery evidence, and what remains planned rather than deployed.
+Suppose an engineering leader needs to move an AI assistant beyond a demonstration. They arrive on the home page and see Abdalrahman's agentic AI focus alongside 15 years of technology experience and principal-level cloud architecture depth. In Selected Work, they can examine how an agent uses knowledge, memory, and bounded tools while trusted application rules retain authority. The remaining cases show the cloud platforms, security controls, delivery systems, and modernization experience needed to operate that kind of system responsibly.
 
 They continue to Services to understand the available engagement areas, then use Experience and Certifications to establish context. If the fit looks promising, they can open LinkedIn, download the CV, or send an email directly. The site does not ask them to register, accept tracking code, or submit information to a form backend.
 
@@ -54,11 +56,11 @@ They continue to Services to understand the available engagement areas, then use
 
 In plain language:
 
-1. A visitor's browser receives a single semantic HTML document with inline styling.
-2. Relative links load the local fonts, images, service icons, social card, and downloadable CV from the same website.
-3. Small inline JavaScript improves navigation and case-study tabs when it is available.
-4. The content remains readable without JavaScript because the case studies appear sequentially as a fallback.
-5. Email, GitHub, LinkedIn, and credential pages are separate external destinations opened only through visitor-selected links.
+1. A visitor's browser receives semantic HTML documents with a shared local stylesheet.
+2. Relative links load the local fonts, images, official service icons, diagrams, social card, and downloadable CV from the same website.
+3. Small inline JavaScript improves homepage navigation when it is available.
+4. Each selected-work card opens a dedicated, readable case-study page; the core content does not depend on JavaScript.
+5. Email, GitHub, LinkedIn, credential, and source-code pages are separate external destinations opened only through visitor-selected links.
 
 ## Technology guide in plain English
 
@@ -66,7 +68,7 @@ In plain language:
 | --- | --- |
 | HTML | Gives the page its headings, sections, links, images, and accessible meaning. |
 | CSS | Controls the visual layout, responsive sizes, colors, typography, and visible keyboard focus. |
-| JavaScript | Adds small conveniences such as mobile navigation and case-study tabs; it is not required to read the core content. |
+| JavaScript | Adds small homepage navigation conveniences; it is not required to read the core content or case studies. |
 | SVG | Keeps architecture drawings, the AA mark, and many icons sharp at different screen sizes. |
 | JSON-LD | Adds structured profile information that search engines can understand. |
 | Open Graph metadata | Provides the title, description, and preview image used when the page is shared. |
@@ -83,6 +85,8 @@ For official provider icon provenance, the diagram's GitHub repository node uses
 
 The site owner reviews content and merges it to the repository's `main` branch. GitHub Pages publishes the root files through the repository's existing Pages configuration. A visitor then receives `index.html` and its relative assets over HTTPS. There is no build pipeline, deployment package, runtime API, or infrastructure-as-code layer in between.
 
+The GitHub Pages path shown in the diagram is currently deployed; no AWS, Azure, agent runtime, or other cloud application resources are planned or represented as part of this website.
+
 ### Deployment status
 
 The website is currently published at the public address above. The repository itself records the files and `.nojekyll` publishing choice; GitHub account settings, Pages availability, domain-name service, transport security, and platform controls remain externally managed and must not be inferred solely from this code.
@@ -94,8 +98,8 @@ Recorded repository work includes:
 - HTML structure, unique identifiers, internal anchors, link safety attributes, and references to local assets.
 - SVG parsing and accessible titles/descriptions.
 - Responsive overflow checks at phone, tablet, desktop, and wide-screen sizes.
-- Mobile call-to-action placement, keyboard navigation, case-study interaction, and active navigation mapping.
-- No-script case-study fallback and checks for browser console errors.
+- Mobile call-to-action placement, keyboard navigation, selected-work links, and active navigation mapping.
+- Dedicated case-study readability without JavaScript and checks for browser console errors.
 - Visual inspection of genuine organization marks, official cloud-service icons, neutral service illustrations, portraits, certification badges, and the social preview card.
 - Local static-server requests for the page and key assets.
 
@@ -108,7 +112,7 @@ This repository has no dependency installation, compilation, unit-test framework
 - There is no content-management system; updates are made directly in the repository.
 - There is no search, localization, visitor personalization, form processing, analytics, or visitor-account functionality.
 - GitHub Pages platform availability and controls are outside this repository.
-- JavaScript improves interaction but the no-script version is less compact because case studies render in sequence.
+- JavaScript improves homepage navigation, but the site intentionally omits search and client-side filtering.
 - The contact surface intentionally exposes professional contact details to the public internet.
 
 ## Running the project locally
@@ -127,15 +131,15 @@ Open <http://127.0.0.1:8000/>. The not-found page is available at <http://127.0.
 
 ### 2. Review the experience
 
-Check the navigation, every case-study tab, local images and fonts, CV download, contact links, keyboard focus, and responsive layout at phone and desktop widths. Disable JavaScript once to verify that the case studies remain readable.
+Check the navigation, every selected-work card and dedicated case page, local images and fonts, CV download, contact links, keyboard focus, and responsive layout at phone and desktop widths. Disable JavaScript once to verify that the core site and case studies remain readable.
 
 ### 3. Run lightweight delivery checks
 
 With the local server still running, use a second terminal:
 
 ```sh
-curl --fail --silent http://127.0.0.1:8000/ | grep -q "Principal Cloud Architect"
-curl --fail --silent -I http://127.0.0.1:8000/assets/og-card.png
+curl --fail --silent http://127.0.0.1:8000/ | grep -q "Agentic AI"
+curl --fail --silent -I http://127.0.0.1:8000/assets/og-card-v2.png
 curl --fail --silent -I http://127.0.0.1:8000/robots.txt
 curl --fail --silent -I http://127.0.0.1:8000/docs/visitor-runtime.svg
 ```
@@ -158,16 +162,18 @@ Rollback uses the same path: revert the faulty content commit, merge or push the
 
 | Location | Contents |
 | --- | --- |
-| `index.html` | Complete single-page website, including inline styles, SVG symbols, structured metadata, and progressive-enhancement JavaScript. |
+| `index.html` | Homepage content, structured metadata, retained SVG symbols, and progressive-enhancement JavaScript. |
+| `styles.css` | Shared light-editorial visual system and responsive layouts. |
+| `work/` | Nine dedicated public and professional case-study pages. |
 | `404.html` | Static not-found page. |
-| `assets` | Portraits, avatar variants, badges, diagrams, organization marks, toolkit marks, and the social preview card. |
+| `assets` | Portraits, avatar variants, badges, official service icons, case diagrams, organization marks, toolkit marks, and social preview cards. |
 | `fonts` | Self-hosted Lato and DejaVu Sans Mono files. |
 | `docs/visitor-runtime.svg` | Browser experience and application-boundary diagram. |
 | `docs/site-architecture.svg` | GitHub Pages publication and hosting diagram. |
 | `docs/site-architecture.mmd` | Maintainable Mermaid source for the publication flow. |
 | `docs/asset-register.md` | Sources, usage rules, and fallback decisions for visual assets. |
 | `robots.txt` | Search-engine crawler guidance. |
-| `sitemap.xml` | Public homepage sitemap entry. |
+| `sitemap.xml` | Public homepage and dedicated case-study sitemap entries. |
 | `.nojekyll` | Direct static-publication instruction for GitHub Pages. |
 | `Abdalrahman-Attya-CV.pdf` | Downloadable public CV. |
 
