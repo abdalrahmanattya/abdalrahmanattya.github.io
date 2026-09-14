@@ -36,7 +36,7 @@ The page is intentionally static and fast. It does not require an application se
 
 ## A representative visitor journey
 
-Suppose an engineering leader needs to move an AI assistant beyond a demonstration. They arrive on the home page and see Abdalrahman's agentic AI focus alongside 15 years of technology experience and principal-level cloud architecture depth. In Selected Work, they can examine how an agent uses knowledge, memory, and bounded tools while trusted application rules retain authority. The remaining cases show the cloud platforms, security controls, delivery systems, and modernization experience needed to operate that kind of system responsibly.
+Suppose an engineering leader needs to move an AI assistant beyond a demonstration. They arrive on the home page and see three connected parts of Abdalrahman's work: 15 years of technology experience, production cloud architecture, and hands-on agentic AI. Each introduction leads directly to the relevant experience or case study. In Selected Work, they can examine how an agent uses knowledge, memory, and bounded tools while trusted application rules retain authority. The remaining cases show the cloud platforms, security controls, delivery systems, and modernization experience needed to operate that kind of system responsibly.
 
 They continue to Services to understand the available engagement areas, then use Experience and Certifications to establish context. If the fit looks promising, they can open LinkedIn, download the CV, or send an email directly. The site does not ask them to register, accept tracking code, or submit information to a form backend.
 
@@ -100,7 +100,7 @@ Recorded repository work includes:
 - Responsive overflow checks at phone, tablet, desktop, and wide-screen sizes.
 - Mobile call-to-action placement, keyboard navigation, selected-work links, and active navigation mapping.
 - Dedicated case-study readability without JavaScript and checks for browser console errors.
-- Visual inspection of genuine organization marks, official cloud-service icons, neutral service illustrations, portraits, certification badges, and the social preview card.
+- Visual inspection of organisation labels, official cloud-service icons, neutral service illustrations, portraits, certification badges, and the social preview card.
 - Local static-server requests for the page and key assets.
 
 This repository has no dependency installation, compilation, unit-test framework, server-side behavior, or cloud-infrastructure test because none is part of the site. Visual and accessibility checks should be repeated whenever presentation or content changes.
